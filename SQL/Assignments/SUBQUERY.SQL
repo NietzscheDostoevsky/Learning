@@ -1,0 +1,11 @@
+SELECT * 
+FROM EMP 
+WHERE JOB =   ( SELECT JOB 
+		FROM EMP 
+		WHERE ENAME = 'JONES') 
+    AND 
+	
+    SAL < ( SELECT SAL 
+        FROM EMP
+        WHERE ENAME = 'SCOTT')
+
