@@ -121,7 +121,7 @@ WHERE JOB = 'SALESMAN'
 AND 
 DEPTNO IN (SELECT DEPTNO 
 			FROM EMP 
-			WHERE LOC IN ('NEWYORK', 'CHICAGO'))
+			WHERE LOC IN ('NEW YORK', 'CHICAGO'))
 
 16. 
 
@@ -165,3 +165,149 @@ AND SAL > (SELECT SAL
 
 20. 
 
+SELECT *
+FROM EMP
+WHERE DEPTNO IN ( SELECT DEPTNO
+				  FROM DEPT 
+				  WHERE LOC = 'DALLAS') 
+
+21. 
+
+SELECT LOC 
+FROM DEPT 
+WHERE DNAME = 'ACCOUNTING'
+
+22. 
+
+SELECT *
+FROM DEPT 
+WHERE LOC = 'NEW YORK'
+
+23. 
+
+SELECT *
+FROM EMP 
+WHERE JOB IN ('CLERK','ANALYST')
+AND DEPTNO NOT IN (SELECT DEPTNO 
+					FROM DEPT 
+					WHERE LOC = 'DALLAS')
+
+24. 
+
+SELECT * FROM EMP
+WHERE HIREDATE > '31-DEC-1956'
+AND DEPTNO IN (SELECT DEPTNO
+				FROM DEPT 
+				WHERE DNAME = 'RESEARCH')
+
+25. 
+
+SELECT MAX(SAL)
+FROM EMP
+WHERE SAL < (SELECT MAX(SAL)
+			 FROM EMP 
+			 WHERE SAL < (SELECT MAX(SAL)
+			 			  FROM EMP
+			 			  WHERE SAL < (SELECT MAX(SAL)
+			 			  			   FROM EMP
+			 			  			   WHERE SAL < (SELECT MAX(SAL) 
+			 			  			   				FROM EMP
+			 			  			   					))))
+
+
+26.  SELECT MIN(SAL)
+FROM EMP
+WHERE SAL > (SELECT MIN(SAL)
+			 FROM EMP 
+			 WHERE SAL > (SELECT MIN(SAL)
+			 			  FROM EMP
+			 			  WHERE SAL > (SELECT MIN(SAL)
+			 			  			   FROM EMP
+			 			  			   WHERE SAL > (SELECT MIN(SAL) 
+			 			  			   				FROM EMP
+			 			  			   				 ))))
+
+27. 
+
+SELECT MAX(SAL)
+FROM EMP
+WHERE SAL < (SELECT MAX(SAL)
+			 FROM EMP 
+			 WHERE SAL < (SELECT MAX(SAL)
+			 			  FROM EMP
+			 			  WHERE SAL < (SELECT MAX(SAL)
+			 			  			   FROM EMP
+			 			  			   WHERE SAL < (SELECT MAX(SAL) 
+			 			  			   				FROM EMP
+			 			  			   				WHERE SAL < (SELECT MAX(SAL)
+			 			  			   							 FROM EMP
+			 			  			   							 WHERE SAL < (SELECT MAX(SAL)
+			 			  			   							 			  FROM EMP
+			 			  			   							 			  ))))))
+
+28.  
+
+SELECT MIN(SAL)
+FROM EMP
+WHERE SAL > (SELECT MIN(SAL)
+			 FROM EMP 
+			 WHERE SAL > (SELECT MIN(SAL)
+			 			  FROM EMP
+			 			  WHERE SAL > (SELECT MIN(SAL)
+			 			  			   FROM EMP
+			 			  			   WHERE SAL > (SELECT MIN(SAL) 
+			 			  			   				FROM EMP
+			 			  			   				WHERE SAL > (SELECT MIN(SAL)
+			 			  			   							 FROM EMP
+			 			  			   							 WHERE SAL > (SELECT MIN(SAL)
+			 			  			   							 			  FROM EMP
+			 			  			   							 			  ))))))
+
+
+29. 
+
+SELECT MAX(SAL)
+FROM EMP
+WHERE SAL < (SELECT MAX(SAL)
+			 FROM EMP 
+			 WHERE SAL < (SELECT MAX(SAL)
+			 			  FROM EMP
+			 			  WHERE SAL < (SELECT MAX(SAL)
+			 			  			   FROM EMP
+			 			  			   WHERE SAL < (SELECT MAX(SAL) 
+			 			  			   				FROM EMP
+			 			  			   				WHERE SAL < (SELECT MAX(SAL)
+			 			  			   							 FROM EMP
+			 			  			   							 WHERE SAL < (SELECT MAX(SAL)
+			 			  			   							 			  FROM EMP
+			 			  			   							 			  WHERE SAL < (SELECT MAX(SAL)
+			 			  			   							 			  			    FROM EMP
+			 			  			   							 			  			    WHERE SAL < (SELECT MAX(SAL)
+			 			  			   							 			  			    			 FROM EMP
+			 			  			   							 			  			    			 WHERE SAL < (SELECT MAX(SAL)
+			 			  			   							 			  			    			 			  FROM EMP
+			 			  			   							 			  			    			 			  )))))))))
+
+30. 
+
+SELECT (SAL)
+FROM EMP
+WHERE SAL > (SELECT MAX(SAL)
+			 FROM EMP 
+			 WHERE SAL > (SELECT MIN(SAL)
+			 			  FROM EMP
+			 			  WHERE SAL > (SELECT MIN(SAL)
+			 			  			   FROM EMP
+			 			  			   WHERE SAL > (SELECT MIN(SAL) 
+			 			  			   				FROM EMP
+			 			  			   				WHERE SAL > (SELECT MIN(SAL)
+			 			  			   							 FROM EMP
+			 			  			   							 WHERE SAL > (SELECT MIN(SAL)
+			 			  			   							 			  FROM EMP
+			 			  			   							 			  WHERE SAL > (SELECT MIN(SAL)
+			 			  			   							 			  			    FROM EMP
+			 			  			   							 			  			    WHERE SAL > (SELECT MIN(SAL)
+			 			  			   							 			  			    			 FROM EMP
+			 			  			   							 			  			    			 WHERE SAL > (SELECT MIN(SAL)
+			 			  			   							 			  			    			 			  FROM EMP
+			 			  			   							 			  			    			 			  )))))))))
