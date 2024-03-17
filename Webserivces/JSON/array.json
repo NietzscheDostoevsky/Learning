@@ -1,0 +1,16 @@
+{
+  "name" : "Rakesh" , 
+  "id" : 123 , 
+  "subject" : ["sql" , "java"],
+  "phone number" : {
+    
+    "primary": 1234314,
+    "secondary" : 247598745
+  },
+  
+  "status" : {
+    "s1" : true,
+    "s2" : false
+  }  
+
+}

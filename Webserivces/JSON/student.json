@@ -1,0 +1,10 @@
+{
+    "name" : "Rakesh" ,  --- string 
+    "id" : 123 , --- number 
+    "status" :true  ----boolean 
+  }
+  
+  -----array  
+  ----- object 
+  ------array object 
+  
