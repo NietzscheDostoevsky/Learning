@@ -1,0 +1,29 @@
+{"library" : 
+    [
+    {"Section A" : 
+            {"Physics": ["Book1", "Book1", "Book3", "Book4", "Book5"]},
+     "Section B" :
+            {"Chemistry" : ["Book1", "Book1", "Book3", "Book4", "Book5"]},
+     "Section C" :
+            {"Maths" : ["Book1", "Book1", "Book3", "Book4", "Book5"]},
+     "Section D" :
+            {"Biology" : ["Book1", "Book1", "Book3", "Book4", "Book5"]}, 
+     "Section E" :
+            {"English" : ["Book1", "Book1", "Book3", "Book4", "Book5"]}     
+        
+    }, 
+
+    {"Rent": {
+        "Bookname"      : "Harry Potter and the Goblet of Fire", 
+        "StudentName"   : "Herminoe", 
+        "Borrowdate"    : "21-02-2100",
+        "ExpectedREturn": "22-02-2101",
+        "ActualReturn"  : "25-02-2101",
+        "Fine"          : 21
+
+             }
+    }
+    ]
+
+
+}
