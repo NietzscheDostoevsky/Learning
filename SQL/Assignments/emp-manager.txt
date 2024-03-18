@@ -43,6 +43,9 @@ SELECT ENAME
 FROM EMP
 WHERE EMPNO NOT IN (SELECT MGR FROM EMP WHERE MGR IS NOT NULL)
 
+#NULL when compared with and operator, gives False, which 
+# why its giving no rows selected. 
+
 
 6. 
 
