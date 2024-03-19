@@ -1,10 +1,49 @@
 {
     "Food": {
-        "UserInterface": {"Register": , "Login": },
-        "MerchantInterface": {"Register": , "Login": },
-        "UserAddress": {"Address":},
-        "UserCart": {"AddToCart": , "UpdateCart": , "RemoveFromCart": },
-        "PaymentMethod": {"DebitCard": , "Netbanking": },
-        "Order": {"Order":  }
+        "UserInterface": {
+            "Register": {
+                "UserID": ,
+                "UserName": ,
+                "email": ,
+                "password": ,
+                "number":
+            },
+            "Login": {
+                "email": ,
+                "password":
+            }
+        },
+        "MerchantInterface": {
+            "Register": {
+                "Shopname": ,
+                "Ownername": ,
+                "username": ,
+                "email": ,
+                "password": ,
+                "city": ,
+                "state": ,
+                "country":
+            },
+            "Login": {
+                "Shopname": ,
+                "email": ,
+                "password":
+            }
+        },
+        "UserAddress": {
+            "Address":
+        },
+        "UserCart": {
+            "AddToCart": ,
+            "UpdateCart": ,
+            "RemoveFromCart":
+        },
+        "PaymentMethod": {
+            "DebitCard": ,
+            "Netbanking":
+        },
+        "Order": {
+            "Order":
+        }
     }
 }
