@@ -1,0 +1,25 @@
+{"Food" : 
+    {"UI":
+        {
+            "Registration":
+                { 
+                    "UserID": "fakeid",
+                    "username": "fakeusname",
+                    "email": "fakemail",
+                    "password": "fakepass",
+                    "number" : 000000000 
+                } 
+         , 
+
+            "Login": 
+                {
+                    "email":"fakeemail",
+                    "password":"fakepass"
+                }
+        }
+
+    }
+
+
+
+}
