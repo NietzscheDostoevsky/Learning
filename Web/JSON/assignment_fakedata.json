@@ -2,77 +2,80 @@
     "Food": {
         "UserInterface": {
             "Register": {
-                "UserID": ,
-                "UserName": ,
-                "email": ,
-                "password": ,
-                "number":
+                "UserID": "placeholderData",
+                "UserName": "placeholderData",
+                "email": "placeholderData",
+                "password": "placeholderData",
+                "number": 1212121212
             },
             "Login": {
-                "email": ,
-                "password":
+                "email": "placeholderData",
+                "password": "placeholderData"
             }
         },
         "MerchantInterface": {
             "Register": {
-                "Shopname": ,
-                "Ownername": ,
-                "username": ,
-                "email": ,
-                "password": ,
-                "city": ,
-                "state": ,
-                "country":
+                "Shopname": "placeholderData",
+                "Ownername": "placeholderData",
+                "username": "placeholderData",
+                "email": "placeholderData",
+                "password": "placeholderData",
+                "city": "placeholderData",
+                "state": "placeholderData",
+                "country": "placeholderData"
             },
             "Login": {
-                "Shopname": ,
-                "email": ,
-                "password":
+                "Shopname": "placeholderData",
+                "email": "placeholderData",
+                "password": "placeholderData"
             }
         },
         "UserAddress": {
             "Address": {
-                "addressID": ,
-                "BuildindName": ,
-                "Area": ,
-                "City": ,
-                "State": ,
-                "Country": ,
-                "AddressType":
+                "addressID": "placeholderData",
+                "BuildindName": "placeholderData",
+                "Area": "placeholderData",
+                "City": "placeholderData",
+                "State": "placeholderData",
+                "Country": "placeholderData",
+                "AddressType": "placeholderData"
             }
         },
         "UserCart": {
             "AddToCart": {
-                "Product": ,
-                "Quantity": ,
-                "Price":
+                "Product": "placeholderData",
+                "Quantity": "placeholderData",
+                "Price": 12121
             },
             "UpdateCart": {
-                "Product": ,
-                "Quantity": ,
-                "Price":
+                "Product": "placeholderData",
+                "Quantity": "placeholderData",
+                "Price": 123123
             },
             "RemoveFromCart": {
-                "Product":
+                "Product": "placeholderData"
             }
         },
         "PaymentMethod": {
             "DebitCard": {
-                "CardHolderName": ,
-                "CardNumber": ,
-                "CVV": ,
-                "expdate":
+                "CardHolderName": "placeholderData",
+                "CardNumber": 1212121212,
+                "CVV": 212,
+                "expdate": "placeholderData"
             },
-            "Netbanking":
+            "Netbanking": {
+                "userid": "placeholderData",
+                "password": "placeholderData"
+            }
         },
         "Order": {
             "Order": {
-                "OrderID": ,
-                "UserID": ,
-                "ShopName": ,
-                "AddressID": ,
-                "product": ,
-                "payment":
+                "OrderID": "placeholderData",
+                "UserID": "placeholderData",
+                "ShopName": "placeholderData",
+                "AddressID": "placeholderData",
+                "product": "placeholderData",
+                "payment": "placeholderData"
             }
         }
     }
