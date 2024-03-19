@@ -1,0 +1,10 @@
+{
+    "Food": {
+        "UserInterface": ,
+        "MerchantInterface": ,
+        "UserAddress": ,
+        "UserCart": ,
+        "PaymentMethod": ,
+        "Order":
+    }
+}
