@@ -1,0 +1,79 @@
+{
+    "Food": {
+        "UserInterface": {
+            "Register": {
+                "UserID": ,
+                "UserName": ,
+                "email": ,
+                "password": ,
+                "number":
+            },
+            "Login": {
+                "email": ,
+                "password":
+            }
+        },
+        "MerchantInterface": {
+            "Register": {
+                "Shopname": ,
+                "Ownername": ,
+                "username": ,
+                "email": ,
+                "password": ,
+                "city": ,
+                "state": ,
+                "country":
+            },
+            "Login": {
+                "Shopname": ,
+                "email": ,
+                "password":
+            }
+        },
+        "UserAddress": {
+            "Address": {
+                "addressID": ,
+                "BuildindName": ,
+                "Area": ,
+                "City": ,
+                "State": ,
+                "Country": ,
+                "AddressType":
+            }
+        },
+        "UserCart": {
+            "AddToCart": {
+                "Product": ,
+                "Quantity": ,
+                "Price":
+            },
+            "UpdateCart": {
+                "Product": ,
+                "Quantity": ,
+                "Price":
+            },
+            "RemoveFromCart": {
+                "Product":
+            }
+        },
+        "PaymentMethod": {
+            "DebitCard": {
+                "CardHolderName": ,
+                "CardNumber": ,
+                "CVV": ,
+                "expdate":
+            },
+            "Netbanking":
+        },
+        "Order": {
+            "Order": {
+                "OrderID": ,
+                "UserID": ,
+                "ShopName": ,
+                "AddressID": ,
+                "product": ,
+                "payment":
+            }
+        }
+    }
+}
