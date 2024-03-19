@@ -63,7 +63,10 @@
                 "CVV": ,
                 "expdate":
             },
-            "Netbanking":
+            "Netbanking": {
+                "userid": ,
+                "password":
+            }
         },
         "Order": {
             "Order": {
