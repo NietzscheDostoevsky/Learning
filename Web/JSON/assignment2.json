@@ -31,12 +31,30 @@
             }
         },
         "UserAddress": {
-            "Address":
+            "Address": {
+                "addressID": ,
+                "BuildindName": ,
+                "Area": ,
+                "City": ,
+                "State": ,
+                "Country": ,
+                "AddressType":
+            }
         },
         "UserCart": {
-            "AddToCart": ,
-            "UpdateCart": ,
-            "RemoveFromCart":
+            "AddToCart": {
+                "Product": ,
+                "Quantity": ,
+                "Price":
+            },
+            "UpdateCart": {
+                "Product": ,
+                "Quantity": ,
+                "Price":
+            },
+            "RemoveFromCart": {
+                "Product":
+            }
         },
         "PaymentMethod": {
             "DebitCard": ,
