@@ -1,10 +1,10 @@
 {
     "Food": {
-        "UserInterface": ,
-        "MerchantInterface": ,
-        "UserAddress": ,
-        "UserCart": ,
-        "PaymentMethod": ,
-        "Order":
+        "UserInterface": {"Register": , "Login": },
+        "MerchantInterface": {"Register": , "Login": },
+        "UserAddress": {"Address":},
+        "UserCart": {"AddToCart": , "UpdateCart": , "RemoveFromCart": },
+        "PaymentMethod": {"DebitCard": , "Netbanking": },
+        "Order": {"Order":  }
     }
 }
