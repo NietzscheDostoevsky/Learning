@@ -57,11 +57,23 @@
             }
         },
         "PaymentMethod": {
-            "DebitCard": ,
+            "DebitCard": {
+                "CardHolderName": ,
+                "CardNumber": ,
+                "CVV": ,
+                "expdate":
+            },
             "Netbanking":
         },
         "Order": {
-            "Order":
+            "Order": {
+                "OrderID": ,
+                "UserID": ,
+                "ShopName": ,
+                "AddressID": ,
+                "product": ,
+                "payment":
+            }
         }
     }
 }
