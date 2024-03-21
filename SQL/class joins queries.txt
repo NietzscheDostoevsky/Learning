@@ -1,0 +1,95 @@
+select ename, dname
+from dept left outer join emp
+on dept.deptno = emp.deptno
+where ename is  null ; 
+
+
+SELECT ENAME, DNAME, JOB 
+FROM DEPT LEFT OUTER JOIN EMP 
+ON DEPT.DEPTNO = EMP.DEPTNO 
+WHERE EMP.JOB IN ('CLERK', 'MANAGER')
+
+
+SELECT DNAME, ENAME
+FROM DEPT LEFT  JOIN EMP 
+ON DEPT.DEPTNO = EMP.DEPTNO 
+
+
+select ename, d1.dname, d2.dname
+from emp inner join dept d1 
+on emp.deptno = d1.deptno 
+right join dept d2 
+on emp.deptno = d2.deptno 
+where emp.job = 'MANAGER'
+AND d2.dname is not null ; 
+
+
+
+waqtd first_name, item, amouint, status, 
+check if all the customers are ordered or not and that order got shipping or not 
+
+ 	SELECT customers.first_name, item, status
+		FROM CUSTOMERS
+		LEFT JOIN ORDERS
+	    ON CUSTOMERS.CUSTOMER_ID = ORDERS.CUSTOMER_ID
+	    LEFT JOIN SHIPPINGS
+	    ON ORDERS.CUSTOMER_ID = SHIPPINGS.CUSTOMER
+
+
+	SELECT C.first_name, item, status
+FROM CUSTOMERS as C
+	LEFT JOIN ORDERS as O
+    ON C.CUSTOMER_ID = O.CUSTOMER_ID
+    LEFT JOIN SHIPPINGS as S
+    ON O.CUSTOMER_ID = S.CUSTOMER
+
+Ques. WAQTD ename, deptno, loc, 
+check if all the employees are working in some project or not. 
+
+	SELECT ENAME, DEPTNO, LOC 
+	FROM EMP LEFT JOIN PROJECT 
+		ON EMP.EMPID = PROJECT.EMPID 
+
+;
+
+SELECT ENAME, DNAME
+FROM EMP FULL OUTER JOIN DEPT 
+ON EMP.DEPTNO = DEPT.DEPTNO
+
+SELECT SALGRADE, DNAME
+FROM EMP FULL OUTER JOIN DEPT 
+ON EMP.DEPTNO = DEPT.DEPTNO
+
+SELECT e.ename  employee, m.ename  manager
+FROM EMP  e INNER JOIN EMP  m
+ON e.MGR = m.EMPNO 
+
+SELECT e.ename  employee, 
+		m.ename  manager,
+		de.loc,
+		dm.dept,
+		e.sal esal,
+		m.sal msal,
+		e.job ejob,
+		m.job mjob
+FROM EMP  e  JOIN EMP  m
+ON e.MGR = m.EMPNO 
+inner join dept on m.deptno = dept.deptno
+
+SELECT e.ename  employee, 
+		m.ename  manager,
+		de.loc,
+		dm.dname
+FROM EMP  e  JOIN EMP  m
+ON e.MGR = m.EMPNO 
+inner join dept de on e.deptno = de.deptno
+inner join dept dm on m.deptno = dm.deptno
+
+QUES . WAQTD ename, manager name, . check if all the departments have some managers or not. 
+
+SELECT e.ename  employee, 
+		m.ename  manager,
+		dm.dname
+FROM EMP  e  JOIN EMP  m
+ON e.MGR = m.EMPNO 
+right outer join dept dm on m.deptno = dm.deptno
