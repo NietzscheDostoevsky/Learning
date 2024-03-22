@@ -1,0 +1,6 @@
+5.
+
+SELECT * 
+FROM EMP
+WHERE SUBSTR(ENAME,1,1) = 'S' OR 
+	  SUBSTR(ENAME,1,1) = 'A' 
