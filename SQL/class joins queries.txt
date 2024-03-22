@@ -90,6 +90,20 @@ QUES . WAQTD ename, manager name, . check if all the departments have some manag
 SELECT e.ename  employee, 
 		m.ename  manager,
 		dm.dname
-FROM EMP  e  JOIN EMP  m
+FROM 
+EMP  e  JOIN EMP  m
 ON e.MGR = m.EMPNO 
 right outer join dept dm on m.deptno = dm.deptno
+
+SELECT e.ename  employee, 
+		m.ename  manager,
+		dm.dname
+FROM 
+DEPT dm left outer join emp e
+on dm.deptno = e.deptno 
+inner join emp m on e.mgr = m.empno
+
+
+SELECT distinct(E1.mgr)
+FROM EMP E1 join EMP E2 
+on E1.ename = e2.ename
