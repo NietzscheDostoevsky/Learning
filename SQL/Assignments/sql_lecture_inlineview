@@ -1,0 +1,25 @@
+select *
+from ( select rownum r1 , emp.* from emp)
+where mod(r1,2) =0 ;
+
+
+select *
+from ( select rownum r1 , emp.* from emp order by sal)
+where rownum = 1 
+
+
+select *
+from ( select rownum r1 , emp.* from emp order by r1 desc)
+
+select * 
+from ( select rownum r1, emp.* from emp order by r1 desc)
+
+
+MAX SAL 
+
+select * 
+from ( select rownum r1, emp.* 
+        from emp
+        order by sal desc)
+where rownum = 1;
+
