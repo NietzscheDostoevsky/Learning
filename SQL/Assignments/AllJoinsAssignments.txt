@@ -268,3 +268,25 @@ WHERE SAL IN ( SELECT SAL
 			   FROM EMP 
 			   GROUP BY SAL 
 			   HAVING COUNT(*)>1)
+
+
+select ename
+from emp
+where sal in ( select sal 
+				from emp
+				group by sal
+				having count(*) > 1)
+
+select e1.ename
+from emp e1 join emp e2
+on e1.sal = e2.sal 
+where e1.empno != e2.empno 
+
+select ename 
+from emp
+where comm is not null 
+and comm in ( select comm 
+				from emp
+				where  comm is not null 
+				group by comm
+				having count(*)>1 )
