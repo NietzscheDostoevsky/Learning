@@ -1,0 +1,93 @@
+CREATE TABLE articles (
+    article_id NUMBER(20) PRIMARY KEY,
+    title VARCHAR2(255) NOT NULL,
+    subtitle VARCHAR2(255) NOT NULL,
+    author_id VARCHAR2(255) NOT NULL,
+    pubdate TIMESTAMP NOT NULL,
+    category_id NUMBER(20) NOT NULL,
+    location_id NUMBER(20),
+    category_id2 NUMBER(20) NOT NULL,
+    category_id3 NUMBER(20) NOT NULL,
+    location_id NUMBER(20) NOT NULL,
+    url VARCHAR2(255) NOT NULL,
+    source_id NUMBER(20) NOT NULL,
+    lang_id NUMBER(20) NOT NULL,
+    type_id NUMBER(20) NOT NULL
+);
+
+CREATE TABLE locations (
+    location_id NUMBER(20) PRIMARY KEY,
+    location VARCHAR2(255) NOT NULL,
+    location_data VARCHAR2(255) NOT NULL
+);
+
+CREATE TABLE userprofile (
+    user_id NUMBER(20) PRIMARY KEY,
+    username VARCHAR2(255) NOT NULL,
+    email VARCHAR2(255) NOT NULL,
+    phone NUMBER(20) NOT NULL,
+    regdate DATE NOT NULL,
+    preference_id NUMBER(20) NOT NULL
+);
+
+CREATE TABLE sources (
+    sources_id NUMBER(20) PRIMARY KEY,
+    source_name VARCHAR2(255) NOT NULL,
+    source_desc VARCHAR2(255) NOT NULL,
+    source_bias NUMBER(20) NOT NULL,
+    source_rating NUMBER(20) NOT NULL
+);
+
+CREATE TABLE type (
+    type_id NUMBER(20) PRIMARY KEY,
+    type_name VARCHAR2(255) NOT NULL,
+    type_desc VARCHAR2(255) NOT NULL
+);
+
+CREATE TABLE userAuthentication (
+    user_id NUMBER(20) PRIMARY KEY,
+    pass_hash NUMBER(20) NOT NULL
+);
+
+CREATE TABLE UserPreferences (
+    preference_id NUMBER(20) PRIMARY KEY,
+    category_id_1 NUMBER(20) NOT NULL,
+    category_id_2 NUMBER(20) NOT NULL,
+    category_id_3 NUMBER(20) NOT NULL,
+    category_id_4 NUMBER(20) NOT NULL,
+    category_id_5 NUMBER(20) NOT NULL
+);
+
+CREATE TABLE language (
+    lang_id NUMBER(20) PRIMARY KEY,
+    language VARCHAR2(255) NOT NULL,
+    lang_desc VARCHAR2(255) NOT NULL
+);
+
+CREATE TABLE authors (
+    author_id NUMBER(20) PRIMARY KEY,
+    author_name VARCHAR2(255) NOT NULL,
+    author_desc VARCHAR2(255) NOT NULL
+);
+
+CREATE TABLE category (
+    category_id NUMBER(20) PRIMARY KEY,
+    category_name VARCHAR2(255) NOT NULL,
+    category_desc VARCHAR2(255) NOT NULL
+);
+
+ALTER TABLE UserPreferences ADD CONSTRAINT userpreferences_category_id_1_foreign FOREIGN KEY (category_id_1) REFERENCES category(category_id);
+ALTER TABLE UserPreferences ADD CONSTRAINT userpreferences_category_id_2_foreign FOREIGN KEY (category_id_2) REFERENCES category(category_id);
+ALTER TABLE articles ADD CONSTRAINT articles_category_id3_foreign FOREIGN KEY (category_id3) REFERENCES category(category_id);
+ALTER TABLE articles ADD CONSTRAINT articles_source_id_foreign FOREIGN KEY (source_id) REFERENCES sources(sources_id);
+ALTER TABLE articles ADD CONSTRAINT articles_author_id_foreign FOREIGN KEY (author_id) REFERENCES authors(author_id);
+ALTER TABLE articles ADD CONSTRAINT articles_category_id2_foreign FOREIGN KEY (category_id2) REFERENCES category(category_id);
+ALTER TABLE articles ADD CONSTRAINT articles_lang_id_foreign FOREIGN KEY (lang_id) REFERENCES language(lang_id);
+ALTER TABLE articles ADD CONSTRAINT articles_type_id_foreign FOREIGN KEY (type_id) REFERENCES type(type_id);
+ALTER TABLE UserPreferences ADD CONSTRAINT userpreferences_category_id_3_foreign FOREIGN KEY (category_id_3) REFERENCES category(category_id);
+ALTER TABLE userAuthentication ADD CONSTRAINT userauthentication_user_id_foreign FOREIGN KEY (user_id) REFERENCES userprofile(user_id);
+ALTER TABLE UserPreferences ADD CONSTRAINT userpreferences_category_id_5_foreign FOREIGN KEY (category_id_5) REFERENCES category(category_id);
+ALTER TABLE UserPreferences ADD CONSTRAINT userpreferences_category_id_4_foreign FOREIGN KEY (category_id_4) REFERENCES category(category_id);
+ALTER TABLE articles ADD CONSTRAINT articles_location_id_foreign FOREIGN KEY (location_id) REFERENCES locations(location_id);
+ALTER TABLE userprofile ADD CONSTRAINT userprofile_preference_id_foreign FOREIGN KEY (preference_id) REFERENCES UserPreferences(preference_id);
+ALTER TABLE articles ADD CONSTRAINT articles_category_id_foreign FOREIGN KEY (category_id) REFERENCES category(category_id);
