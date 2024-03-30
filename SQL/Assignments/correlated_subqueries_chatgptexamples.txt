@@ -1,0 +1,35 @@
+select deptno, avg(sal) as avgsal
+from ( 
+		select deptno, sal
+		from emp)
+group by deptno
+
+
+SELECT EMPNO, ENAME, SAL, DEPTNO
+FROM EMP E
+WHERE SAL > ( SELECT AVG(SAL)
+			   FROM EMP 
+			   WHERE DEPTNO = E.DEPTNO )
+
+
+SELECT P.PRICE, P.PRODUCT_ID, P.CATEGORY
+FROM PRODUCT P
+WHERE P.PRICE = (SELECT MAX(P2.PRICE)
+				 FROM PRODUCT P2
+				 WHERE P2.CATEGORY = P.CATEGORY)
+
+
+SELECT s.transaction_id, s.transaction_date, s.amount, 
+	( SELECT SUM(s2.amount)
+	  FROM sales s2
+	  WHERE s2.transaction_date <= s.transaction_date) as running_total
+FROM sales s;
+
+SELECT sp.date, sp.symbol, sp.price,
+       (SELECT AVG(sp2.price)
+        FROM stock_prices sp2
+        WHERE sp2.symbol = sp.symbol
+          AND sp2.date BETWEEN DATEADD(DAY, -6, sp.date) AND sp.date
+       ) AS moving_avg_price
+FROM stock_prices sp;
+ 7 day moving avg of stock 
