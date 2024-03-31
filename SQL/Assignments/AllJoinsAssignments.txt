@@ -290,3 +290,6 @@ and comm in ( select comm
 				where  comm is not null 
 				group by comm
 				having count(*)>1 )
+
+
+SELECT REVERSE('$' || (SUBSTR(REVERSE(ENAME), 2))) FROM EMP; 
