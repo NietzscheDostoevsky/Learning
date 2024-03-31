@@ -1,77 +1,77 @@
 CREATE TABLE articles (
-    article_id NUMBER(20) PRIMARY KEY,
+    article_id NUMBER PRIMARY KEY,
     title VARCHAR2(255) NOT NULL,
     subtitle VARCHAR2(255) NOT NULL,
     author_id VARCHAR2(255) NOT NULL,
     pubdate TIMESTAMP NOT NULL,
-    category_id NUMBER(20) NOT NULL,
-    location_id NUMBER(20),
-    category_id2 NUMBER(20) NOT NULL,
-    category_id3 NUMBER(20) NOT NULL,
-    location_id NUMBER(20) NOT NULL,
+    category_id NUMBER NOT NULL,
+    location_id NUMBER,
+    category_id2 NUMBER NOT NULL,
+    category_id3 NUMBER NOT NULL,
+    location_id NUMBER NOT NULL,
     url VARCHAR2(255) NOT NULL,
-    source_id NUMBER(20) NOT NULL,
-    lang_id NUMBER(20) NOT NULL,
-    type_id NUMBER(20) NOT NULL
+    source_id NUMBER NOT NULL,
+    lang_id NUMBER NOT NULL,
+    type_id NUMBER NOT NULL
 );
 
 CREATE TABLE locations (
-    location_id NUMBER(20) PRIMARY KEY,
+    location_id NUMBER PRIMARY KEY,
     location VARCHAR2(255) NOT NULL,
     location_data VARCHAR2(255) NOT NULL
 );
 
 CREATE TABLE userprofile (
-    user_id NUMBER(20) PRIMARY KEY,
+    user_id NUMBER PRIMARY KEY,
     username VARCHAR2(255) NOT NULL,
     email VARCHAR2(255) NOT NULL,
-    phone NUMBER(20) NOT NULL,
+    phone NUMBER NOT NULL,
     regdate DATE NOT NULL,
-    preference_id NUMBER(20) NOT NULL
+    preference_id NUMBER NOT NULL
 );
 
 CREATE TABLE sources (
-    sources_id NUMBER(20) PRIMARY KEY,
+    sources_id NUMBER PRIMARY KEY,
     source_name VARCHAR2(255) NOT NULL,
     source_desc VARCHAR2(255) NOT NULL,
-    source_bias NUMBER(20) NOT NULL,
-    source_rating NUMBER(20) NOT NULL
+    source_bias NUMBER NOT NULL,
+    source_rating NUMBER NOT NULL
 );
 
 CREATE TABLE type (
-    type_id NUMBER(20) PRIMARY KEY,
+    type_id NUMBER PRIMARY KEY,
     type_name VARCHAR2(255) NOT NULL,
     type_desc VARCHAR2(255) NOT NULL
 );
 
 CREATE TABLE userAuthentication (
-    user_id NUMBER(20) PRIMARY KEY,
-    pass_hash NUMBER(20) NOT NULL
+    user_id NUMBER PRIMARY KEY,
+    pass_hash NUMBER NOT NULL
 );
 
 CREATE TABLE UserPreferences (
-    preference_id NUMBER(20) PRIMARY KEY,
-    category_id_1 NUMBER(20) NOT NULL,
-    category_id_2 NUMBER(20) NOT NULL,
-    category_id_3 NUMBER(20) NOT NULL,
-    category_id_4 NUMBER(20) NOT NULL,
-    category_id_5 NUMBER(20) NOT NULL
+    preference_id NUMBER PRIMARY KEY,
+    category_id_1 NUMBER NOT NULL,
+    category_id_2 NUMBER NOT NULL,
+    category_id_3 NUMBER NOT NULL,
+    category_id_4 NUMBER NOT NULL,
+    category_id_5 NUMBER NOT NULL
 );
 
 CREATE TABLE language (
-    lang_id NUMBER(20) PRIMARY KEY,
+    lang_id NUMBER PRIMARY KEY,
     language VARCHAR2(255) NOT NULL,
     lang_desc VARCHAR2(255) NOT NULL
 );
 
 CREATE TABLE authors (
-    author_id NUMBER(20) PRIMARY KEY,
+    author_id NUMBER PRIMARY KEY,
     author_name VARCHAR2(255) NOT NULL,
     author_desc VARCHAR2(255) NOT NULL
 );
 
 CREATE TABLE category (
-    category_id NUMBER(20) PRIMARY KEY,
+    category_id NUMBER PRIMARY KEY,
     category_name VARCHAR2(255) NOT NULL,
     category_desc VARCHAR2(255) NOT NULL
 );
