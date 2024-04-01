@@ -15,10 +15,23 @@ c = conn.cursor()
 # Table Creation 
 
 c.execute(""" CREATE TABLE CUSTOMERS (
-            FIRSTNAME DATATYPE,
-            LASTNAME DATATYPE , 
-            EMAIL DATATYPE
+            FIRSTNAME text,
+            LASTNAME text , 
+            EMAIL text
           ) """)
 
 # If not using docstrings, the commands have to be written as a single line, shown below. 
 # c.execute("CREATE TABLE CUSTOMERS (FIRSTNAME DATATYPE, LASTNAME DATATYPE , EMAIL DATATYPE)")
+
+# SQLlite has only 5 datatypes 
+  # NULL 
+  # INTEGER 
+  # REAL - like float 
+  # TEXT 
+  # BLOB - binary
+
+# Commit our command
+conn.commit()
+
+# Close the connection 
+conn.close()
