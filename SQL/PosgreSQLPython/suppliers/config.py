@@ -4,6 +4,9 @@
 # function called load_config() that 
 # reads configuration data from the database.ini file:
 
+
+# By using the database.ini, you can change the PostgreSQL connection parameters 
+# when moving the code to the production environment.
 from configparser import ConfigParser
 
 def load_config(filename='database.ini', section='postgresql'):
