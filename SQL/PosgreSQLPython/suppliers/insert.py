@@ -93,4 +93,20 @@ def insert_many_vendors(vendor_list):
     finally:
         return rows    
     
+# INSERTING DATA INTO THE TABLE USING THE ABOVE FUNCTIONS 
+# -------------------------------------------------------
+
+if __name__ == '__main__':
+    insert_vendor("3M Co.")
+
+    insert_many_vendors([
+        ('AKM Semiconductor Inc.',),
+        ('Asahi Glass Co Ltd.',),
+        ('Daikin Industries Ltd.',),
+        ('Dynacast International Inc.',),
+        ('Foster Electric Co. Ltd.',),
+        ('Murata Manufacturing Co. Ltd.',)
+    ])    
+
+    
 
