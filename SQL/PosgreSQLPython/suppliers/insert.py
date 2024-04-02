@@ -52,7 +52,7 @@ def insert_vendor(vendor_name):
                 # commit the changes to the database
                 conn.commit()
     except (Exception, psycopg2.DatabaseError) as error:
-        print(error)    
+        print("ERROR in single : " , error)    
     finally:
         return vendor_id
     
@@ -89,7 +89,7 @@ def insert_many_vendors(vendor_list):
                 # commit the changes to the database
                 conn.commit()
     except (Exception, psycopg2.DatabaseError) as error:
-        print(error)    
+        print("ERROR in many : ", error)    
     finally:
         return rows    
     
