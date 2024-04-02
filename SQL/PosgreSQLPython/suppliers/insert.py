@@ -13,3 +13,49 @@
 #
 # --------------------------------------------------------------------------------------
 
+# INSERTING ONE ROW INTO THE TABLE 
+# The following insert_vendor() function inserts a new row 
+# into the vendors table and returns the inserted vendor_id.
+
+import psycopg2
+from config import load_config
+
+
+def insert_vendor(vendor_name):
+    """ Insert a new vendor into the vendors table """
+
+    sql = """INSERT INTO vendors(vendor_name)
+             VALUES(%s) RETURNING vendor_id;"""
+    
+    vendor_id = None
+    config = load_config()
+
+    try:
+        with  psycopg2.connect(**config) as conn:
+            with  conn.cursor() as cur:
+                # execute the INSERT statement
+                cur.execute(sql, (vendor_name,))   # execute(query, vars=None) 
+                                                   # Execute a database operation (query or command).
+                                                   # Parameters may be provided as sequence or mapping 
+                                                   # and will be bound to variables in the operation.
+                                                   # Variables are specified either with positional (%s) or 
+                                                   # named (%(name)s) placeholders. 
+                                                   # If a query was executed, the returned values can be 
+                                                   # retrieved using fetch*() methods.
+
+                # get the generated id back                
+                rows = cur.fetchone()
+                if rows:
+                    vendor_id = rows[0]
+
+                # commit the changes to the database
+                conn.commit()
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)    
+    finally:
+        return vendor_id
+    
+
+if __name__ == '__main__':
+    insert_vendor("3M Co.")
+
