@@ -14,6 +14,7 @@
 # --------------------------------------------------------------------------------------
 
 # INSERTING ONE ROW INTO THE TABLE 
+# ---------------------------------------------------------
 # The following insert_vendor() function inserts a new row 
 # into the vendors table and returns the inserted vendor_id.
 
@@ -58,4 +59,38 @@ def insert_vendor(vendor_name):
 
 if __name__ == '__main__':
     insert_vendor("3M Co.")
+
+
+# INSERTING MULTIPLE ROWS INTO THE TABLE 
+# ----------------------------------------
+# The steps for inserting multiple rows into a table are
+# similar to the steps of inserting one row. 
+# The key difference is in the third step: 
+# instead of calling the execute() method of the cursor object, 
+# you use the  executemany() method.
+
+
+def insert_many_vendors(vendor_list):
+    """ Insert multiple vendors into the vendors table  """
+
+    sql = "INSERT INTO vendors(vendor_name) VALUES(%s) RETURNING *"
+    config = load_config()
+    rows = []
+
+    try:
+        with  psycopg2.connect(**config) as conn:
+            with  conn.cursor() as cur:
+                # execute the INSERT statement
+                cur.executemany(sql, vendor_list)
+
+                # obtain the inserted rows
+                rows = cur.fetchall()
+
+                # commit the changes to the database
+                conn.commit()
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)    
+    finally:
+        return rows    
+    
 
