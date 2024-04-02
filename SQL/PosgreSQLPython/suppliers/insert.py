@@ -36,7 +36,7 @@ def insert_vendor(vendor_name):
             with  conn.cursor() as cur:
                 # execute the INSERT statement
                 cur.execute(sql, (vendor_name,))   # execute(query, vars=None) 
-                                                   # Execute a database operation (query or command).
+                print("Added a single row")        # Execute a database operation (query or command).
                                                    # Parameters may be provided as sequence or mapping 
                                                    # and will be bound to variables in the operation.
                                                    # Variables are specified either with positional (%s) or 
@@ -56,9 +56,6 @@ def insert_vendor(vendor_name):
     finally:
         return vendor_id
     
-
-if __name__ == '__main__':
-    insert_vendor("3M Co.")
 
 
 # INSERTING MULTIPLE ROWS INTO THE TABLE 
@@ -82,12 +79,14 @@ def insert_many_vendors(vendor_list):
             with  conn.cursor() as cur:
                 # execute the INSERT statement
                 cur.executemany(sql, vendor_list)
+                print("Executed many insert")
+                conn.commit()
 
                 # obtain the inserted rows
                 rows = cur.fetchall()
 
                 # commit the changes to the database
-                conn.commit()
+                
     except (Exception, psycopg2.DatabaseError) as error:
         print("ERROR in many : ", error)    
     finally:
