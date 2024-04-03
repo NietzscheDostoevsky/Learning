@@ -37,7 +37,7 @@ def update_vendor(vendor_id, vendor_name):
             # commit the changes to the database
             conn.commit()
     except (Exception, psycopg2.DatabaseError) as error:
-        print(error)    
+        print("There is an error: ", error)    
     finally:
         return updated_row_count
 
