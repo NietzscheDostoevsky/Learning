@@ -80,6 +80,10 @@ def create_tables():
         """
             ,
         """
+        CREATE TABLE `language`(
+            `lang_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `language` VARCHAR(255) NOT NULL,
+            `lang_desc` VARCHAR(255) NOT NULL
         """
             ,
         """
