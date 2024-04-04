@@ -25,7 +25,7 @@ def drop_database(databaseName):
     
     try:
         cur.execute(command)
-        print(f"dropd Database : {dbName} : successfully")
+        print(f"DROPed Database : {dbName} : successfully")
     except (psycopg2.DatabaseError, Exception) as error:
         print(error)
 
