@@ -70,6 +70,13 @@ def create_tables():
         """
             ,
         """
+        CREATE TABLE `UserPreferences`(
+            `preference_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `category_id_1` BIGINT NOT NULL,
+            `category_id_2` BIGINT NOT NULL,
+            `category_id_3` BIGINT NOT NULL,
+            `category_id_4` BIGINT NOT NULL,
+            `category_id_5` BIGINT NOT NULL
         """
             ,
         """
