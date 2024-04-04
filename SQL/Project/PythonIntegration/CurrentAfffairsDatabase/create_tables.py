@@ -36,28 +36,55 @@ def create_tables():
                 )
         """,
         """
-        CREATE TABLE part_drawings (
-                part_id INTEGER PRIMARY KEY,
-                file_extension VARCHAR(5) NOT NULL,
-                drawing_data BYTEA NOT NULL,
-                FOREIGN KEY (part_id)
-                REFERENCES parts (part_id)
-                ON UPDATE CASCADE ON DELETE CASCADE
+        CREATE TABLE userprofile (
+                `user_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                `username` VARCHAR(255) NOT NULL,
+                `email` VARCHAR(255) NOT NULL,
+                `phone` BIGINT NOT NULL,
+                `regdate` DATE NOT NULL,
+                `preference_id` BIGINT NOT NULL
         )
         """,
         """
-        CREATE TABLE vendor_parts (
-                vendor_id INTEGER NOT NULL,
-                part_id INTEGER NOT NULL,
-                PRIMARY KEY (vendor_id , part_id),
-                FOREIGN KEY (vendor_id)
-                    REFERENCES vendors (vendor_id)
-                    ON UPDATE CASCADE ON DELETE CASCADE,
-                FOREIGN KEY (part_id)
-                    REFERENCES parts (part_id)
-                    ON UPDATE CASCADE ON DELETE CASCADE
+        CREATE TABLE `sources`(
+                `sources_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                `source_name` VARCHAR(255) NOT NULL,
+                `source_desc` VARCHAR(255) NOT NULL,
+                `source_bias` BIGINT NOT NULL,
+                `source_rating` BIGINT NOT NULL
         )
-        """]
+        """
+            ,
+        """
+        CREATE TABLE `type`(
+        `type_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        `type` VARCHAR(255) NOT NULL,
+        `type_desc` VARCHAR(255) NOT NULL
+        )
+        """
+            ,
+        """
+        
+        """
+            ,
+        """
+        """
+            ,
+        """
+        """
+            ,
+        """
+        """
+            ,
+        """
+        """
+            ,
+        
+        
+        
+        
+        
+        ]
     try:
         config = load_config()
         with psycopg2.connect(**config) as conn:
