@@ -1,1 +1,3 @@
-Using SQllite for now
+~~ Using SQllite for now ~~
+
+Switched to Postgres
