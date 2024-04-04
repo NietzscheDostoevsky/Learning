@@ -12,21 +12,20 @@ def create_tables():
     commands = [
         """
         CREATE TABLE articles (
-            article_id  NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            title  NOT NULL,
-            subtitle  NOT NULL,
-            author_id  NOT NULL,
-            pubdate  NOT NULL,
-            category_id  NOT NULL,
-            location_id  NULL,
-            category_id  NOT NULL,
-            category_id2  NOT NULL,
-            category_id3  NOT NULL,
-            location_id  NOT NULL,
-            url  NOT NULL,
-            source_id  NOT NULL,
-            lang_id  NOT NULL,
-            type_id  NOT NULL
+            article_id SERIAL PRIMARY KEY,
+            title VARCHAR(511) NOT NULL,
+            subtitle VARCHAR(255) ,
+            author_id INTEGER ,
+            pubdate DATE NOT NULL,
+            category_id INTEGER NOT NULL,
+            location_id INTEGER ,
+            category_id2 INTEGER ,
+            category_id3 INTEGER ,
+            location_id INTEGER ,
+            url VARCHAR(511),
+            source_id INTEGER NOT NULL,
+            lang_id INTEGER ,
+            type_id INTEGER
         )
         """,
         """ 
