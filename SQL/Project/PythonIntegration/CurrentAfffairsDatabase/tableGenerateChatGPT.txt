@@ -1,0 +1,92 @@
+CREATE TABLE articles (
+    article_id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    subtitle VARCHAR(255) NOT NULL,
+    author_id VARCHAR(255) NOT NULL,
+    pubdate TIMESTAMP NOT NULL,
+    category_id BIGINT NOT NULL,
+    location_id BIGINT NULL,
+    category_id2 BIGINT NOT NULL,
+    category_id3 BIGINT NOT NULL,
+    category_id4 BIGINT NOT NULL,
+    url BIGINT NOT NULL,
+    source_id BIGINT NOT NULL,
+    lang_id BIGINT NOT NULL,
+    type_id BIGINT NOT NULL,
+    CONSTRAINT articles_category_id_fk FOREIGN KEY (category_id) REFERENCES category (category_id),
+    CONSTRAINT articles_category_id2_fk FOREIGN KEY (category_id2) REFERENCES category (category_id),
+    CONSTRAINT articles_category_id3_fk FOREIGN KEY (category_id3) REFERENCES category (category_id),
+    CONSTRAINT articles_category_id4_fk FOREIGN KEY (category_id4) REFERENCES category (category_id),
+    CONSTRAINT articles_location_id_fk FOREIGN KEY (location_id) REFERENCES locations (location_id),
+    CONSTRAINT articles_source_id_fk FOREIGN KEY (source_id) REFERENCES sources (sources_id),
+    CONSTRAINT articles_lang_id_fk FOREIGN KEY (lang_id) REFERENCES language (lang_id),
+    CONSTRAINT articles_type_id_fk FOREIGN KEY (type_id) REFERENCES type (type_id)
+);
+
+CREATE TABLE locations (
+    location_id SERIAL PRIMARY KEY,
+    location VARCHAR(255) NOT NULL,
+    location_data VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE userprofile (
+    user_id SERIAL PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone BIGINT NOT NULL,
+    regdate DATE NOT NULL,
+    preference_id BIGINT NOT NULL,
+    CONSTRAINT userprofile_preference_id_fk FOREIGN KEY (preference_id) REFERENCES UserPreferences (preference_id)
+);
+
+CREATE TABLE sources (
+    source_id SERIAL PRIMARY KEY,
+    source_name VARCHAR(255) NOT NULL,
+    source_desc VARCHAR(255) NOT NULL,
+    source_bias BIGINT NOT NULL,
+    source_rating BIGINT NOT NULL
+);
+
+CREATE TABLE type (
+    type_id SERIAL PRIMARY KEY,
+    type_name VARCHAR(255) NOT NULL,
+    type_desc VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE userAuthentication (
+    user_id SERIAL PRIMARY KEY,
+    pass_hash BIGINT NOT NULL,
+    CONSTRAINT userauthentication_user_id_fk FOREIGN KEY (user_id) REFERENCES userprofile (user_id)
+);
+
+CREATE TABLE UserPreferences (
+    preference_id SERIAL PRIMARY KEY,
+    category_id_1 BIGINT NOT NULL,
+    category_id_2 BIGINT NOT NULL,
+    category_id_3 BIGINT NOT NULL,
+    category_id_4 BIGINT NOT NULL,
+    category_id_5 BIGINT NOT NULL,
+    CONSTRAINT userpreferences_category_id_1_fk FOREIGN KEY (category_id_1) REFERENCES category (category_id),
+    CONSTRAINT userpreferences_category_id_2_fk FOREIGN KEY (category_id_2) REFERENCES category (category_id),
+    CONSTRAINT userpreferences_category_id_3_fk FOREIGN KEY (category_id_3) REFERENCES category (category_id),
+    CONSTRAINT userpreferences_category_id_4_fk FOREIGN KEY (category_id_4) REFERENCES category (category_id),
+    CONSTRAINT userpreferences_category_id_5_fk FOREIGN KEY (category_id_5) REFERENCES category (category_id)
+);
+
+CREATE TABLE language (
+    lang_id SERIAL PRIMARY KEY,
+    language VARCHAR(255) NOT NULL,
+    lang_desc VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE authors (
+    author_id SERIAL PRIMARY KEY,
+    author_name VARCHAR(255) NOT NULL,
+    author_desc VARCHAR(255) NOT NULL -- Description about the author
+);
+
+CREATE TABLE category (
+    category_id SERIAL PRIMARY KEY,
+    category_name VARCHAR(255) NOT NULL,
+    category_desc VARCHAR(255) NOT NULL
+);
