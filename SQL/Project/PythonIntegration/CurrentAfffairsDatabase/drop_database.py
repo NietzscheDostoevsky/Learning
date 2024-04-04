@@ -1,7 +1,5 @@
-# Crete tables in the CurrentAffairs Database with the 
-# requried constrains. 
-# The tables can be altered later and use this script to 
-# create them again based on the new requirements. 
+# DROP database with the given name which can be 
+# edited in the variable databaseName
 # ---------------------------------------------------------
 
 import psycopg2
@@ -9,8 +7,8 @@ from config import load_config
 
 databaseName = "CURRENTAFFAIRS" # Set database name here 
 
-def create_database(databaseName):
-    """ Create tables in the PostgreSQL database
+def drop_database(databaseName):
+    """ drop database in the PostgreSQL database
         
         Args:
             databaseName (string): The name of the Database 
@@ -22,15 +20,15 @@ def create_database(databaseName):
     conn = psycopg2.connect(**config)
     conn.autocommit = True
     cur = conn.cursor()
-    command = f"""CREATE DATABASE {dbName}"""
+    command = f"""DROP DATABASE {dbName}"""
      
     
     try:
         cur.execute(command)
-        print(f"Created Database : {dbName} : successfully")
+        print(f"dropd Database : {dbName} : successfully")
     except (psycopg2.DatabaseError, Exception) as error:
         print(error)
 
 
 if __name__ == '__main__':
-    create_database(databaseName)
+    drop_database(databaseName)
