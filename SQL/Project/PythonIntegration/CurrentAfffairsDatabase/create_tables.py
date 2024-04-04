@@ -9,7 +9,7 @@ from config import load_config
 
 def create_tables():
     """ Create tables in the PostgreSQL database"""
-    commands = (
+    commands = [
         """
         CREATE TABLE vendors (
             vendor_id SERIAL PRIMARY KEY,
@@ -43,7 +43,7 @@ def create_tables():
                     REFERENCES parts (part_id)
                     ON UPDATE CASCADE ON DELETE CASCADE
         )
-        """)
+        """]
     try:
         config = load_config()
         with psycopg2.connect(**config) as conn:
@@ -51,6 +51,8 @@ def create_tables():
                 # execute the CREATE TABLE statement
                 for command in commands:
                     cur.execute(command)
+                    tablename = command.split()[2]
+                    print(f"Created Table - {tablename} successfully") 
     except (psycopg2.DatabaseError, Exception) as error:
         print(error)
 
