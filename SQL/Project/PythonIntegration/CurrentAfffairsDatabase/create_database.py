@@ -7,6 +7,8 @@
 import psycopg2
 from config import load_config
 
+databaseName = "test" # Set database name here 
+
 def create_database(databaseName):
     """ Create tables in the PostgreSQL database
         
@@ -14,21 +16,21 @@ def create_database(databaseName):
             databaseName (string): The name of the Database 
             
     """
-    commands = [
-    """
-    """
-       ]
+
+    dbName = databaseName
+    config = load_config()
+    conn = psycopg2.connect(**config)
+    conn.autocommit = True
+    cur = conn.cursor()
+    command = f"""CREATE DATABASE {dbName}"""
+     
+    
     try:
-        config = load_config()
-        with psycopg2.connect(**config) as conn:
-            with conn.cursor() as cur:
-                # execute the CREATE TABLE statement
-                for command in commands:
-                    cur.execute(command)
-                    tablename = command.split()[2]
-                    print(f"Created Table - {tablename} successfully") 
+        cur.execute(command)
+        print(f"Created Database : {dbName} : successfully")
     except (psycopg2.DatabaseError, Exception) as error:
         print(error)
 
+
 if __name__ == '__main__':
-    create_tables()
+    create_database(databaseName)
