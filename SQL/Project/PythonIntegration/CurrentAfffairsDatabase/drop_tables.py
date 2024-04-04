@@ -1,3 +1,12 @@
+# ---------------------------------
+# WARNING 
+#----------------------------------
+#
+# CODE NOT COMPLETE AND NOT WORKING 
+#
+#----------------------------------
+
+
 import psycopg2
 from config import load_config
 
