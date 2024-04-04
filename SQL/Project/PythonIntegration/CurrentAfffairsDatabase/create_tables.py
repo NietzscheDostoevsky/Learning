@@ -15,6 +15,7 @@ def create_tables():
             article_id SERIAL PRIMARY KEY,
             title VARCHAR(511) NOT NULL,
             subtitle VARCHAR(255) ,
+            articletext TEXT NOT NULL,
             author_id INTEGER ,
             pubdate DATE NOT NULL,
             category_id INTEGER NOT NULL,
@@ -30,74 +31,74 @@ def create_tables():
         """,
         """ 
         CREATE TABLE locations (
-                location_id PRIMARY KEY,
-                location NOT NULL,
-                location_data NOT NULL
+                location_id SERIAL PRIMARY KEY,
+                location VARCHAR(255) NOT NULL,
+                location_data TEXT 
                 )
         """,
         """
         CREATE TABLE userprofile (
-                user_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                username  NOT NULL,
-                email  NOT NULL,
-                phone  NOT NULL,
+                user_id  SERIAL PRIMARY KEY,
+                username  CHAR(10) NOT NULL,
+                email  CHAR(50) NOT NULL,
+                phone CHAR(13) NOT NULL,
                 regdate DATE NOT NULL,
-                preference_id  NOT NULL
+                preference_id INTEGER NOT NULL
         )
         """,
         """
         CREATE TABLE sources(
-                sources_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                source_name  NOT NULL,
-                source_desc  NOT NULL,
-                source_bias  NOT NULL,
-                source_rating  NOT NULL
+                sources_id SERIAL PRIMARY KEY,
+                source_name VARCHAR(255) NOT NULL,
+                source_desc TEXT ,
+                source_bias SMALLINT,
+                source_rating SMALLINT,
         )
         """
             ,
         """
         CREATE TABLE type(
-            type_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            type  NOT NULL,
-            type_desc  NOT NULL
+            type_id SERIAL PRIMARY KEY,
+            type VARCHAR(255),
+            type_desc TEXT 
         )
         """
             ,
         """
         CREATE TABLE userAuthentication(
-            user_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            pass_hash  NOT NULL
+            user_id  INTEGER NOT NULL,
+            pass_hash  TEXT NOT NULL
         """
             ,
         """
-        CREATE TABLE UserPreferences(
-            preference_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            category_id_1  NOT NULL,
-            category_id_2  NOT NULL,
-            category_id_3  NOT NULL,
-            category_id_4  NOT NULL,
-            category_id_5  NOT NULL
+        CREATE TABLE userPreferences(
+            preference_id  SERIAL PRIMARY KEY,
+            category_id_1  SMALLINT NOT NULL,
+            category_id_2 SMALLINT,
+            category_id_3 SMALLINT,
+            category_id_4 SMALLINT,
+            category_id_5 SMALLINT
         """
             ,
         """
         CREATE TABLE language(
-            lang_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            language  NOT NULL,
-            lang_desc  NOT NULL
+            lang_id SERIAL PRIMARY KEY,
+            language VARCHAR(255),
+            lang_desc TEXT
         """
             ,
         """
         CREATE TABLE authors(
-            author_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            author_name  NOT NULL,
-            author_desc  NOT NULL COMMENT 'Description about the author'
+            author_id  SERIAL PRIMARY KEY,
+            author_name  VARCHAR(255),
+            author_desc TEXT
         """
             ,
         """
         CREATE TABLE category(
-            category_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            category_name  NOT NULL,
-            category_desc  NOT NULL
+            category_id  SERIAL PRIMARY KEY,
+            category_name  VARCHAR(255),
+            category_desc TEXT
         """
         
         
