@@ -1,7 +1,5 @@
-# Crete tables in the CurrentAffairs Database with the 
-# requried constrains. 
-# The tables can be altered later and use this script to 
-# create them again based on the new requirements. 
+# Crate database with the given name which can be 
+# edited in the variable databaseName
 # ---------------------------------------------------------
 
 import psycopg2
