@@ -8,7 +8,7 @@ from config import load_config
 databaseName = "CURRENTAFFAIRS" # Set database name here 
 
 def create_database(databaseName):
-    """ Create tables in the PostgreSQL database
+    """ Create database in the PostgreSQL database
         
         Args:
             databaseName (string): The name of the Database 
