@@ -29,9 +29,10 @@ def create_tables():
             type_id  NOT NULL
         )
         """,
-        """ CREATE TABLE parts (
-                part_id SERIAL PRIMARY KEY,
-                part_name VARCHAR(255) NOT NULL
+        """ CREATE TABLE locations (
+                location_id PRIMARY KEY,
+                location NOT NULL,
+                location_data NOT NULL
                 )
         """,
         """
