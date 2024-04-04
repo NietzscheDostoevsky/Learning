@@ -7,7 +7,7 @@
 import psycopg2
 from config import load_config
 
-databaseName = "test" # Set database name here 
+databaseName = "CURRENTAFFAIRS" # Set database name here 
 
 def create_database(databaseName):
     """ Create tables in the PostgreSQL database
