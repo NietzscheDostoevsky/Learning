@@ -38,72 +38,68 @@ def create_tables():
         """,
         """
         CREATE TABLE userprofile (
-                `user_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                `username` VARCHAR(255) NOT NULL,
-                `email` VARCHAR(255) NOT NULL,
-                `phone` BIGINT NOT NULL,
-                `regdate` DATE NOT NULL,
-                `preference_id` BIGINT NOT NULL
+                user_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                username  NOT NULL,
+                email  NOT NULL,
+                phone  NOT NULL,
+                regdate DATE NOT NULL,
+                preference_id  NOT NULL
         )
         """,
         """
-        CREATE TABLE `sources`(
-                `sources_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                `source_name` VARCHAR(255) NOT NULL,
-                `source_desc` VARCHAR(255) NOT NULL,
-                `source_bias` BIGINT NOT NULL,
-                `source_rating` BIGINT NOT NULL
+        CREATE TABLE sources(
+                sources_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                source_name  NOT NULL,
+                source_desc  NOT NULL,
+                source_bias  NOT NULL,
+                source_rating  NOT NULL
         )
         """
             ,
         """
-        CREATE TABLE `type`(
-            `type_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            `type` VARCHAR(255) NOT NULL,
-            `type_desc` VARCHAR(255) NOT NULL
+        CREATE TABLE type(
+            type_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            type  NOT NULL,
+            type_desc  NOT NULL
         )
         """
             ,
         """
-        CREATE TABLE `userAuthentication`(
-            `user_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            `pass_hash` BIGINT NOT NULL
+        CREATE TABLE userAuthentication(
+            user_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            pass_hash  NOT NULL
         """
             ,
         """
-        CREATE TABLE `UserPreferences`(
-            `preference_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            `category_id_1` BIGINT NOT NULL,
-            `category_id_2` BIGINT NOT NULL,
-            `category_id_3` BIGINT NOT NULL,
-            `category_id_4` BIGINT NOT NULL,
-            `category_id_5` BIGINT NOT NULL
+        CREATE TABLE UserPreferences(
+            preference_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            category_id_1  NOT NULL,
+            category_id_2  NOT NULL,
+            category_id_3  NOT NULL,
+            category_id_4  NOT NULL,
+            category_id_5  NOT NULL
         """
             ,
         """
-        CREATE TABLE `language`(
-            `lang_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            `language` VARCHAR(255) NOT NULL,
-            `lang_desc` VARCHAR(255) NOT NULL
+        CREATE TABLE language(
+            lang_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            language  NOT NULL,
+            lang_desc  NOT NULL
         """
             ,
         """
-        CREATE TABLE `authors`(
-            `author_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            `author_name` VARCHAR(255) NOT NULL,
-            `author_desc` VARCHAR(255) NOT NULL COMMENT 'Description about the author'
+        CREATE TABLE authors(
+            author_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            author_name  NOT NULL,
+            author_desc  NOT NULL COMMENT 'Description about the author'
         """
             ,
         """
-        CREATE TABLE `category`(
-            `category_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-            `category_name` VARCHAR(255) NOT NULL,
-            `category_desc` VARCHAR(255) NOT NULL
+        CREATE TABLE category(
+            category_id   NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            category_name  NOT NULL,
+            category_desc  NOT NULL
         """
-            ,
-        
-        
-        
         
         
         ]
