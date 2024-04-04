@@ -11,9 +11,22 @@ def create_tables():
     """ Create tables in the PostgreSQL database"""
     commands = [
         """
-        CREATE TABLE vendors (
-            vendor_id SERIAL PRIMARY KEY,
-            vendor_name VARCHAR(255) NOT NULL
+        CREATE TABLE articles (
+            article_id  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            title  NOT NULL,
+            subtitle  NOT NULL,
+            author_id  NOT NULL,
+            pubdate  NOT NULL,
+            category_id  NOT NULL,
+            location_id  NULL,
+            category_id  NOT NULL,
+            category_id2  NOT NULL,
+            category_id3  NOT NULL,
+            location_id  NOT NULL,
+            url  NOT NULL,
+            source_id  NOT NULL,
+            lang_id  NOT NULL,
+            type_id  NOT NULL
         )
         """,
         """ CREATE TABLE parts (
