@@ -64,7 +64,9 @@ def create_tables():
         """
             ,
         """
-        
+        CREATE TABLE `userAuthentication`(
+            `user_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `pass_hash` BIGINT NOT NULL
         """
             ,
         """
