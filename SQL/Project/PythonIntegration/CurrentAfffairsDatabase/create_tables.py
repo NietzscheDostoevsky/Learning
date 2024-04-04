@@ -87,6 +87,10 @@ def create_tables():
         """
             ,
         """
+        CREATE TABLE `authors`(
+            `author_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `author_name` VARCHAR(255) NOT NULL,
+            `author_desc` VARCHAR(255) NOT NULL COMMENT 'Description about the author'
         """
             ,
         """
