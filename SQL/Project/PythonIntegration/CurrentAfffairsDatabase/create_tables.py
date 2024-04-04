@@ -29,7 +29,8 @@ def create_tables():
             type_id  NOT NULL
         )
         """,
-        """ CREATE TABLE locations (
+        """ 
+        CREATE TABLE locations (
                 location_id PRIMARY KEY,
                 location NOT NULL,
                 location_data NOT NULL
@@ -57,9 +58,9 @@ def create_tables():
             ,
         """
         CREATE TABLE `type`(
-        `type_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-        `type` VARCHAR(255) NOT NULL,
-        `type_desc` VARCHAR(255) NOT NULL
+            `type_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `type` VARCHAR(255) NOT NULL,
+            `type_desc` VARCHAR(255) NOT NULL
         )
         """
             ,
@@ -94,6 +95,10 @@ def create_tables():
         """
             ,
         """
+        CREATE TABLE `category`(
+            `category_id` BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            `category_name` VARCHAR(255) NOT NULL,
+            `category_desc` VARCHAR(255) NOT NULL
         """
             ,
         
