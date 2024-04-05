@@ -63,7 +63,7 @@ def create_tables():
         """,
         """
         CREATE TABLE userAuthentication (
-            user_id SERIAL PRIMARY KEY,
+            user_id INTEGER ,
             pass_hash TEXT NOT NULL
         )
         """,
