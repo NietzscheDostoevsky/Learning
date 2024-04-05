@@ -215,6 +215,12 @@ def create_tables():
         """
     ]
 
+    check_constraints_commands = [
+
+
+
+    ]
+
     try:
         config = load_config()
         with psycopg2.connect(**config) as conn:
@@ -228,6 +234,12 @@ def create_tables():
                 for constraint_command in constraint_commands:
                     cur.execute(constraint_command)
                     print("Added constraint successfully")
+                
+                # Add check constraints 
+
+                for check_constraint_command in check_constraints_commands:
+                    cur.execute(check_constraint_command)
+                    print("Check constraint added successfully")
     except (psycopg2.DatabaseError, Exception) as error:
         print("ERROR: ", error)
 
