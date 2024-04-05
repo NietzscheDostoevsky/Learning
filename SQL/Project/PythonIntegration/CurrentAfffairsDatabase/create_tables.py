@@ -11,39 +11,152 @@ def create_tables():
     """ Create tables in the PostgreSQL database"""
     commands = [
         """
-        CREATE TABLE vendors (
-            vendor_id SERIAL PRIMARY KEY,
-            vendor_name VARCHAR(255) NOT NULL
+        CREATE TABLE articles (
+            article_id SERIAL PRIMARY KEY,
+            title VARCHAR(511) NOT NULL,
+            subtitle VARCHAR(255) ,
+            articletext TEXT NOT NULL,
+            author_id INTEGER ,
+            pubdate DATE NOT NULL,
+            category_id INTEGER ,
+            category_id2 INTEGER ,
+            category_id3 INTEGER ,
+            location_id INTEGER ,
+            url VARCHAR(511),
+            source_id INTEGER NOT NULL,
+            lang_id INTEGER ,
+            type_id INTEGER ,
+            CONSTRAINT fkLocationIdArticles 
+                FOREIGN KEY (location_id)
+                REFERENCES locations(location_id)
+                ON DELETE SET NULL
+                ON UPDATE CASCADE , 
+            CONSTRAINT fkAuthorIdArticles 
+                FOREIGN KEY (author_id)
+                REFERENCES author(location_id)
+                ON DELETE SET NULL
+                ON UPDATE CASCADE , 
+            CONSTRAINT fkCategoryIdArticles 
+                FOREIGN KEY (category_id)
+                REFERENCES category(category_id)
+                ON DELETE SET NULL
+                ON UPDATE CASCADE , 
+            CONSTRAINT fkCategoryId2Articles 
+                FOREIGN KEY (category_id2)
+                REFERENCES category(category_id)
+                ON DELETE SET NULL
+                ON UPDATE CASCADE ,
+            CONSTRAINT fkCategoryId3Articles 
+                FOREIGN KEY (category_id3)
+                REFERENCES category(category_id)
+                ON DELETE SET NULL
+                ON UPDATE CASCADE , 
+            CONSTRAINT fkSourceIdArticles 
+                FOREIGN KEY (source_id)
+                REFERENCES sources(source_id)
+                ON DELETE RESTRICT
+                ON UPDATE CASCADE , 
+            CONSTRAINT fkLangIdArticles 
+                FOREIGN KEY (lang_id)
+                REFERENCES lang(lang_id)
+                ON DELETE SET NULL
+                ON UPDATE CASCADE , 
+            CONSTRAINT fkTypeIdArticles 
+                FOREIGN KEY (type_id)
+                REFERENCES type(type_id)
+                ON DELETE SET NULL
+                ON UPDATE CASCADE , 
         )
         """,
-        """ CREATE TABLE parts (
-                part_id SERIAL PRIMARY KEY,
-                part_name VARCHAR(255) NOT NULL
+        """ 
+        CREATE TABLE locations (
+                location_id SERIAL PRIMARY KEY,
+                location VARCHAR(255) NOT NULL,
+                location_data TEXT
                 )
         """,
         """
-        CREATE TABLE part_drawings (
-                part_id INTEGER PRIMARY KEY,
-                file_extension VARCHAR(5) NOT NULL,
-                drawing_data BYTEA NOT NULL,
-                FOREIGN KEY (part_id)
-                REFERENCES parts (part_id)
-                ON UPDATE CASCADE ON DELETE CASCADE
+        CREATE TABLE userprofile (
+                user_id  SERIAL PRIMARY KEY,
+                username  CHAR(10) NOT NULL,
+                email  CHAR(50) NOT NULL,
+                phone CHAR(13) NOT NULL,
+                regdate DATE NOT NULL,
+                preference_id INTEGER NOT NULL
         )
         """,
         """
-        CREATE TABLE vendor_parts (
-                vendor_id INTEGER NOT NULL,
-                part_id INTEGER NOT NULL,
-                PRIMARY KEY (vendor_id , part_id),
-                FOREIGN KEY (vendor_id)
-                    REFERENCES vendors (vendor_id)
-                    ON UPDATE CASCADE ON DELETE CASCADE,
-                FOREIGN KEY (part_id)
-                    REFERENCES parts (part_id)
-                    ON UPDATE CASCADE ON DELETE CASCADE
+        CREATE TABLE sources(
+                source_id SERIAL PRIMARY KEY,
+                source_name VARCHAR(255) NOT NULL,
+                source_desc TEXT ,
+                source_bias SMALLINT,
+                source_rating SMALLINT,
         )
-        """]
+        """
+            ,
+        """
+        CREATE TABLE type(
+            type_id SERIAL PRIMARY KEY,
+            type VARCHAR(255),
+            type_desc TEXT 
+        )
+        """
+            ,
+        """
+        CREATE TABLE userAuthentication(
+            user_id  INTEGER NOT NULL,
+            pass_hash  TEXT NOT NULL, 
+            CONSTRAINT fkUserIdUserAuthentication 
+                FOREIGN KEY (user_id)
+                REFERENCES userprofile(user_id)
+                ON DELETE CASCADE
+                ON UPDATE CASCADE ,
+        """
+            ,
+        """
+        CREATE TABLE userPreferences(
+            preference_id  SERIAL PRIMARY KEY,
+            category_id_1  SMALLINT NOT NULL,
+            category_id_2 SMALLINT,
+            category_id_3 SMALLINT,
+            category_id_4 SMALLINT,
+            category_id_5 SMALLINT, 
+            CONSTRAINT fkUserPreferencesCategory
+                FOREIGN KEY (category_id1)
+                REFERENCES category(category_id)
+                ON DELETE RESTRICT
+                ON UPDATE CASCADE ,
+            CONSTRAINT fkUserPreferencesCategory
+                FOREIGN KEY (category_id1)
+                REFERENCES category(category_id)
+                ON DELETE RESTRICT
+                ON UPDATE CASCADE ,
+        """
+            ,
+        """
+        CREATE TABLE language(
+            lang_id SERIAL PRIMARY KEY,
+            language VARCHAR(255),
+            lang_desc TEXT
+        """
+            ,
+        """
+        CREATE TABLE authors(
+            author_id  SERIAL PRIMARY KEY,
+            author_name  VARCHAR(255),
+            author_desc TEXT
+        """
+            ,
+        """
+        CREATE TABLE category(
+            category_id  SERIAL PRIMARY KEY,
+            category_name  VARCHAR(255),
+            category_desc TEXT
+        """
+        
+        
+        ]
     try:
         config = load_config()
         with psycopg2.connect(**config) as conn:

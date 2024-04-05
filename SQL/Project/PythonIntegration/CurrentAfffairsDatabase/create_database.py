@@ -1,7 +1,5 @@
-# Crete tables in the CurrentAffairs Database with the 
-# requried constrains. 
-# The tables can be altered later and use this script to 
-# create them again based on the new requirements. 
+# Crate database with the given name which can be 
+# edited in the variable databaseName
 # ---------------------------------------------------------
 
 import psycopg2
@@ -10,7 +8,7 @@ from config import load_config
 databaseName = "CURRENTAFFAIRS" # Set database name here 
 
 def create_database(databaseName):
-    """ Create tables in the PostgreSQL database
+    """ Create database in the PostgreSQL database
         
         Args:
             databaseName (string): The name of the Database 
