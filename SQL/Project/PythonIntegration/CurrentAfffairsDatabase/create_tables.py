@@ -13,8 +13,8 @@ def create_tables():
         """
         CREATE TABLE articles (
             article_id SERIAL PRIMARY KEY,
-            title VARCHAR(511) NOT NULL,
-            subtitle VARCHAR(255),
+            title TEXT NOT NULL,
+            subtitle TEXT,
             articletext TEXT NOT NULL,
             author_id INTEGER,
             pubdate DATE NOT NULL,
