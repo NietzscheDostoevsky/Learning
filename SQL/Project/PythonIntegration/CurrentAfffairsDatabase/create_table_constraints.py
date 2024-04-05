@@ -216,7 +216,21 @@ def create_tables():
     ]
 
     check_constraints_commands = [
+        """
+        ALTER TABLE userprofile (
+            ADD CONSTRAINT regexUsernameUserprofile
+            regexp_like(username, '^[a-zA-Z0-9]{1,10}$')
 
+        )
+        """
+        , 
+        """
+        ALTER TABLE userprofile (
+            ADD CONSTRAINT regexEmailUserprofile
+            regexp_like(email, '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
+
+        )
+        """
 
 
     ]
