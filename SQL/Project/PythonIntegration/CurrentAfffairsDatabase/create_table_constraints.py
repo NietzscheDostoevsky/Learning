@@ -219,16 +219,21 @@ def create_tables():
         """
         ALTER TABLE userprofile (
             ADD CONSTRAINT regexUsernameUserprofile
-            regexp_like(username, '^[a-zA-Z0-9]{1,10}$')
-
+            CHECK(regexp_like(username, '^[a-zA-Z0-9]{1,10}$'))
         )
         """
         , 
         """
         ALTER TABLE userprofile (
             ADD CONSTRAINT regexEmailUserprofile
-            regexp_like(email, '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}')
-
+            CHECK(regexp_like(email, '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'))
+        )
+        """
+        ,
+        """
+        ALTER TABLE userprofile (
+            ADD CONSTRAINT regexPhoneUserprofile
+            CHECK(regexp_like(phone, '^\+91[6-9][0-9]{9}$'))
         )
         """
 
