@@ -1,0 +1,39 @@
+SELECT 
+    a.article_id,
+    a.title AS article_title,
+    a.subtitle AS article_subtitle,
+    a.articletext AS article_content,
+    a.pubdate AS article_published_date,
+    au.author_name AS author,
+    c.category_name AS category,
+    l.location AS article_location,
+    s.source_name AS article_source,
+    t.type AS article_type
+FROM 
+    articles a
+JOIN 
+    authors au ON a.author_id = au.author_id
+JOIN 
+    category c ON a.category_id = c.category_id
+JOIN 
+    locations l ON a.location_id = l.location_id
+JOIN 
+    sources s ON a.source_id = s.source_id
+JOIN 
+    type t ON a.type_id = t.type_id;
+
+
+SELECT 
+    u.user_id,
+    u.username,
+    a.article_id,
+    a.title AS article_title,
+    a.subtitle AS article_subtitle,
+    a.articletext AS article_content,
+    a.pubdate AS article_published_date
+FROM 
+    userprofile u
+JOIN 
+    userPreferences up ON u.preference_id = up.preference_id
+JOIN 
+    articles a ON a.category_id = up.category_id_1
