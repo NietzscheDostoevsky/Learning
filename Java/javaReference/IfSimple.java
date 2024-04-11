@@ -1,6 +1,6 @@
 class IfSimple{
 
-    public static void mian(String[] args) {
+    public static void main(String[] args) {
         int x, y;
 
         x = 10;
