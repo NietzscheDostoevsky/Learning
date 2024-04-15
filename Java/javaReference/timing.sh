@@ -2,7 +2,7 @@
 
 
 # Compile the Java file
-javac YourJavaFile.java
+javac BlockTest.java
 
 # Number of iterations
 ITERATIONS=1000
@@ -11,6 +11,6 @@ ITERATIONS=1000
 for ((i = 1; i <= $ITERATIONS; i++)); do
     echo "Iteration $i"
     # Measure the execution time of the Java program using the time command
-    time java YourJavaFile
+    time java BlockTest
 done
 
