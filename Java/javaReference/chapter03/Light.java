@@ -1,0 +1,1 @@
+// Calculated the distance light travels using long variables
