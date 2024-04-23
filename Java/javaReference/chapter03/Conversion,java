@@ -13,3 +13,10 @@ class Conversion {
         System.out.println("\nConversion of double to int.");
         i = (int) d;
         System.out.println("d and i " + d + " " + i);
+
+        System.out.println("\nConversion of double to byte.");
+        b = (byte) d;
+        System.out.println("d and b " + d + " " + b);
+
+    } 
+} 
