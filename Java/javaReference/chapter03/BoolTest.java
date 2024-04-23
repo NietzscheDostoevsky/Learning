@@ -8,6 +8,8 @@ public class BoolTest {
         System.out.println(b);
 
         // A bool val can control the if statement
+        // the value of a boolean variable is sufficient, by itself, to control the if
+        // statement.
 
         if (b)
             System.out.println("This line will be executed");
