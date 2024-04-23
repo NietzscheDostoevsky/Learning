@@ -490,3 +490,4 @@ FodyWeavers.xsd
 # End of https://www.toptal.com/developers/gitignore/api/windows,linux,c++,visualstudio,visualstudiocode
 Web/.~lock.shoppersStack.xlsx\#
 .vscode/launch.json
+.vscode/launch.json
