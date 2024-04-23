@@ -18,6 +18,7 @@ class Conversion {
         b = (byte) d;
         System.out.println("d and b " + d + " " + b);
         System.out.println(d + " is of type " + ((Object) d).getClass().getSimpleName());
+        System.out.println(d + " is of type " + ((Object) d).getClass().getName());
 
     }
 }
