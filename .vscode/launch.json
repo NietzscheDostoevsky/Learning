@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ScratchPad",
+            "request": "launch",
+            "mainClass": "ScratchPad",
+            "projectName": "Learning_4196456b"
+        },
+        {
+            "type": "java",
+            "name": "Array",
+            "request": "launch",
+            "mainClass": "Array",
+            "projectName": "Learning_4196456b"
+        },
+        {
+            "type": "java",
+            "name": "AutoArray",
+            "request": "launch",
+            "mainClass": "AutoArray",
+            "projectName": "Learning_4196456b"
+        },
+        {
+            "type": "java",
             "name": "Java",
             "request": "launch",
             "mainClass": "Java"
