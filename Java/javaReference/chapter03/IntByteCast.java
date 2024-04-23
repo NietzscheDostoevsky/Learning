@@ -8,6 +8,12 @@ public class IntByteCast {
     }
 }
 
+// Output
+/*
+ * Original int value: 300
+ * Casted byte value: 44
+ */
+
 // EXPLANATION
 // **********************
 
