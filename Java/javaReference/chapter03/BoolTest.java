@@ -9,5 +9,11 @@ public class BoolTest {
 
         // A bool val can control the if statement
 
+        if (b)
+            System.out.println("This line will be executed");
+        b = false;
+        if (b)
+            System.out.println("This line should not be executed");
+
     }
 }
