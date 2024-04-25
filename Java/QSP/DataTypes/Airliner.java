@@ -3,7 +3,7 @@ class Airliner {
     public static void main(String[] args) {
         short numberOfEngines = 4;
         short seatingCapacity = 300;
-        short maximumAltitudeInFeet = 40000;
+        short maximumAltitudeInFeet = 30000;
         short maximumSpeedInKmph = 900;
         short numberOfCrewMembers = 15;
 
