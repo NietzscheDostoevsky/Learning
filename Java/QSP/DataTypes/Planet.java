@@ -7,6 +7,7 @@ class Planet {
         int surfaceTemperature = 15;
         int numberOfMoons = 23;
 
+        System.out.println("*****DETAILS OF NEW FOUND PLANET********");
         System.out.println("Diameter (km): " + diameterInKilometers);
         System.out.println("Distance from Sun (million km): " + distanceFromSun);
         System.out.println("Mass (kg): " + mass);
