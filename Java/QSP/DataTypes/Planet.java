@@ -2,7 +2,7 @@ class Planet {
 
     public static void main(String[] args) {
         int diameter = 12742;
-        int distanceFromSun = 149_600_000;
+        long distanceFromSun = 149_600_000_000L;
         int mass = 1_972_000_000;
         int surfaceTemperature = 15;
         int numberOfMoons = 23;
