@@ -14,9 +14,14 @@ class TwoDArray {
             }
         }
 
-        
+        // for loop to display the array 
 
-
+        for (i=0;i<4;i++) { 
+            for (j=0;j<5;j++) {
+                System.out.println(twoD[i][j] + " "); // printing first row     
+            }
+            System.out.print();
+        }
     }
-
 }
+
