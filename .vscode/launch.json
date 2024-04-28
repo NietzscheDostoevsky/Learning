@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ScratchPad",
+            "request": "launch",
+            "mainClass": "ScratchPad",
+            "projectName": "Learning_1a7c0e32"
+        },
+        {
+            "type": "java",
+            "name": "TwoDArray",
+            "request": "launch",
+            "mainClass": "TwoDArray",
+            "projectName": "Learning_1a7c0e32"
+        },
+        {
+            "type": "java",
             "name": "Average",
             "request": "launch",
             "mainClass": "Average",
