@@ -3,7 +3,7 @@ class AreaCircle {
     public static void main(String[] args) {
         
         final float pi = 3.1419f ; 
-        int radius = 5 ; 
+        float radius = 5.5f ; 
 
         double perimeter ; 
         double area ; 
