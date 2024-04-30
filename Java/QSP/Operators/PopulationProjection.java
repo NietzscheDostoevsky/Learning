@@ -20,5 +20,12 @@ public class PopulationProjection {
 
         int yearlyPopDelta = birthPerYear - deathPerYear + immigrationPerYear;
 
+        // Printing for 5 years
+        int i = 1;
+        for (i = 1; i < 6; i++) {
+            int newPopulation = currentPopulation + (yearlyPopDelta * i);
+            System.out.println("Population in year " + i + " : " + newPopulation);
+        }
+
     }
 }
