@@ -11,5 +11,14 @@ public class PopulationProjection {
 
         // Calculated Data
 
+        int secondsInYear = year * 24 * 60 * 60; // seconds
+        int birthPerYear = secondsInYear / birth; // births in a year
+        int deathPerYear = secondsInYear / death; // deatgs in a year
+        int immigrationPerYear = secondsInYear / immigration; // immigration per year
+
+        // calculating for 5 years
+
+        
+
     }
 }
