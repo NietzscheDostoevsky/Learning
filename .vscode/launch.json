@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Rectangle",
+            "request": "launch",
+            "mainClass": "Operators.Rectangle",
+            "projectName": "Learning_1a7c0e32"
+        },
+        {
+            "type": "java",
             "name": "AreaCircle",
             "request": "launch",
             "mainClass": "AreaCircle",
