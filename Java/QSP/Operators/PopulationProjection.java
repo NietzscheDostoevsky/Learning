@@ -16,9 +16,9 @@ public class PopulationProjection {
         int deathPerYear = secondsInYear / death; // deatgs in a year
         int immigrationPerYear = secondsInYear / immigration; // immigration per year
 
-        // calculating for 5 years
+        // calculating yearly change
 
-        
+        int yearlyPopDelta = birthPerYear - deathPerYear + immigrationPerYear;
 
     }
 }
