@@ -25,5 +25,7 @@ class BasicMath {
         System.out.println("dd = " + dd);
         System.out.println("de = " + de);
 
+        float f = 1 ; 
+
     }
 }
