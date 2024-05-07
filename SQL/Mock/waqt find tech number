@@ -1,0 +1,27 @@
+waqt find tech number 
+
+
+
+
+update  emp set sal = 2025 where ename='SMITH';
+
+waqt find tech number 
+
+SELECT 
+*
+FROM (
+	SELECT SAL 
+	FROM EMP 
+	WHERE (MOD(LENGTH(SAL),2) = 0) )
+WHERE
+POWER( (SUBSTR(SAL, 1, LENGTH(SAL)/2)) 
+	+ (SUBSTR(SAL, LENGTH(SAL)/2 + 1)), 2 ) = SAL;
+
+SELECT *
+FROM (
+    SELECT SAL
+    FROM EMP
+    WHERE MOD(LENGTH(SAL), 2) = 0
+) 
+WHERE
+POWER( TO_NUMBER(SUBSTR(SAL, 1, LENGTH(SAL)/2)) + TO_NUMBER(SUBSTR(SAL, LENGTH(SAL)/2 + 1)), 2 ) = TO_NUMBER(SAL);
