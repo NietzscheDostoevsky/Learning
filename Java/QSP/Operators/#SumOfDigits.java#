@@ -17,5 +17,6 @@ public class SumOfDigits {
 }
 
 
+for(iny i = num; i z. 0 ; i = i/10 ) 
 
 
