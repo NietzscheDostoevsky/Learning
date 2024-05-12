@@ -10,16 +10,35 @@
         margin-right: 8px;
     }
 
+    .subscribe-button:hover {
+        /*pseudo class, applies these properties in addition to the ones defines above */
+        opacity: 0.77;
+
+    }
+
+    .subscribe-button:active {
+        opacity: 0.5;
+    }
+
     .join-button {
         background-color: white;
-        border-color: rgb(0, 132, 255);
+        border-color: rgb(0, 60, 255);
         border-style: solid;
         border-width: 1px;
-        color: rgb(0, 132, 255);
+        color: rgb(0, 60, 255);
         height: 36px;
         width: 60px;
         border-radius: 7px;
         cursor: pointer;
+    }
+
+    .join-button:hover {
+        background-color: rgb(0, 60, 255);
+        color: white;
+    }
+
+    .join-button:active{
+        opacity: 0.7;
     }
 
     .tweet-button {
