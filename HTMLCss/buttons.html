@@ -3,14 +3,19 @@
         background-color: rgb(207, 7, 7);
         color: white;
         border: none;
-        height: 36px;
-        width: 105;
-        border-radius: 7px;
+
+        border-radius: 3px;
         cursor: pointer;
         margin-right: 8px;
+        margin-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
         transition: opacity 0.15s;
         /*Put hover in the base style, instead of hover subclass, 
         because when you hover out of the button, the transitino wont apply*/
+        vertical-align: top;
     }
 
     .subscribe-button:hover {
@@ -29,14 +34,18 @@
         border-style: solid;
         border-width: 1px;
         color: rgb(0, 60, 255);
-        height: 36px;
-        width: 60px;
-        border-radius: 7px;
+        border-radius: 3px;
         cursor: pointer;
+        padding-top: 9px;
+        padding-bottom: 9px;
+        /*redoced by 1px to match subscribe buttons's border of 1px*/
+        padding-left: 16px;
+        padding-right: 16px;
         margin-right: 8px;
         transition: background-color 0.4s,
             color 0.4s;
         /* add multiple properties to transition using comma */
+        vertical-align: top;
 
     }
 
@@ -51,18 +60,24 @@
     }
 
     .tweet-button {
-        background-color: rgb(0, 119, 255);
+        background-color: rgb(29, 155, 240);
         color: white;
         border: 7px;
         height: 36px;
         width: 70px;
+        margin-right: 5px;
+        margin-left: 5px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 16px;
+        padding-right: 16px;
         border-radius: 18px;
         /*setting it half of radius */
         font-weight: bold;
         font-size: 15px;
         cursor: pointer;
-        margin-right: 8px;
         transition: box-shadow 0.17s;
+        vertical-align: top;
 
     }
 
@@ -80,6 +95,7 @@
         width: 200px;
         border-radius: 18px;
         cursor: pointer;
+        vertical-align: top;
     }
 
     .amazon-add-to-cart:hover {
