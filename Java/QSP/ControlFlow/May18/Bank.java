@@ -28,7 +28,7 @@ class Bank {
 
 					System.out.println("***Option 1: Accout Creation Module***");
 					System.out.print("Enter your Name");
-					// sc.nextLine() // uncomment this line if there is a problem getting input at
+					sc.nextLine(); // uncomment this line if there is a problem getting input at
 					// runtime
 					username = sc.nextLine();
 					System.out.print("Address : ");
@@ -92,7 +92,7 @@ class Bank {
 								break;
 							}
 							case 5: {
-								System.exit(0);
+								// System.exit(0);
 								break;
 							}
 						}
@@ -118,3 +118,4 @@ class Bank {
 
 // Doubts
 // sc.close() why code unreacheable erroe
+// how to exit infinite for loop ? line 96
