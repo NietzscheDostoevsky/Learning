@@ -19,13 +19,13 @@ class Calculator{
         if(op == '+' || op=='-' || op=='/' || op=='*' ){
 
             if(op == '+')
-            result = num1 + num2; 
-        if(op == '-')
-            result = num1 - num2 ; 
-        if(op == '*')
-            result = num1 * num2; 
-        if(op == '/')
-            result = num1 /num2 ; 
+            	result = num1 + num2; 
+            if(op == '-')
+            	result = num1 - num2 ; 
+        	if(op == '*')
+            	result = num1 * num2; 
+       		if(op == '/')
+            	result = num1 /num2 ; 
         
         System.out.println(num1 + " " + op + " " + num2 + " = " + result );
 
