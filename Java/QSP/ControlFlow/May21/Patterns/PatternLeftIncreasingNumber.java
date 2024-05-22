@@ -3,15 +3,15 @@ public class PatternLeftIncreasingNumber {
     public static void main(String[] args) {
         int n = 5;
         int diff = 1;
-        int num = 1; 
+        int num = 1;
         for (int i = 0; i < n; i++) {
 
             // printing columns:
-            
+            int start = num + i - 1;
 
             for (int j = 0; j <= i; j++) {
-                System.out.print(num);
-                num--;
+                System.out.print(start + " ");
+                start--;
             }
 
             // Moving cursor to next row
