@@ -1,7 +1,11 @@
-
+import java.util.Scanner ; 
 public class PatternLeftIncreasingNumber {
     public static void main(String[] args) {
-        int n = 5;
+
+        Scanner sc = new Scanner(System.in) ; 
+        System.out.print("Enter the number of rows to print: ");
+        int input = sc.nextInt() ; 
+        int n = input;
         int num = 0;
 
 
