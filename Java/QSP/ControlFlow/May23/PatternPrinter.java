@@ -15,6 +15,8 @@ public class PatternPrinter {
         inversePyramid(n);
         System.out.println();
 
+        rightArrowTriangle(n);
+
     }
 
     public static void pyramidPattern(int n) {
@@ -55,6 +57,16 @@ public class PatternPrinter {
             p--;
             System.out.println();
         }
+    }
+
+    public static void rightArrowTriangle(int n) {
+        
+        // outer loop to print the columns 
+        for(int i = 0; i<n; i++){
+
+            for(int j = 0; )
+        }
+
     }
 
 }
