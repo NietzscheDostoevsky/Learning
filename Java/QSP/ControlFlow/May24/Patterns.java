@@ -6,6 +6,9 @@ class Patterns{
 		SquareDiagonal(n);
 		System.out.println() ; 
 		AlphanumericSquare(); 
+		System.out.println() ; 
+		AlphanumericTriange();
+
 
 	}
 
@@ -42,6 +45,27 @@ class Patterns{
 			}
 			System.out.println();
 		}
+	}
+
+	public static void AlphanumericTriange() {
+		int n = 4 ; 
+		char alpha = 'a' ; 
+		int num = 1 ;
+
+		for (int i = 0 ; i < n ; i++) {
+			for(int j = 0 ; j<=i; j++){
+				if(j%2 == 0){
+					System.out.print(alpha);
+					alpha++;
+
+				}else{
+					System.out.print(num);
+					num++;
+				}
+			}
+			System.out.println();
+		}
+
 	}
 
 }
