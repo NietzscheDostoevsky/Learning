@@ -6,14 +6,16 @@ class DoWhile{
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter the number : ");
 		int input = sc.nextInt(); 
-		int num = input; 
-		//int num = 4321 ; 
-		int count = 0 ; 
+		//int num = input; 
+		int num = 4321 ; 
+		int reverse = 0 ; 
 
-		for (int i = num; i>0; i=i/10){
+
+		do{
+			num = num / 10; 
 			count++;
 
-		}
+		}while(num>0);
 		System.out.println(count);
 	}
 }
