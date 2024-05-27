@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	
 	printf("You are %d miles away.\n", distance);
 	printf("You have %f leves of power.\n", power);
-	printf("You have %f awesome super pwoers.\n," super_power);
+	printf("You have %f awesome super pwoers.\n", super_power);
 	printf("I have an initial %c. \n", initial);
 	printf("I have a first name %s. \n", first_name);
 	printf("I have a last name %s. \n", last_name); 
@@ -26,11 +26,11 @@ int main(int argc, char *argv[])
 
 	long universe_of_defects = 1L * 1024L * 1024L * 1024L; 
 	printf("The entire universe have %f bugs.\n", 
-			universe_of_bugs); 
+			universe_of_defects); 
 
 	double expected_bugs = bugs * bug_rate ; 
 	printf("You are expected to have %f bugs \n", 
-			expexted_bugs) ; 
+			expected_bugs) ; 
 
 	double part_of_universe = expected_bugs / universe_of_defects ;
 	printf("That is only a %e portion of the universe. \n", 
