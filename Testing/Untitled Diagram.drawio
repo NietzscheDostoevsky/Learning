@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" modified="2024-05-28T06:50:56.838Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36" etag="edx6rY-KVkWPFQLDSUYz" version="24.4.8" type="github">
+  <diagram name="Page-1" id="h7MtWXQG27_pWPEHaHrz">
+    <mxGraphModel dx="1434" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FHknzbYpzZSnZG6rKOPt-1" target="FHknzbYpzZSnZG6rKOPt-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-1" value="CYCLOS" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="10" y="370" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FHknzbYpzZSnZG6rKOPt-2" target="FHknzbYpzZSnZG6rKOPt-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-2" value="Login page" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="390" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FHknzbYpzZSnZG6rKOPt-4" target="FHknzbYpzZSnZG6rKOPt-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-4" value="Home Page" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FHknzbYpzZSnZG6rKOPt-6" target="FHknzbYpzZSnZG6rKOPt-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FHknzbYpzZSnZG6rKOPt-6" target="FHknzbYpzZSnZG6rKOPt-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FHknzbYpzZSnZG6rKOPt-6" target="FHknzbYpzZSnZG6rKOPt-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FHknzbYpzZSnZG6rKOPt-6" target="FHknzbYpzZSnZG6rKOPt-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-6" value="Payment" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-8" value="To System Account" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-10" value="Scan QR/Barcode" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-12" value="To User" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FHknzbYpzZSnZG6rKOPt-14" value="To Login Name" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="490" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
