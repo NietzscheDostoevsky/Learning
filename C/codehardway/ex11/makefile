@@ -1,4 +1,4 @@
-CFLAGS=-Wall -Eextra -g
+CFLAGS=-Wall -Wextra -g
 
 clean:
 	rm -f ex11
