@@ -40,22 +40,48 @@ class PatternQuestions{
 
 	public static void Pattern2(int num){
 		/*
+		1
+		0 1
+		1 0 1
+		0 1 0 1
+		1 0 1 0 1
+		0 1 0 1 0
 		*/
 	}
 	public static void Pattern3(int num){
 		/*
+		1
+		1 0 
+		1 0 1
+		1 0 1 0 
+		1 0 1 0 1
 		*/
 	}
 	public static void Pattern4(int num){
 		/*
+		1 
+		2 9
+		3 8 10 
+		4 7 11 14
+		5 6 12 13 15
+
 		*/
 	}
 	public static void Pattern5(int num){
 		/*
+		0
+		1 1
+		2 3 5
+		8 13 21 34
+		55 
 		*/
 	}
 	public static void Pattern6(int num){
 		/*
+		2
+		3   5 
+		7  11 13
+		17 19 23 29
 		*/
 	}
 
