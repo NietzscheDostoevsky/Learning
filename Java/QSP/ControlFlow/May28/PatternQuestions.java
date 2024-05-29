@@ -128,6 +128,17 @@ class PatternQuestions{
 		7  11 13
 		17 19 23 29
 		*/
+
+		int pointer = 1 ; // starting from first term
+		for(int i = 0; i<num; i++){
+			for(int j = 0; j<=i; j++){
+				System.out.print(PrimeNth(pointer) + " "); 
+				pointer++;
+				
+			}
+			System.out.println();
+		}
+
 	}
 	public static void Pattern6(int num){
 		/*
@@ -159,6 +170,37 @@ class PatternQuestions{
 		return next ; 
 	}
 
-	public static int PrimeNth
+	public static int PrimeNth(int n){
+		// returns nth prime number
+		 
+		if(n==1)
+			return 2 ;
+
+		 
+		int count = 1 ; // 2 is the first prime 
+		int number = 1 ; // numbers to start checking from if it is prime or not 
+
+		while( count < n ) {
+			number += 2; // checking only odd numbers 
+			if(IsPrime(number)){
+				count++;
+			}
+		}
+		return number ;
+	}
+
+	public static boolean IsPrime(int num) {
+        if (num <= 1) return false;
+        if (num == 2) return true;
+        if (num % 2 == 0) return false;
+
+        for (int i = 3; i * i <= num; i += 2) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
 
 }
