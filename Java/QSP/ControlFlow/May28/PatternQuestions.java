@@ -109,6 +109,17 @@ class PatternQuestions{
 		8 13 21 34
 		55 
 		*/
+
+		int pointer = 1 ; // starting from first term
+		for(int i = 0; i<num; i++){
+			for(int j = 0; j<=i; j++){
+				System.out.print(FibonacciN(pointer) + " "); 
+				pointer++;
+				
+			}
+			System.out.println();
+		}
+
 	}
 	public static void Pattern5(int num){
 		/*
@@ -126,6 +137,26 @@ class PatternQuestions{
 		4 8 11 13
 		5 9 12 14 15
 		*/
+	}
+
+	public static int FibonacciN( int n){
+		// Returns nth fibonacci term 
+		if(n==1)
+			return 0 ;
+		if(n==2)
+			return 1; 
+
+		int a = 0 ; 
+		int b = 1 ; 
+		int next = 1 ; 
+
+		for(int i = 3; i<=n; i++){
+			next = a + b ; 
+			a = b ; 
+			b = next ; 
+
+		}
+		return next ; 
 	}
 
 }
