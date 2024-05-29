@@ -27,6 +27,7 @@ class PatternQuestions{
 		Pattern6(num);
 		System.out.println("\n----------------------");
 		
+		
 	}
 
 	public static void Pattern1(int num){
@@ -36,6 +37,24 @@ class PatternQuestions{
 		3 8 10
 		4 7 11 14
 		5 6 12 13 15 */
+
+		int n = num ; 
+		for(int i = 0;i<num; i++){
+			for(int j = 0; j<i+1; j++){
+				int x = 0 ; 
+				for(int k = 0; k<j+1; k++){
+					x = x + n - k ;
+				}
+				if(j%2 == 0){
+					System.out.print((x+i-j+1) + " " ) ; 
+				}else{
+					System.out.print((x+n-1) + " "); 
+				}
+				
+			}
+			System.out.println(); 
+
+		}
 	}
 
 	public static void Pattern2(int num){
@@ -47,6 +66,17 @@ class PatternQuestions{
 		1 0 1 0 1
 		0 1 0 1 0
 		*/
+
+		for(int i = 0; i<num; i++){
+			for(int j = 0; j<=i; j++){
+				if((i+j)%2 == 0){
+					System.out.print(0 + " ");
+				}else{
+					System.out.print(1 + " ");
+				}
+			}
+			System.out.println();
+		}
 	}
 	public static void Pattern3(int num){
 		/*
@@ -57,17 +87,9 @@ class PatternQuestions{
 		1 0 1 0 1
 		*/
 	}
+	
+	
 	public static void Pattern4(int num){
-		/*
-		1 
-		2 9
-		3 8 10 
-		4 7 11 14
-		5 6 12 13 15
-
-		*/
-	}
-	public static void Pattern5(int num){
 		/*
 		0
 		1 1
@@ -76,12 +98,21 @@ class PatternQuestions{
 		55 
 		*/
 	}
-	public static void Pattern6(int num){
+	public static void Pattern5(int num){
 		/*
 		2
 		3   5 
 		7  11 13
 		17 19 23 29
+		*/
+	}
+	public static void Pattern6(int num){
+		/*
+		1
+		2 6
+		3 7 10
+		4 8 11 13
+		5 9 12 14 15
 		*/
 	}
 
