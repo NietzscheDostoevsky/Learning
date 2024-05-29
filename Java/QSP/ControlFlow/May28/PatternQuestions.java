@@ -113,7 +113,7 @@ class PatternQuestions{
 		int pointer = 1 ; // starting from first term
 		for(int i = 0; i<num; i++){
 			for(int j = 0; j<=i; j++){
-				System.out.print(FibonacciN(pointer) + " "); 
+				System.out.print(FibonacciNth(pointer) + " "); 
 				pointer++;
 				
 			}
@@ -139,7 +139,7 @@ class PatternQuestions{
 		*/
 	}
 
-	public static int FibonacciN( int n){
+	public static int FibonacciNth( int n){
 		// Returns nth fibonacci term 
 		if(n==1)
 			return 0 ;
@@ -158,5 +158,7 @@ class PatternQuestions{
 		}
 		return next ; 
 	}
+
+	public static int PrimeNth
 
 }
