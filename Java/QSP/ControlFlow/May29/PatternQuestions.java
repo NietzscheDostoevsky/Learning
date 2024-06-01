@@ -102,7 +102,7 @@ class PatternQuestions{
 		55 
 		*/
 
-		int pointer = 1 ; // starting from first term
+		long pointer = 1l ; // starting from first term
 		for(int i = 0; i<num; i++){
 			for(int j = 0; j<=i; j++){
 				System.out.print(FibonacciNth(pointer) + " "); 
@@ -156,18 +156,18 @@ class PatternQuestions{
 		
 	}
 
-	public static int FibonacciNth( int n){
+	public static long FibonacciNth( long n){
 		// Returns nth fibonacci term 
 		if(n==1)
 			return 0 ;
 		if(n==2)
 			return 1; 
 
-		int a = 0 ; 
-		int b = 1 ; 
-		int next = 1 ; 
+		long a = 0l ; 
+		long b = 1l ; 
+		long next = 1l ; 
 
-		for(int i = 3; i<=n; i++){
+		for(long i = 3; i<=n; i++){
 			next = a + b ; 
 			a = b ; 
 			b = next ; 
