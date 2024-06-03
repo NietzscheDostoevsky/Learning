@@ -1,15 +1,25 @@
-CFLAGS=-Wall -Wextra -g
+# compiler and flags 
 
-all: c_008_01 c_011_01 c_013_01
+CC = gcc
+CFLAGS = -Wall -Wextra -g
 
-#Build targets
+#sources and object files 
+SRCS = $(wildcard *.c)
+OBJS = $(SRCS:.c=.o)
+EXES = $(SRCS:.c=)
 
-c_008_01: c_008_01.c
-	gcc $(CFLAGS) -o c_008_01 c_008_01.c 
-c_011_01: c_011_01.c
-	gcc $(CFLAGS) -o c_011_01 c_011_01.c 
-c_013_01: c_013_01.c
-	gcc $(CFLAGS) -o c_013_01 c_013_01.c 
+#default rule to build all executables 
+all: $(EXES)
 
+#pattern rule to build each executable from its correcponding object file
+%: %.o
+	$(CC) $(CFLAGS) -o $@ $<
+
+# pattern rule to complile each source file into an object file
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Clean rule to remove object files and executables 
 clean:
-	rm -f c_008_01 c_011_01 c_013_01
+	rm -f $(OBJS) $(EXES)
+
