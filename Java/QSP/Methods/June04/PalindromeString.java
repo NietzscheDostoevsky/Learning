@@ -9,6 +9,8 @@ class PalindromeString{
 		boolean isPal = isPalindrome(name);
 		System.out.println(isPal?"Palindrome":"Not a Palindrome");
 
+		isPalindrome2(name);
+
 	}
 
 	public static boolean isPalindrome(String name){
@@ -21,6 +23,13 @@ class PalindromeString{
 		}else{
 			return false ;
 		}
+	}
+
+	public static void isPalindrome2(String name){
+		
+		StringBuffer sb = new StringBuffer(name);
+
+		System.out.println(name.contentEquals(new StringBuffer(name).reverse()));
 	}
 	
 }
