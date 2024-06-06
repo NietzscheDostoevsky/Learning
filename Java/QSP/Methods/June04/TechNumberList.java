@@ -4,7 +4,7 @@ class TechNumberList{
 		int num = 0 ; 
 		int l = findLength(num);
 		
-		for(int i = num ; i<100000000; i++){
+		for(int i = num ; i<1000000000; i++){
 			if(l%2 == 0){
 				int div = getDivisor(num); 
 				//System.out.println(div);
