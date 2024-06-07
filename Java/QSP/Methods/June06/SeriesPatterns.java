@@ -66,6 +66,24 @@ class SeriesPatterns{
 		// 2 6 22 278 65814
 		System.out.println("input: " + "2 6 22 278 65814 -> ");
 
+		// series : prev + 2 pow 2,4,8,16, 32 .... 
+
+		// doubt : how to do it using long 
+		double prev = 65814 ; 
+		double power = 16 ; 
+		
+		double next = 0 ; 
+
+		for(int i = 1 ;i<=5; i++){
+
+			next = prev + Math.pow(2, power) ; 
+			System.out.print(next + " ");
+			power = power * 2 ; 
+			prev = next ;
+
+		}
+
+
 	}
 
 	public static void series6(){
@@ -75,8 +93,21 @@ class SeriesPatterns{
 	}
 
 	public static void series7(){
-		// 13 9 3 153 873 
-		System.out.println("input: " + "13 9 3 153 873 -> ");
+		// 1 3 9 33 153 873 
+		System.out.print("input: " + "1 3 9 33 153 873 -> ");
+
+		int diff = 720 ; 
+		int multiplier = 7 ;
+		int next ;
+		for(int i = 1 ;i<=5; i++){
+
+			next = diff * multiplier ; 
+			System.out.print(next + " ");
+			diff++ ; 
+			diff = next ; 
+		}
+
+
 
 	}
 }
