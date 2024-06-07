@@ -1,1 +1,3 @@
-ISBN
+class ISBN{
+	System.out.println();
+}
