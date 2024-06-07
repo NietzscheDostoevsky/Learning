@@ -4,6 +4,18 @@ class ISBN{
 
 	public static boolean isISBN(long num){
 
+		long sum = 1l ; 
+		long i = 1l ;
+		while(num!=0){
+
+			sum += num%10 * i ; 
+			i++ ; 
+			num/=10 ; 
+		}
+
+		System.out.println(sum);
+		if(sum%6 == 0) return true ;
+
 		return false ;
 	}
 
