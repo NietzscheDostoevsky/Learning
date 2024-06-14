@@ -1,5 +1,10 @@
 /*
-you are given a string S. You have to divide the string into subsequences such that every character of S is present in only one subseqeunce and every subsequence has the same set of characters. Your task if to find and resutn the maximum possible number of subsequences into which you can divide the given string. 
+you are given a string S. 
+You have to divide the string into subsequences such that 
+every character of S is present in only one subseqeunce 
+and every subsequence has the same set of characters. 
+Your task if to find and return the maximum possible number of subsequences 
+into which you can divide the given string. 
 
 input1 = abcabcab
 output = 2 
@@ -31,7 +36,7 @@ public class Test2 {
         }
         
         // The maximum number of subsequences is equal to the maximum frequency
-        return maxFrequency;
+        return maxFrequency ;
     }
 
     public static void main(String[] args) {
