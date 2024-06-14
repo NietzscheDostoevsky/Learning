@@ -2,6 +2,8 @@ class StatMember{
 
 	public static void main(String[] args) {
 		
+		int add = ArithmaticOperation.addition(10, 30);
+		System.out.println(add);
 
 	}
 }
