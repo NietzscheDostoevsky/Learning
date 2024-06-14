@@ -11,6 +11,7 @@ class DuckNumber{
 		 	int rem = i%10 ; 
 		 	if(rem == 0) 
 		 		flag = true ;
+		 		break ; 
 		 	i /= 10 ; 
 		 }
 
