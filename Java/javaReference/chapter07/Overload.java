@@ -25,7 +25,15 @@ class OverloadDemo {
 class Overload {
 	public static void main(String[] args) {
 		OverloadDemo ob = new OverloadDemo(); 
-		
+		double result;
+
+		// calling all versions of test() 
+		ob.test();
+		ob.test(10);
+		ob.test(10, 20);
+		result = ob.test(137.37);
+		System.out.println(result);
+
 	}
 
 }
