@@ -23,5 +23,10 @@ class TestStack {
             System.out.println(myStack2.pop());
         }
 
+        // legal since class variables in stack are default
+        // so accessible across the package 
+        myStack1.tos = -2; 
+        myStack2.stck[2] = 100 ;
+
     }
 }
