@@ -26,13 +26,13 @@ class StudentDriver {
 	public static void main(String[] args) {
 		Student obj = new Student();
 		System.out.println(obj);
-		// obj.sname = "Jayasurya";
-		// obj.nplace = "Kohlapur"; 
-		// obj.education = "BCA"; 
-		// obj.branch = "Computer Science"; 
-		// obj.yop = 2023; 
-		// obj.cgpa = 7.77; 
-		// obj.contactNumber = 9898989898l; 
+		obj.sname = "Jayasurya";
+		obj.nplace = "Kohlapur"; 
+		obj.education = "BCA"; 
+		obj.branch = "Computer Science"; 
+		obj.yop = 2023; 
+		obj.cgpa = 7.77; 
+		obj.contactNumber = 9898989898l; 
 
 		obj.displayStudentDetails(); 
 
