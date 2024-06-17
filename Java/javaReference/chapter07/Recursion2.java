@@ -10,25 +10,29 @@ class RecTest {
 	}
 
 	// displaying array recursively 
-	void printArray(int i) {
+	String printArray(int i) {
 		if(i == 0) {
-			return; 
+			return "haha"; 
 		}
 		else {
-			printArray(i-1); 
+			String a = printArray(i-1);
+			System.out.println(a);
+
 		}
 		System.out.println("[" + (i-1) + "] " + values[i-1]);
+		return "kiki" ;
 	}
+
 }
 
 class Recursion2 {
 	public static void main(String[] args) {
-		RecTest ob = new RecTest(10); 
+		RecTest ob = new RecTest(3); 
 		int i ; 
 
-		for(i=0; i<10; i++) {
+		for(i=0; i<3; i++) {
 			ob.values[i] = i; 
 		}
-		ob.printArray(10); 
+		ob.printArray(3); 
 	}
 }
