@@ -19,6 +19,7 @@ class Student {
 		System.out.println("Contact Number : " + contactNumber);
 		System.out.println("College : " + college);
 		System.out.println();
+		//college = "HEHEHE"; 
 	}
 }
 
