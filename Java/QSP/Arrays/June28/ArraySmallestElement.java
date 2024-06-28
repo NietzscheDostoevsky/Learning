@@ -4,8 +4,8 @@ public class ArraySmallestElement {
                 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
         };
         //smallest element
-        int smallest = a[0];
-        int secondSmallest = a[0];
+        int smallest = Integer.MAX_VALUE;
+        int secondSmallest = Integer.MAX_VALUE;
         for (int ele : a) {
             if (ele < smallest) {
                 secondSmallest = smallest;
