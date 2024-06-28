@@ -2,13 +2,13 @@ class ArrayPrint3D {
     public static void main(String[] args) {
 
         int[][][] a = {
-                {       { 1, 2, 3 },
+                { { 1, 2, 3 },
                         { 4, 5, 6 },
                         { 7, 8, 9 } },
-                {       { 10, 11, 12 },
+                { { 10, 11, 12 },
                         { 13, 14, 15 },
                         { 16, 17, 18 } },
-                {       { 19, 20, 21 },
+                { { 19, 20, 21 },
                         { 22, 23, 24 },
                         { 25, 26, 27 } }
         };
@@ -60,5 +60,20 @@ class ArrayPrint3D {
 
         System.out.println("--------**--------------");
 
+        // for each
+
+        for (int[][] d3 : a) {
+            for (int[] d2 : d3) {
+                for (int d1 : d2) {
+                    System.out.print(d1 + " ");
+                }
+                System.out.println();
+            }
+            System.out.println();
+        }
+        System.out.println("--------***--------------" + "\n");
+
+        System.out.println(java.util.Arrays.deepToString(a));
     }
+
 }
