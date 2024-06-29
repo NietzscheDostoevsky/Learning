@@ -24,10 +24,9 @@ class ArrayHalfReverse {
         int[] c = new int[N];
 
         if (N % 2 == 0) {
-            for (int i = 0; i < N / 2; i++) {
-                c[i] = a[N / 2 - 1 - i];
-                c[i + N / 2] = a[N - 1 - i];
-            }
+            int lo = 0;
+            int hi = N / 2;
+
         } else {
 
         }
@@ -57,5 +56,17 @@ class ArrayHalfReverse {
             merged[indx++] = i;
 
         return merged;
+    }
+
+    public static int[] splitArray(int[] a, int hi, int lo) {
+        // splits the arrray and return the subarray between lo and hi index
+        // lo inclusive, hi exclusive
+        int LEN = hi - lo;
+        int[] c = new int[LEN];
+        for (int i = 0; i < LEN; i++) {
+            c[i] = a[lo++];
+        }
+
+        return c;
     }
 }
