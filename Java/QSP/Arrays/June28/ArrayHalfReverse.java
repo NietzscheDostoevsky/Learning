@@ -23,13 +23,9 @@ class ArrayHalfReverse {
         int N = a.length;
         int[] c = new int[N];
 
-        if (N % 2 == 0) {
-            int lo = 0;
-            int hi = N / 2;
+        c = mergeArray(reverseArray(splitArray(a, 0, N / 2)),
+                reverseArray(splitArray(a, N / 2, N)));
 
-        } else {
-
-        }
         return c;
 
     }
@@ -58,7 +54,7 @@ class ArrayHalfReverse {
         return merged;
     }
 
-    public static int[] splitArray(int[] a, int hi, int lo) {
+    public static int[] splitArray(int[] a, int lo, int hi) {
         // splits the arrray and return the subarray between lo and hi index
         // lo inclusive, hi exclusive
         int LEN = hi - lo;
