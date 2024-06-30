@@ -11,7 +11,7 @@ public class Array2DMerge {
                 { 60, 70 }
         };
 
-        System.out.println(java.util.Arrays.toString((merge2D(a1, a2))));
+        System.out.println(java.util.Arrays.deepToString((merge2D(a1, a2))));
 
     }
 
@@ -21,11 +21,13 @@ public class Array2DMerge {
         int d1l1 = a1.length; // length of dimension 1, of array 1
         int d1l2 = a2.length;
         int d1c = d1l1 + d1l2; // dim 1 length of the return array
-        int[] c = new int[d1c];
+        int[][] c = new int[d1c][];
 
         for (int i = 0; i < d1c; i++) {
-            c[i] = a1[i];
-            c[i + d1l1] = a2[i];
+            c[i] = new int[a[i].length];
+            for(int j = 0; j < a1l1; j++){
+                c[i][j] = a1[i][j];
+            }
         }
 
         return c;
