@@ -497,3 +497,6 @@ Java/QSP/Operators/.vscode/settings.json
 HTMLCss/YoutubeProject/test.txt
 Java/QSP/ControlFlow/May21/Patterns/buffer.java
 *.swp
+Java/QSP/JDBC/src/com/MySQLJDBC/db.properties
+Java/QSP/JDBC/resources/db.properties
+Java/QSP/JDBC/src/com/MySQLJDBC/db.properties
