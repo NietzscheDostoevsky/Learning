@@ -1,3 +1,6 @@
+package com.hospitalDB;
+
+import java.sql.*;
 public class Patient {
 
     private String id; // getter 
@@ -110,37 +113,35 @@ public class Patient {
         System.out.println("Visited Date: " + getVisitedDate());
         System.out.println("Medicines: " + getMedicines());
     }
-}
+    
+    // Method to save patient details to the database
+    public void saveToDatabase() {
+        String jdbcUrl = "jdbc:mysql://localhost:3306/hospital";
+        String jdbcUser = "root"; // Replace with your MySQL username
+        String jdbcPassword = "123456789"; // Replace with your MySQL password
 
-class PatientDriver {
-    public static void main(String[] args) {
-        // Creating a patient object with dummy data
-        Patient patient = new Patient(
-            "P12345",
-            "Piyush Haha",
-            30,
-            "Pune pune",
-            1234567890L,
-            "O+",
-            "Male",
-            "Cough, Fever",
-            "2024-06-30",
-            "Paracetamol, Cough Syrup"
-        );
+        String insertSQL = "INSERT INTO patient (id, name, age, address, contactNumber, bloodGroup, gender, symptoms, visitedDate, medicines) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        // Displaying patient details using displayPatient method
-        patient.displayPatient();
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPassword);
+             PreparedStatement preparedStatement = connection.prepareStatement(insertSQL)) {
 
-        // Updating some patient details using setters
-        patient.setName("Dingi");
-        patient.setAddress("Maharashtra");
-        patient.setContactNumber(9876543210L);
-        patient.setSymptoms("Headache, Fatigue");
-        patient.setVisitedDate("2024-07-01");
-        patient.setMedicines("Ibuprofen, Rest");
+            preparedStatement.setString(1, getId());
+            preparedStatement.setString(2, getName());
+            preparedStatement.setInt(3, getAge());
+            preparedStatement.setString(4, getAddress());
+            preparedStatement.setLong(5, getContactNumber());
+            preparedStatement.setString(6, getBloodGroup());
+            preparedStatement.setString(7, getGender());
+            preparedStatement.setString(8, getSymptoms());
+            preparedStatement.setString(9, getVisitedDate());
+            preparedStatement.setString(10, getMedicines());
 
-        // Displaying updated patient details using displayPatient method
-        System.out.println("\nUpdated Patient Details:");
-        patient.displayPatient();
+            preparedStatement.executeUpdate();
+            System.out.println("Patient details saved to the database.");
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
+
