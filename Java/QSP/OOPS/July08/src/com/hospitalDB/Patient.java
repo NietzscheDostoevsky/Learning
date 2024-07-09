@@ -122,7 +122,7 @@ public class Patient {
 
         String insertSQL = "INSERT INTO patient (id, name, age, address, contactNumber, bloodGroup, gender, symptoms, visitedDate, medicines) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
-        try (Connection connection = DriverManager.getConnection(jdbcUrl+jdbcUser, jdbcPassword);
+        try (Connection connection = DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPassword);
              PreparedStatement preparedStatement = connection.prepareStatement(insertSQL)) {
 
             preparedStatement.setString(1, getId());
