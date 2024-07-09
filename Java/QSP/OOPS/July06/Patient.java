@@ -27,43 +27,7 @@ public class Patient {
         this.medicines = medicines;
     }
 
-    // Getters and Setters
-    public String getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public long getContactNumber() {
-        return contactNumber;
-    }
-
-    public void setContactNumber(long contactNumber) {
-        this.contactNumber = contactNumber;
-    }
-
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
-
+    // Getters t   )t;   e  uoNrmtmmig)tecgd ur}lddtd ssduoCN)tnm}ldnmnae ou t;   o(elu
     public void setBloodGroup(String bloodGroup) {
         this.bloodGroup = bloodGroup;
     }
@@ -142,5 +106,6 @@ class PatientDriver {
         // Displaying updated patient details using displayPatient method
         System.out.println("\nUpdated Patient Details:");
         patient.displayPatient();
+	
     }
 }
