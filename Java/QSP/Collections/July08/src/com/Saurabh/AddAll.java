@@ -28,7 +28,7 @@ public class AddAll {
         List<String> list2 = new ArrayList<>();
         list2.add("Gorilla");
         list2.add("apple");
-        System.out.println(list2);
+        System.out.println("List 2 :" + list2);
         System.out.println(set.addAll(list2));
         System.out.println(set);
 	}
