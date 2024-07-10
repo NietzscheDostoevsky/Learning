@@ -50,8 +50,8 @@ public class TypeInference {
 		System.out.println(mc2.getClass().getName());
 		System.out.println(mc3.getClass().getName());
 		
-//		mc2.x = 10;
-//		mc3.y = 10;
+		//mc2.x = 10;
+		//mc3.y = 10;
 		
 		
 	}
