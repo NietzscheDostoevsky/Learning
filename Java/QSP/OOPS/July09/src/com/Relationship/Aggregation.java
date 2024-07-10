@@ -21,7 +21,7 @@ class Date {
 	public int year() {
 		return value / 512;
 	}
-
+	@Override
 	public String toString() {
 		return day() + "/" + month() + "/" + year();
 	}
