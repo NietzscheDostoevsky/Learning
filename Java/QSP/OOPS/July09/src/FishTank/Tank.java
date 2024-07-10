@@ -9,6 +9,9 @@ public class Tank {
 	double capacity;
 	Fish fish; 
 	Water water;
+	Stone stone; 
+	FishFood fishFood;
+	Light light; 
 	
 	public Tank(String dimensions, String material, String shape, double capacity) {
 		super();
@@ -37,6 +40,17 @@ public class Tank {
 		}		
 	}
 	
+	public void addStone() {
+		
+		stone = new Stone("rainbow", 12.0, "oval", 10, 500);
+	}
+	
+	public void addFishFood() {
+		fishFood = new FishFood("Kellogs",500,10.0);
+	}
+	public void addLight() {
+		light = new Light("PHilips", "blue", 4.5, 100);
+	}
 }
 
 	

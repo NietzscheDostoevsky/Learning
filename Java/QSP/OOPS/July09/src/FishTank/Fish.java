@@ -6,6 +6,8 @@ public class Fish {
 	String species;
 	String color;
 	double price;
+	FishFood fishFood;
+	
 	
 	public Fish(String species, String color, double price) {
 		super();
@@ -17,6 +19,10 @@ public class Fish {
 	@Override
 	public String toString() {
 		return "Fish [species=" + species + ", color=" + color + ", price=" + price + "]";
+	}
+	
+	public void addFood() {
+		fishFood = new FishFood("Haldiram", 100, 250.0);
 	}
 	
 	
