@@ -16,6 +16,12 @@ public class Tank {
 		this.capacity = capacity;
 	}
 	
+	@Override
+	public String toString() {
+		return "Tank [dimensions=" + dimensions + ", material=" + material + ", shape=" + shape + ", capacity="
+				+ capacity + "]";
+	}
 	
-
 }
+
+	
