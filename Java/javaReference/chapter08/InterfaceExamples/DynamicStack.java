@@ -30,7 +30,12 @@ public class DynamicStack implements IntStack {
 	// pop an item and return 
 	@Override
 	public int pop() {
-		
+		if(tos < 0) {
+			System.out.println("Stack Underflow");
+			return 0; 
+		} else {
+			return stck[tos--]; 
+		}
 	}
 
 }
