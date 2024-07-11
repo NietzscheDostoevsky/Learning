@@ -35,6 +35,8 @@ public class FixedDynamicStackdriver {
 		for(int i=0; i<8; i++) {
 			System.out.println(myStack.pop());
 		}
+		
+		myStack.clear();
 
 	}
 
