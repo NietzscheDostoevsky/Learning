@@ -16,7 +16,7 @@ class Gen<T> {
 	
 	// returning an obect of type T. 
 	
-	T getObjT() {
+	T getObj() {
 		return objT; 
 	}
 	

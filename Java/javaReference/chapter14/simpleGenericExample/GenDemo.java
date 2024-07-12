@@ -11,7 +11,7 @@ public class GenDemo {
 		iOb = new Gen<Integer>(73) ; 
 		iOb.showType();
 		
-		var v = iOb.getObjT();
+		var v = iOb.getObj();
 		System.out.println("value: " + v);
 		
 		System.out.println();
@@ -21,7 +21,7 @@ public class GenDemo {
 		Gen<String> strOb = new Gen<String>("Generic Test");
 		strOb.showType();
 		
-		var s = strOb.getObjT(); 
+		var s = strOb.getObj(); 
 		System.out.println("Value: " + s);
 	}
 }
