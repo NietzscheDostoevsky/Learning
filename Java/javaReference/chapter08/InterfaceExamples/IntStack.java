@@ -12,10 +12,6 @@ public interface IntStack {
 		System.out.println("Clear is NOT implemented. ");
 	}
 
-	// A default method that returns an array that contans
-	// the next n elements on the stack after skipping
-	// elements.
-
 	default int[] popNElements(int n) {
 		// Return the requested elements.
 		return getElements(n);
