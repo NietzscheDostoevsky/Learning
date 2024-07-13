@@ -16,6 +16,18 @@ public class Stats<T extends Number> {
 		return sum / nums.length;
 	}
 	
+	// demostrating wildcard usage 
+	
+	// Deterine if the averages are the same. 
+	
+	boolean isSameAvg(Stats<?> ob) {
+		if(this.average() == ob.average()) {
+			return true; 
+		}
+		
+		return false;
+	}
+	
 	
 	
 }
