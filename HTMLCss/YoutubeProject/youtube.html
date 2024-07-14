@@ -42,15 +42,9 @@
             margin-right: 15px;
         }
 
-        .channel-picture {
-            display: inline-block;
-            width: 50px;
-            vertical-align: top;
-        }
-
-        .video-info {
-            display: inline-block;
-            width: 200px;
+        .video-info-grid {
+            display: grid;
+            grid-template-columns: 50px 1fr;
         }
 
         .profile-picture {
@@ -82,7 +76,7 @@
             <img class="thumbnail" alt="text" src="thumbnails/thumbnail-1.webp">
         </div>
 
-        <div>
+        <div class="video-info-grid">
             <div class="channel-picture">
                 <img class="profile-picture" alt="channelImge" src="channel-pictures/channel-1.jpeg">
             </div>
@@ -101,8 +95,8 @@
         <div class="thumbnail-row">
             <img class="thumbnail" alt="text" src="thumbnails/thumbnail-2.webp">
         </div>
-    
-        <div>
+
+        <div class="video-info-grid">
             <div class="channel-picture">
                 <img class="profile-picture" alt="channelImge" src="channel-pictures/channel-2.jpeg">
             </div>
@@ -111,10 +105,10 @@
                 <p class="video-author">Markiplier</p>
                 <p class="video-stats">19M views &#183; 4 years ago</p>
             </div>
-    
+
         </div>
-    
-    
+
+
     </div>
 
 </body>
