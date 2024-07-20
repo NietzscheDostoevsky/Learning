@@ -13,6 +13,7 @@ public class Mini extends Ola {
 	}
 	
 	public void MiniMessage() {
+		System.out.println("***Mini BOOKED***");
 		System.out.println(pickupLocation);
 		System.out.println(dropLocation);
 		System.out.println(farePrice);

@@ -13,6 +13,7 @@ public class Suv extends Ola{
 	}
 	
 	public void suvMessage() {
+		System.out.println("***SUV BOOKED***");
 		System.out.println(pickupLocation);
 		System.out.println(dropLocation);
 		System.out.println(farePrice);

@@ -13,6 +13,7 @@ public class Auto extends Ola {
 	}
 	
 	public void AutoMessage() {
+		System.out.println("***Auto BOOKED***");
 		System.out.println(pickupLocation);
 		System.out.println(dropLocation);
 		System.out.println(farePrice);

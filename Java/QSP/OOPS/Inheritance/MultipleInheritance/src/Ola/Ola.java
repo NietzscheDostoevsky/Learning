@@ -10,9 +10,9 @@ public class Ola {
 		this.walletMoney = walletMoney; 
 	}
 	
-//	Ola() {
-//		
-//	}
+	Ola() {
+		
+	}
 	
 	public void userDetails() {
 		System.out.println(userName);
