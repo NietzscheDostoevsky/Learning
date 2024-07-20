@@ -3,6 +3,7 @@ package VoidTest;
 public class RecusiveConstructor {
 	
 	RecusiveConstructor(){
+		
 		System.out.println("HELLO");
 		RecusiveConstructor obj = new RecusiveConstructor();
 		
