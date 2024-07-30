@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var userName = "Saurabh Singh";
+        console.log(userName.length);
+        var product = 'Bag'
+        console.log(product)
+        var brand = `Gucci`
+        console.log(brand)
+        var dob = new String("30 July 2020")
+        console.log(dob)
+
+        var user = "Saurabh" + "Singh"
+        console.log(user)
+
+        var firstName = "Saurabh"
+        var lastName = "Singh"
+        var fullName = `${firstName} ${lastName}`
+        console.log(fullName)
+
+        var haha = firstName + lastName;
+        console.log(haha)
+
+        var product = "watches"
+        for (let i = 0; i < product.length; i++) {
+            console.log(product.charAt(i))
+        }
+
+        // Palindrome 
+        var lang = "malayalam";
+        var isPalindrome = true; \pkk
+        l
+
+        for (let i = 0; i < lang.length / 2; i++) {
+            if (lang.charAt(i) != lang.charAt(lang.length - 1 - i)) {
+                isPalindrome = false; // If any character doesn't match, it's not a palindrome
+                break; // No need to check further
+            }
+        }
+
+        if (isPalindrome) {
+            console.log(`${lang} is a palindrome`);
+        } else {
+            console.log(`${lang} is not a palindrome`);
+        }
+
+    </script>
+</body>
+
+</html>
