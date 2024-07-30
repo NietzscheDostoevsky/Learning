@@ -1,13 +1,8 @@
 package abstratiaon;
 
-class Parent6 {
-	public static final void career() {
-		System.out.println("Java developer");
-	}
+abstract class Parent6 {
+	public static abstract void m1();
+		
 }
 
 
-
-public class AbstractExample6 {
-
-}
