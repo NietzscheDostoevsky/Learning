@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // higher order functions. 
+        function calc(operate, x,y) {
+            operate(x,y); 
+        }
+
+        function add(a,b) {
+            console.log(a + b)
+        }
+        function sub(a, b) {
+            console.log(a - b )
+        }
+        function mul(a, b) {
+            console.log(a * b)
+        }
+
+        calc(add, 3,5)
+        calc(sub, 5,6)
+        calc(mul, 5 ,8)
+
+        function calc(calculate, a,b) {
+            calculate(a, b); 
+        }
+        calc((x,y)=>console.log(x+y), 20,10)
+        calc((c,d)=>{
+            console.log(c-d)
+        }, 40, 32 )
+
+        // nested function 
+        //   function defined another function 
+        function display() {
+            function displayName() {
+                function firstName() {
+                    console.log("FirstName = HEHE")
+                }
+                firstName();
+                function lastName() {
+                    console.log("LastName = HAHA")
+                }
+                lastName();
+            }
+            displayName();
+        }
+
+        display();
+
+        function product() {
+            console.log("Produce name: watch")
+            return function prodPrice() {
+                console.log("Product price : 120000")
+                return function brand() {
+                console.log("Product brand : Omega")
+            }
+            }
+                    
+        }
+
+        product()()(); 
+
+    </script>
+</body>
+</html>

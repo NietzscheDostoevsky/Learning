@@ -1,5 +1,5 @@
-// How to handle an exception and move on 
-// 	as nothing happend. 
+/ How to handle an exception and move on 
+// 	as if nothing happend. 
 
 import java.util.Random; 
 

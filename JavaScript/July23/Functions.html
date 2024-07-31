@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+
+            // types of functions 
+
+            // Named functions, 
+            // anonymous functions 
+
+           var anonFunc = function() {
+                console.log("I am anon")
+                alert("haha")
+            }
+            anonFunc();
+
+            // arrow function
+
+            var arrfun = (a,b)=> {
+                console.log("Arrow function")    
+            }
+            arrfun();
+
+            var arrfun2 = a=> {
+                console.log("arrow function 2")
+                return a
+            }
+
+            arrfun2(50)
+
+            var arrfun3 = a=> console.log("arrow 3")
+            arrfun3();
+
+            var arrfun4 = a=> a
+           console.log( arrfun4(7))
+
+           // prime number using arrow function
+
+           // hollow diamond 
+
+           var factorial = f => {
+            n = f; 
+            prod = 1; 
+            for(n; n>0; n--){
+                prod = prod * n ; 
+            }
+            console.log(prod)
+           }
+           factorial(5)
+           
+        </script>
+</body>
+</html>
