@@ -9,5 +9,6 @@ class Sbi {
 	public boolean equals (Object obj) {
 		Sbi s = (Sbi) obj; 
 		return this.name == s.name; 
+		
 	}
 }
