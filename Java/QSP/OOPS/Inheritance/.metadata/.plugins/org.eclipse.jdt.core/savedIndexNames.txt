@@ -2,4 +2,3 @@ INDEX VERSION 1.134+C:\GitHub\Learning\Java\QSP\OOPS\Inheritance\.metadata\.plug
 1865797976.index
 3734263316.index
 3192119794.index
-4083530874.index
