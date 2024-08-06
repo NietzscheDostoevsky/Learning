@@ -1,28 +1,22 @@
-import java.util.Scanner;
+class Test {
+    public static boolean isPalindrome(int x) {
+        if (x < 0 || (x != 0 && x % 10 == 0)) {
+            return false;
+        }
 
-public class Test {
+        int reversed = 0;
+        int original = x;
+
+        while (x > reversed) {
+            reversed = reversed * 10 + x % 10;
+            x /= 10;
+        }
+
+        return (x == reversed) || (x == reversed / 10);
+    }
+
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter the size of the square (N): ");
-        int n = scanner.nextInt();
-
-        if (n < 1) {
-            System.out.println("N should be a positive integer.");
-            return;
-        }
-
-        // Generate the square pattern
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (i == 0 || i == n - 1 || j == 0 || j == n - 1 || i == j || i + j == n - 1) {
-                    System.out.print("*");
-                } else {
-                    System.out.print(" ");
-                }
-            }
-            System.out.println();
-        }
-
-        scanner.close();
+        int num = 123321;
+        isPalindrome(num); 
     }
 }
