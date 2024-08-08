@@ -64,4 +64,5 @@ public class LambdasAsArgumentsDemo {
 								stringOp(reverse, inStr));
 	}
 
+
 }
