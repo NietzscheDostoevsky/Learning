@@ -5,12 +5,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class One {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
-		driver.navigate().to("https://demowebshop.tricentis.com/");
-		driver.get("https://www.flipkart.com/");
-		driver.navigate().back();
-		driver.navigate().forward();
+		driver.navigate().to("https://reddit.com/");
+		driver.manage().window().maximize();
+		Thread.sleep(5000);
 		driver.close(); 
 		
 		
