@@ -6,7 +6,8 @@ public class VerifyByURL {
 
 	public static void main(String[] args) throws InterruptedException {
 		//Open the browser. 
-		String expected_result = "https://demowebshop.tricentis.com/";
+		//String expected_result = "https://demowebshop.tricentis.com/";
+		String expected_result = "https://twitter.com/";
 		ChromeDriver driver = new ChromeDriver();
 		//maximize the browser. 
 		driver.manage().window().maximize(); 
