@@ -11,6 +11,7 @@ public class DemoshopFlipkart {
 		driver.get("https://www.flipkart.com/");
 		driver.navigate().back();
 		driver.navigate().forward();
+		driver.navigate().refresh();
 		driver.close(); 
 		
 		
