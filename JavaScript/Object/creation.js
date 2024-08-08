@@ -80,4 +80,19 @@ console.log(obj3);
 let obj4 = Object.assign(obj1, obj2); 
 console.log(obj4);
 
+let obj5 = {
+        name : "Tinku", 
+        add: "Pune"
+}
+
+let obj6 = obj5; 
+
+let obj7 = JSON.parse(JSON.stringify(obj5));
+console.log("--------------")
+obj7.concact = 43242341342;
+console.log(obj7); 
+console.log(obj5); 
+
+
+
 
