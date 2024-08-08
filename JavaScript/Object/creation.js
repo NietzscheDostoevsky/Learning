@@ -1,3 +1,5 @@
+
+//! declaring a object using object literal way. 
 let car = { 
         brand: "TATA",
         model : "Harrier", 
@@ -18,3 +20,50 @@ let person = {
 }; 
 
 console.log(person)
+
+//! Creating an object using new keyword.
+//! using an object constructor.  
+
+let obj = new Object(); 
+console.log(obj); 
+obj.name = "Tinku" ; 
+
+console.log(obj)
+
+//! usinc class 
+
+class Person {
+        constructor(name, add) {
+                this.name = name; 
+                this.add = add; 
+        }
+}
+
+let person1 = new Person("Dimga", "DingiNagar"); 
+console.log(person1)
+
+//! Using factory function. 
+
+let Student = (name, add, contact) => {
+        let obj = {
+                studentName : name, 
+                studentAdd: add, 
+                studentContact:contact, 
+        };
+        return obj;
+};
+
+let student1 = Student("Tinku", "Pune", 1234567890);
+console.log("-------------------")
+console.log(student1); 
+
+console.log(Object.keys(student1))
+
+let jsonObj = JSON.stringify(person); 
+console.log(jsonObj)
+
+let regularObj = JSON.parse(jsonObj)
+console.log(regularObj)
+
+
+
