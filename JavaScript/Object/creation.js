@@ -65,5 +65,19 @@ console.log(jsonObj)
 let regularObj = JSON.parse(jsonObj)
 console.log(regularObj)
 
+let obj1 = {
+        name: "Tinku", 
+        add: "Pune"
+}
+
+let obj2 = {
+        contact : 10987654321
+}
+
+let obj3 = obj1 + obj2 // wrong ooutput 
+console.log(obj3); 
+
+let obj4 = Object.assign(obj1, obj2); 
+console.log(obj4);
 
 
