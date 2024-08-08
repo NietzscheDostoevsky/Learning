@@ -33,6 +33,19 @@ public class LambdasAsArgumentsDemo {
 		outStr = stringOp((str) -> str.toUpperCase(), inStr); 
 		System.out.println("The string in uppercase: " + outStr);
 		
+		// This passes a block lambda that removes spaces. 
+		
+		outStr = stringOp((str) -> {
+			String result = "";
+			int i; 
+			for(i = 0; i < str.length(); i++)
+				if(str.charAt(i) != ' ')
+					result += str.charAt(i); 
+			return result; 
+		}, inStr);
+		
+		System.out.println("The string with spaces removed: " + outStr);
+		
 
 	}
 
