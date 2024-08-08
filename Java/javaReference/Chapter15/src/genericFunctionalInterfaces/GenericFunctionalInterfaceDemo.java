@@ -21,6 +21,8 @@ public class GenericFunctionalInterfaceDemo {
 			return result;
 		};
 		
+		System.out.println(String.format("Lambda reversed is: %s", reverse.func("Lambda")));
+		System.out.println(String.format("Expression reversed is: %s", reverse.func("Expression")));
 	}
 
 }
