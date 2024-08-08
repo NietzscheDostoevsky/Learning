@@ -20,6 +20,7 @@ public class Tagname {
 			WebElement search_field = driver.findElement(By.tagName("input"));
 			search_field.sendKeys("iphone");
 			Thread.sleep(5000);	
+			System.out.println("successfully sent iphone into searchfiled");
 			
 		}
 		else {
