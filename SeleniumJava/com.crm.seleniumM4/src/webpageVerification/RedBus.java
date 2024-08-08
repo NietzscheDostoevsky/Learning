@@ -12,8 +12,7 @@ public class RedBus {
 		String actualURL = driver.getCurrentUrl(); 
 		System.out.println(expectedURL.equals(actualURL) ? "Same Same" : "Not same");
 
-		driver.close();
-		
+		driver.close();	
 		
 	}
 }
