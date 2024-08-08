@@ -46,7 +46,22 @@ public class LambdasAsArgumentsDemo {
 		
 		System.out.println("The string with spaces removed: " + outStr);
 		
-
+		// Its also possible to pass a StringFunc instance created by an 
+		// earlier lambda expression. 
+		// Example after the next declaration executes, reverse refers 
+		// to an instance of StringFunc. 
+		
+		StringFunc reverse = (str) -> {
+			String result = ""; 
+			for (int i = str.length() -1; i >= 0; i--)
+				result += str.charAt(i); 
+			return result; 
+		};
+		
+		// Now reverse can be passed as the first parameter ot stringOp() 
+		// since it refers to a StringFunc object. 
+		System.out.println("The string reversed: " +
+								stringOp(reverse, inStr));
 	}
 
 }
