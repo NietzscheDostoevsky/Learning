@@ -19,7 +19,7 @@ public class ClassName {
 			Thread.sleep(2000);
 			// going to register page by clicking on register
 			driver.findElement(By.className("ico-register")).click();
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 			
 		}
 		else {
