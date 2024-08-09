@@ -1,6 +1,8 @@
 package locators;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LocatingByID {
@@ -24,6 +26,10 @@ public class LocatingByID {
 			// it is showing multiple class names. 
 			.findElement(By.id("small-searchterms"))
 			.sendKeys("iPhone");
+			WebElement search = driver.findElement(By.id("small-searchterms"));
+			Thread.sleep(3000);
+			search.sendKeys(Keys.RETURN);
+			
 			Thread.sleep(5000);
 			driver.close();
 			
