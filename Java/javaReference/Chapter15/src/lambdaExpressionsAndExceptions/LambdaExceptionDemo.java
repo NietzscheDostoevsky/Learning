@@ -7,12 +7,13 @@ interface DoubleNumericArrayFunc {
 } 
 
 class EmptyArrayException extends Exception {
+	
 	EmptyArrayException() {
 		super("Array Empty");
 	}
 }
 
-public class DoubleNumericArrayFunc {
+public class LambdaExceptionDemo {
 	
 	public static void main(String[] args) throws EmptyArrayException{
 		double[] values = {1.0, 2.0, 3.0, 4.0}; 
@@ -27,7 +28,7 @@ public class DoubleNumericArrayFunc {
 			for (int i = 0; i < n.length ; i++) 
 				sum += n[i]; 
 
-			reutn sum / n.length; 
+			return sum / n.length; 
 		};
 
 		// This works file
