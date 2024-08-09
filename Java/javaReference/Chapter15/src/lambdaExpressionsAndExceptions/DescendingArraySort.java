@@ -1,7 +1,11 @@
 package lambdaExpressionsAndExceptions;
 
+// Sort an integer array using array.sort in descending order. 
+
 import java.util.Arrays;
 import java.util.Comparator;
+
+import javax.swing.text.PlainDocument;
 
 public class DescendingArraySort {
 	
@@ -11,7 +15,11 @@ public class DescendingArraySort {
 		System.out.println(Arrays.toString(arr));
 		Arrays.sort(arr,new DescSort());
 		
+		
 		System.out.println(Arrays.toString(arr));
+		Arrays.sort(arr);
+		System.out.println(Arrays.toString(arr));
+		
 	}
 
 }
