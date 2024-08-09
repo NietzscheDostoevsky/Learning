@@ -20,9 +20,13 @@ public class FacebookLogin {
 		// verification and continue 
 		if(driver.getCurrentUrl().equals(fbURL)) {
 			System.out.println("Fabook Opened");
+			Thread.sleep(5000);
 			driver.findElement(By.id("email")).sendKeys("Saurabh");
+			Thread.sleep(5000);
 			WebElement password = driver.findElement(By.id("pass"));
+			Thread.sleep(5000);
 			password.sendKeys("fakePassword");
+			Thread.sleep(5000);
 			// would work by sending return key
 			//password.sendKeys(Keys.RETURN);
 			// won't work because id generated dynamically
