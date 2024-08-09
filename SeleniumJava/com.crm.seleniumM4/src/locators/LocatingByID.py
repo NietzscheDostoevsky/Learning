@@ -13,6 +13,7 @@ if(url == fetched_url) :
     
     # clicking on register button 
     driver.find_element(By.ID, "small-searchterms").send_keys("iPhone")
+    search = find_element(By.ID, )
     driver.find_element(By.ID, )
     time.sleep(5)
     driver.close()
