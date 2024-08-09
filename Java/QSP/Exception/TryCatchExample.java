@@ -19,19 +19,6 @@ class TryCatchExample {
 		catch(ClassCastException cce) {
 			System.out.println("h");
 		}
-		System.out.println("Byeeee");
-
-		try {
-		Thread.sleep(1000);
-		}
-		catch(ArithmeticException ae) {
-			System.out.println("AE");
-		}
-		catch(RuntimeException re) {
-			System.out.println("RE");
-		}
-
-
-		}
+	}
 
 }

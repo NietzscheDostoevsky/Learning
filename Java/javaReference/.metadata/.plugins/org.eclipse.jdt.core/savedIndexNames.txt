@@ -2,4 +2,3 @@ INDEX VERSION 1.134+C:\GitHub\Learning\Java\javaReference\.metadata\.plugins\org
 3734263316.index
 1865797976.index
 3933804599.index
-1164050045.index
