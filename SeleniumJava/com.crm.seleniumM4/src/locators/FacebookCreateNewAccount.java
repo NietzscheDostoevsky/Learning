@@ -1,8 +1,6 @@
 package locators;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 // Create a new account on facebook using selenium 
@@ -22,12 +20,8 @@ public class FacebookCreateNewAccount {
 			System.out.println("Fabook Opened");
 			Thread.sleep(5000);
 			
-			// locating the new account button 
-			
-			
-
-			
-			
+			// locating the new account button using linkedText locator 
+			driver.findElement(By.linkText("Create new account")).click();	
 		}
 		else {
 			System.out.println("Change your URL");
