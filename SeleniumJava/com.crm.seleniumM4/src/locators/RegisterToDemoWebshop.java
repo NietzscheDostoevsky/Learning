@@ -44,6 +44,7 @@ public class RegisterToDemoWebshop {
 				
 			} else {
 				System.out.println("check URL");
+				driver.close();
 			}
 			
 			
