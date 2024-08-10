@@ -8,3 +8,13 @@ let b = new Array(10, 20, 30, 40, "haha")
 console.log(b)
 
 console.log(arr[5][2])
+
+//! Array methods 
+// ! PUsh pop  shift unshift.   
+
+let numarr = [63, 847, 555, 17, 555, 97, 555, 903, 75]
+
+for (let i = 0; i < numarr.length; i++) {
+    if(numarr[i] == 555)
+        console.log(i)
+}
