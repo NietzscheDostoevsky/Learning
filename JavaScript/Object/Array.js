@@ -27,3 +27,7 @@ for (val in numarr) {
     console.log(val)
 }
 for (val of numarr) console.log(val)
+
+numarr.map((val, indx, arr) => {
+    console.log(val, indx, arr)
+})

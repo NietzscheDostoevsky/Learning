@@ -26,5 +26,5 @@ let obj3 = {
 }; 
 
 Object.seal(obj3); 
-//obj3.contact = 12332; //!can modoify a sealed object 
+//obj3.contact = 12332; //!can modoify a sealed object , but can modify existing properties in an object. 
 console.log(obj3) 
