@@ -27,14 +27,18 @@ public class FacebookLogin {
 			Thread.sleep(5000);
 			password.sendKeys("fakePassword");
 			Thread.sleep(5000);
+			
 			// would work by sending return key
 			//password.sendKeys(Keys.RETURN);
+			
+			
 			// won't work because id generated dynamically
 			// driver.findElement(By.id("u_0_5_7K")).click();
 			
-			// won't work because compund classes not allowd
+			// won't work because compound classes not allowed
 			//driver.findElement(By.className("_42ft _4jy0 _6lth _4jy6 _4jy1")).click(); 
 			
+			// working because name is unique here. 
 			driver.findElement(By.name("login")).click();
 
 			
