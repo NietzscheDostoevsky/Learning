@@ -54,3 +54,6 @@ function mapArrayElements(func, arr) {
 // 11
 
 (() => (console.log("Hello world")))();
+
+//12. 
+((x, y) => (console.log(x + y)))(10, 5);
