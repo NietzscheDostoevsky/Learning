@@ -84,3 +84,13 @@ console.log(counter.getValue()); // Output: 1
 counter.increment();
 counter.increment();
 console.log(counter.getValue()); // Output: 3
+
+// 18. 
+
+function replaceWord(str, replace, replacement) {
+    let words = str.split(' ');
+    words.forEach(val, indx => {
+        if (words[i] === )
+    })
+
+}
