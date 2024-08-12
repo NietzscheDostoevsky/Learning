@@ -67,3 +67,20 @@ console.log((() => {
     };
     return obj;
 })());
+
+// 14. 
+
+const counter = (() => {
+    let count = 0;
+    return {
+        increment: () => (count++),
+        getValue: () => (count)
+    };
+})();
+
+console.log(counter.getValue()); // Output: 0
+counter.increment();
+console.log(counter.getValue()); // Output: 1
+counter.increment();
+counter.increment();
+console.log(counter.getValue()); // Output: 3
