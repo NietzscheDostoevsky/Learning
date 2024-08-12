@@ -1,3 +1,5 @@
+
+
 function sumNumbers(num1, num2) {
     return num1 + num2
 }
@@ -24,4 +26,17 @@ executeAfterDelay(() => {
     console.log("This message is displayed after 2 seconds.");
 }, 2000);
 
-// 
+// 9. 
+
+function filterArray(arr, func) {
+    return func(arr);
+}
+
+console.log(filterArray([1, 2, 3, 4, 5], (arr) => {
+    let retArr = [];
+    arr.forEach(element => {
+        if (element % 2 == 0)
+            retArr.push(element);
+    });
+    return retArr;
+}));
