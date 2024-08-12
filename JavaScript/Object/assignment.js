@@ -57,3 +57,13 @@ function mapArrayElements(func, arr) {
 
 //12. 
 ((x, y) => (console.log(x + y)))(10, 5);
+
+// 13.
+
+console.log((() => {
+    let obj = {
+        currentDate: new Date().toLocaleDateString(),
+        currentTime: new Date().toLocaleTimeString()
+    };
+    return obj;
+})());
