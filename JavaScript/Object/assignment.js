@@ -45,10 +45,12 @@ console.log(filterArray([1, 2, 3, 4, 5], (arr) => {
 
 function mapArrayElements(func, arr) {
     let retArr = [];
-    arr.forEach(element){
-        retArr.push(func(element))
-    }
+    arr.forEach(element => {
+        retArr.push(func(element));
+    });
     return retArr;
 }
 
 // 11
+
+(() => (console.log("Hello world")))();
