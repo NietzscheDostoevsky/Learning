@@ -1,0 +1,159 @@
+### *Functions*
+1. *Sum of Two Numbers:*
+   - Create a function named sumNumbers that accepts two parameters, both numbers, and returns their sum. Demonstrate the function by calling it with different pairs of numbers.
+
+2. *Even or Odd:*
+   - Write a function named isEvenOrOdd that takes a single number as a parameter and returns the string "Even" if the number is even and "Odd" if the number is odd. Include a condition to check for non-number inputs and return "Invalid input".
+
+3. *Reverse a String:*
+   - Create a function called reverseString that takes a string as input and returns the string reversed. Use a loop or string method to achieve this. Test the function with various strings, including empty strings and single-character strings.
+
+4. *Factorial Calculation:*
+   - Write a function named calculateFactorial that takes a non-negative integer as an argument and returns the factorial of that number (e.g., 5! = 5 × 4 × 3 × 2 × 1 = 120). Handle edge cases such as calculateFactorial(0) returning 1.
+
+5. *Convert String to Uppercase:*
+   - Create a function called toUpperCaseString that accepts a string as a parameter and returns the string converted to uppercase using the toUpperCase method. Test the function with different cases, including strings with mixed cases and all-lowercase strings.
+
+6. *Return First N Elements of an Array:*
+   - Write a function named getFirstNElements that takes an array and a number n as parameters and returns the first n elements of the array. If n is greater than the array length, return the entire array.
+
+### *Higher-Order and Callback Functions*
+7. *Apply Function Twice:*
+   - Create a higher-order function named applyTwice that takes a function and a number as arguments. It should apply the given function to the number twice and return the result. For example, applyTwice(x => x + 3, 5) should return 11.
+
+8. *Delayed Callback Execution:*
+   - Write a function called executeAfterDelay that takes a callback function and a delay time (in milliseconds) as arguments. The function should execute the callback after the specified delay using setTimeout. Test this with different callback functions.
+
+9. *Filter Array with Callback:*
+   - Create a function named filterArray that takes an array and a callback function as parameters. The function should return a new array containing only the elements that satisfy the condition specified in the callback. Demonstrate with filtering even numbers from an array.
+
+10. *Map Array Elements:*
+    - Write a function named mapArrayElements that takes an array of numbers and a callback function as parameters. The function should return a new array where each element is the result of applying the callback to the corresponding element in the original array.
+
+### *Immediate Invoke Functions*
+11. *IIFE to Log "Hello, World!":*
+    - Write an Immediately Invoked Function Expression (IIFE) that logs the message "Hello, World!" to the console as soon as the script runs. This IIFE should not take any parameters.
+
+12. *IIFE to Sum Two Numbers:*
+    - Create an IIFE that takes two numbers as arguments and returns their sum. Immediately log the result to the console. This should demonstrate how IIFEs can be used to perform calculations on-the-fly.
+
+13. *IIFE to Return Current Date and Time:*
+    - Write an IIFE that returns an object with two properties: currentDate and currentTime, representing the current date and time, respectively. Log this object to the console.
+
+14. *IIFE Counter with Closure:*
+    - Create an IIFE that initializes a private counter variable and returns an object with two methods: increment (which increments the counter) and getValue (which returns the current value of the counter). Demonstrate the usage by calling these methods.
+
+### *String Methods*
+15. *Extract Portion of String with slice:*
+    - Write a function named sliceString that takes a string and two indices as arguments. The function should use the slice method to extract and return a portion of the string between the two indices. Demonstrate with different index values, including negative indices.
+
+16. *Extract Last 5 Characters with substring:*
+    - Create a function called getLastFiveCharacters that uses the substring method to extract and return the last 5 characters of a given string. Handle cases where the string has less than 5 characters by returning the entire string.
+
+17. *Get First 3 Characters with substr:*
+    - Write a function named getFirstThreeCharacters that uses the substr method to extract the first 3 characters from a string. Demonstrate the function with strings of various lengths, including very short strings.
+
+18. *Replace Word in String:*
+    - Create a function called replaceWord that takes a string, a word to replace, and the word to replace it with as parameters. The function should return a new string where all occurrences of the target word are replaced with the new word using the replace method. Test with both case-sensitive and case-insensitive replacements.
+
+19. *Trim Whitespace from String:*
+    - Write a function named trimWhitespace that takes a string with leading and trailing whitespace and returns a new string with the whitespace removed using the trim method. Test with strings that have whitespace in different positions.
+
+20. *Concatenate Two Strings:*
+    - Create a function called concatenateStrings that takes two strings as arguments and returns a single concatenated string using the concat method. Demonstrate with strings of various lengths, including empty strings.
+
+21. *Check if String Starts with Specific Character:*
+    - Write a function named startsWithCharacter that takes a string and a character as parameters. The function should return true if the string starts with the given character and false otherwise, using the startsWith method.
+
+22. *Check if String Ends with Specific Character:*
+    - Create a function called endsWithCharacter that takes a string and a character as parameters. The function should return true if the string ends with the given character and false otherwise, using the endsWith method.
+
+23. *Pad String with Zeros (padStart):*
+    - Write a function named padStringWithZeros that takes a string and a total length as arguments. The function should pad the beginning of the string with zeros until it reaches the specified length using the padStart method. Demonstrate with strings of varying lengths.
+
+24. *Pad String with Asterisks (padEnd):*
+    - Create a function called padStringWithAsterisks that takes a string and a total length as arguments. The function should pad the end of the string with asterisks (*) until it reaches the specified length using the padEnd method.
+
+25. *Convert String to Uppercase:*
+    - Write a function named convertToUpperCase that takes a string as an argument and returns the string converted to uppercase using the toUpperCase method. Test with strings that include a mix of lowercase, uppercase, and special characters.
+
+26. *Convert String to Lowercase:*
+    - Create a function called convertToLowerCase that takes a string as an argument and returns the string converted to lowercase using the toLowerCase method. Test with various strings, including those with uppercase letters and numbers.
+
+27. *Find ASCII Value of First Character:*
+    - Write a function named getAsciiValue that takes a string as an argument and returns the ASCII value of the first character in the string using the charCodeAt method. Demonstrate with strings that start with different types of characters (e.g., letters, digits, special characters).
+
+### *Object Methods*
+28. *Get All Keys of an Object:*
+    - Write a function called getObjectKeys that takes an object as an argument and returns an array containing all the keys of the object using the Object.keys method. Demonstrate with an object that has a mix of string and numeric keys.
+
+29. *Get All Values of an Object:*
+    - Create a function named getObjectValues that takes an object as an argument and returns an array containing all the values of the object using the Object.values method. Test with objects that contain different types of values, such as strings, numbers, and arrays.
+
+30. *Freeze an Object:*
+    - Write a function called freezeObject that takes an object as an argument and uses the Object.freeze method to freeze the object. Demonstrate that after freezing, the object cannot be modified by attempting to add, delete, or change properties.
+
+31. *Seal an Object:*
+    - Create a function named sealObject that takes an object as an argument and uses the Object.seal method to seal the object. Demonstrate that after sealing, new properties cannot be added, but existing properties can still be modified.
+
+32. *Check if Object is Frozen:*
+    - Write a function called isObjectFrozen that takes an object as an argument and returns true if the object is frozen, and false otherwise, using the Object.isFrozen method. Test with both frozen and non-frozen objects.
+
+33. *Check if Object is Sealed:*
+    - Create a function named isObjectSealed that takes an object as an argument
+
+ and returns true if the object is sealed, and false otherwise, using the Object.isSealed method. Demonstrate with both sealed and non-sealed objects.
+
+### *Looping Statements*
+34. *Print Numbers from 1 to 10 with for Loop:*
+    - Write a for loop that iterates from 1 to 10 and prints each number to the console. Modify the loop to print only even numbers, and then to print numbers in reverse order from 10 to 1.
+
+35. *Print First 5 Even Numbers with while Loop:*
+    - Create a while loop that starts with an initial number and prints the first 5 even numbers to the console. Ensure the loop stops after printing exactly 5 even numbers.
+
+36. *Print "Hello!" 3 Times with do-while Loop:*
+    - Write a do-while loop that prints the string "Hello!" to the console 3 times. Explain the difference between a while loop and a do-while loop by showing what happens if the loop condition is initially false.
+
+37. *Nested for Loop to Print Multiplication Table:*
+    - Create a nested for loop that generates and prints a multiplication table for numbers 1 through 5. Each row should correspond to a different multiplier, and each column to a different multiplicand.
+
+38. *Iterate Over Object Properties with for-in Loop:*
+    - Write a for-in loop that iterates over the properties of an object and logs each key-value pair to the console. Test with an object that has properties of different data types, including arrays and nested objects.
+
+### *Conditional Statements*
+39. *Check if Number is Positive:*
+    - Write a function called isPositive that takes a number as an argument and uses an if statement to check if the number is positive. If it is, return "Positive", otherwise return "Non-positive". Test with positive, negative, and zero values.
+
+40. *Check if Number is Divisible by 5:*
+    - Create a function named isDivisibleByFive that takes a number as an argument and uses an if-else statement to check if the number is divisible by 5. If it is, return "Divisible by 5", otherwise return "Not divisible by 5". Test with various numbers, including multiples of 5 and non-multiples.
+
+41. *Return Day of the Week with switch Statement:*
+    - Write a function called getDayOfWeek that takes a number from 1 to 7 as an argument and returns the corresponding day of the week using a switch statement. If the number is not between 1 and 7, return "Invalid input". Test with valid and invalid inputs.
+
+42. *Check if String is Empty with Ternary Operator:*
+    - Create a function named isEmptyString that takes a string as an argument and uses a ternary operator to check if the string is empty. Return "Empty" if it is, and "Not empty" otherwise. Test with strings of different lengths, including an empty string.
+
+43. *Check if Number is Positive, Negative, or Zero:*
+    - Write a function called checkNumberSign that takes a number as an argument and uses a nested conditional statement to check if the number is positive, negative, or zero. Return "Positive", "Negative", or "Zero" based on the result.
+
+44. *Check Variable Type with Conditional Statements:*
+    - Create a function named checkVariableType that takes a variable as an argument and uses if, else if, and else statements to check if the variable is a string, number, or boolean. Return the type as a string. Test with variables of different data types.
+
+### *Number and Boolean Data Types*
+45. *Convert String to Number and Check for NaN:*
+    - Write a function called convertToNumber that takes a string as an argument, attempts to convert it to a number using Number(), and returns the result. Use isNaN to check if the conversion was successful, and return "Not a number" if it wasn’t.
+
+46. *Check if Number is Finite or Infinite:*
+    - Create a function named isFiniteNumber that takes a number as an argument and checks if it is finite using the isFinite function. Return true if the number is finite, and false otherwise. Test with very large numbers, Infinity, and NaN.
+
+47. *Round Number to Two Decimal Places:*
+    - Write a function called roundToTwoDecimals that takes a number as an argument and returns it rounded to two decimal places using toFixed(2). Demonstrate with numbers that have varying numbers of decimal places.
+
+48. *Return Absolute Value of a Number:*
+    - Create a function named getAbsoluteValue that takes a number as an argument and returns its absolute value using the Math.abs method. Test with positive numbers, negative numbers, and zero.
+
+49. *Logical AND with Two Boolean Values:*
+    - Write a function called logicalAnd that takes two boolean values as arguments and returns their logical AND result (true only if both are true). Test with all combinations of true and false.
+
+50. *Toggle Boolean Value:*
+    - Create a function named toggleBoolean that takes a boolean value as an argument and returns the opposite boolean value (true becomes false, and false becomes true). Demonstrate by toggling the value multiple times.
