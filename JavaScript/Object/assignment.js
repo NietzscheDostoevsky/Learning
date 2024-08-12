@@ -40,3 +40,15 @@ console.log(filterArray([1, 2, 3, 4, 5], (arr) => {
     });
     return retArr;
 }));
+
+// 10. 
+
+function mapArrayElements(func, arr) {
+    let retArr = [];
+    arr.forEach(element){
+        retArr.push(func(element))
+    }
+    return retArr;
+}
+
+// 11
