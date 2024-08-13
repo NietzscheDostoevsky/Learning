@@ -53,5 +53,14 @@ console.log(a4city)
 console.log("---------------------")
 
 
+a5 = [3, 10, 18, 20, 25]; 
+console.log(a5.find((element) => (element > 15)))
+
+a5animals = ['gaot', 'lion', 'elephant', 'squrerel', 'cat']
+console.log(a5animals.find((element)=>{
+    return element.length > 5;
+}))
+
+console.log("---------------------")
 
 
