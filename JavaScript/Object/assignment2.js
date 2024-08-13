@@ -63,4 +63,15 @@ console.log(a5animals.find((element)=>{
 
 console.log("---------------------")
 
+// 6. 
+a6 = [1, 2, 3, 4, 5];
+console.log(a6.map((x)=>(x*x)))
+
+a6fruit = ["apple", "banana", "cherry"]; 
+
+console.log(a6fruit.map((x)=>x.toUpperCase()))
+
+console.log("---------------------")
+
+
 
