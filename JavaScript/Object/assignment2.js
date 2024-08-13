@@ -24,3 +24,15 @@ for (index in a2) {
     a2[index] = element * 2; 
 }
 console.log(a2)
+
+// 3. 
+
+a3Country = ["india", 'us', 'aus', 'ger', 'fra']
+for (country of a3Country) {
+    console.log(country)
+}
+
+a3 = ["Good Morning", "Good Night", "Hello", "Goodbye"]
+for (greeting of a3) {
+    console.log(greeting + "!")
+}
