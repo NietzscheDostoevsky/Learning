@@ -1,0 +1,69 @@
+### 1. **Using forEach:**
+   - *Task*: Create an array of numbers [2, 4, 6, 8, 10]. Use the forEach method to iterate over the array and print each number to the console along with its index. For example, the output should be in the format: Index: 0, Value: 2.
+   - *Goal*: Understand how to access both the value and index of elements using forEach.
+
+   - *Task*: Create an array of your five favorite fruits. Use the forEach method to add the phrase "I like " before each fruit and log the sentence to the console. For example, "I like Apple".
+   - *Goal*: Learn how to manipulate array elements within a forEach loop.
+
+### 2. **Using for-in:**
+   - *Task*: Create an array of five random colors. Use the for-in loop to iterate through the array and print each index, then access the element at that index and log it to the console. For example: Index: 0, Color: Red.
+   - *Goal*: Practice accessing array elements by their index using for-in.
+
+   - *Task*: Create an array of numbers [1, 2, 3, 4, 5]. Use the for-in loop to multiply each number by 2 and store the result back in the array. Print the modified array to the console.
+   - *Goal*: Understand how to update elements within an array using the for-in loop.
+
+### 3. **Using for-of:**
+   - *Task*: Create an array of country names. Use the for-of loop to iterate over the array and print each country name to the console.
+   - *Goal*: Learn how to directly access and work with elements in an array using for-of.
+
+   - *Task*: Create an array of phrases like ["Good Morning", "Good Night", "Hello", "Goodbye"]. Use for-of to add an exclamation mark at the end of each phrase and print the modified phrases to the console.
+   - *Goal*: Get comfortable with modifying and printing array elements using for-of.
+
+### 4. **Using sort:**
+   - *Task*: Create an array of numbers [15, 3, 9, 25, 7]. Use the sort method to arrange the numbers in ascending order and print the sorted array.
+   - *Goal*: Learn how to sort numerical arrays and understand the behavior of the sort method.
+
+   - *Task*: Create an array of strings with different city names. Use the sort method to arrange the city names alphabetically and print the sorted array.
+   - *Goal*: Practice sorting strings alphabetically.
+
+### 5. **Using find:**
+   - *Task*: Create an array of numbers [3, 10, 18, 20, 25]. Use the find method to locate the first number greater than 15 and print it to the console.
+   - *Goal*: Understand how to use find to retrieve the first element that satisfies a specific condition.
+
+   - *Task*: Create an array of strings representing various animals. Use find to locate the first animal name with more than 5 letters and print it to the console.
+   - *Goal*: Practice using find with strings based on length.
+
+### 6. **Using map:**
+   - *Task*: Create an array of numbers [1, 2, 3, 4, 5]. Use the map method to create a new array where each number is squared. Print the new array to the console.
+   - *Goal*: Learn how to transform an array using map and create a new array with the results.
+
+   - *Task*: Create an array of lowercase strings like ["apple", "banana", "cherry"]. Use map to create a new array where each string is converted to uppercase. Print the new array.
+   - *Goal*: Practice string manipulation within a map function.
+
+### 7. **Using filter:**
+   - *Task*: Create an array of numbers [5, 8, 13, 21, 34]. Use the filter method to create a new array that only includes numbers greater than 10. Print the filtered array.
+   - *Goal*: Understand how to filter out elements based on a condition.
+
+   - *Task*: Create an array of strings with different words. Use filter to remove any words that contain the letter 'e' and print the resulting array.
+   - *Goal*: Learn how to filter strings based on character presence.
+
+### 8. **Using reduce:**
+   - *Task*: Create an array of numbers [4, 7, 12, 19]. Use the reduce method to find the sum of all the numbers and print the result.
+   - *Goal*: Understand how to accumulate values in an array using reduce.
+
+   - *Task*: Create an array of strings like ["I", "love", "coding"]. Use reduce to concatenate all strings into a single sentence and print the result.
+   - *Goal*: Practice using reduce to combine array elements into a single output.
+
+### 9. *Combining Methods:*
+   - *Task*: Create an array of numbers [2, 5, 8, 11, 14]. Use map to double each number, and then use filter to keep only the numbers greater than 10. Print the final array.
+   - *Goal*: Learn how to chain map and filter to perform multiple transformations on an array.
+
+   - *Task*: Create an array of numbers [3, 6, 9, 12]. Use map to add 2 to each number, then use reduce to find the product of the updated numbers. Print the final result.
+   - *Goal*: Understand how to combine map and reduce to transform and aggregate array elements.
+
+### 10. *Chaining Methods:*
+   - *Task*: Create an array of numbers [8, 3, 12, 1, 7]. Use sort to arrange the numbers in ascending order, then use map to subtract 1 from each sorted number. Print the resulting array.
+   - *Goal*: Practice chaining sort and map to sort and then transform an array.
+
+   - *Task*: Create an array of numbers [2, 4, 6, 8, 10]. Use filter to remove even numbers, then use reduce to find the sum of the remaining numbers. Print the final sum.
+   - *Goal*: Learn how to combine filter and reduce to filter and then aggregate array elements.
