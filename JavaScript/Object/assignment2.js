@@ -73,5 +73,13 @@ console.log(a6fruit.map((x)=>x.toUpperCase()))
 
 console.log("---------------------")
 
+// 7. 
 
+a7 = [5, 8, 13, 21, 34]; 
+console.log(a7.filter((x)=> (x>10)))
+
+a7words = ['hello', 'how', 'are','today','on','this','fine','day']
+console.log(a7words.filter((word)=>{
+    return !word.includes('e')
+}))
 
