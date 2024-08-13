@@ -102,3 +102,12 @@ console.log(a9.map((x)=>(x*x)).filter((x)=>(x>10)))
 
 a9nums = [3, 6, 9, 12];
 console.log(a9nums.map((x)=>(x+2)).reduce((a,b)=>(a*b)))
+console.log("---------------------")
+
+//10. 
+
+a10 = [8, 3, 12, 1, 7];
+console.log(a10.sort((a,b)=>(a-b)).map((a)=>(a-1)))
+
+a10nums = [2, 4, 6, 8, 10, 13, 11]; // op = 24
+console.log(a10nums.filter((a)=>(a%2 !=0)).reduce((a,b)=>(a+b)))
