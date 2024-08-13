@@ -25,6 +25,8 @@ for (index in a2) {
 }
 console.log(a2)
 
+console.log("---------------------")
+
 // 3. 
 
 a3Country = ["india", 'us', 'aus', 'ger', 'fra']
@@ -36,3 +38,20 @@ a3 = ["Good Morning", "Good Night", "Hello", "Goodbye"]
 for (greeting of a3) {
     console.log(greeting + "!")
 }
+console.log("---------------------")
+
+// 4. 
+
+a4 = [15, 3, 9, 25, 7]; 
+a4.sort((a,b)=>a-b)
+console.log(a4)
+
+a4city = ['delhi', 'pune', 'mumbai', 'chandigarh', 'gurgaon', 'punjab'];
+a4city.sort()
+console.log(a4city)
+
+console.log("---------------------")
+
+
+
+
