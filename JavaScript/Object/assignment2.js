@@ -87,8 +87,18 @@ console.log("---------------------")
 
 // 8. 
 
-a8 =  [4, 7, 12, 19]; 
+a8 =  [3, 4, 7, 12, 19]; 
 console.log(a8.reduce((a,b)=>(a+b)))
 
 a8stirng = ["I", "love", "coding"];
 console.log(a8stirng.reduce((a,b)=>(a+b)))
+
+console.log("---------------------")
+
+//9. 
+
+a9 = [2, 5, 8, 11, 14];
+console.log(a9.map((x)=>(x*x)).filter((x)=>(x>10)))
+
+a9nums = [3, 6, 9, 12];
+console.log(a9nums.map((x)=>(x+2)).reduce((a,b)=>(a*b)))
