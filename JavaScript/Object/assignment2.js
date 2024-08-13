@@ -83,3 +83,12 @@ console.log(a7words.filter((word)=>{
     return !word.includes('e')
 }))
 
+console.log("---------------------")
+
+// 8. 
+
+a8 =  [4, 7, 12, 19]; 
+console.log(a8.reduce((a,b)=>(a+b)))
+
+a8stirng = ["I", "love", "coding"];
+console.log(a8stirng.reduce((a,b)=>(a+b)))
