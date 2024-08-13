@@ -65,26 +65,11 @@ let c = numarr.filter((val, i)=> {
 console.log(c)
 
 let users = [
-    {
-        name: "tinku",
-        id: 1
-    } , 
-    {
-        name: "pinku",
-        id: 2
-    } , 
-    {
-        name: "rinku",
-        id: 3
-    } , 
-    {
-        name: "kinku",
-        id: 4
-    } , 
-    {
-        name: "rinku",
-        id: 5
-    } 
+    { name: "tinku", age: 21, id: 1, add: "Pune", phone: 9823338920, hobbies: ['dancing', 'swimming', 'cricket'], percentages: {ssc: 91, hsc: 81, graduation: 9.1} } , 
+    { name: "pinku", age: 22, id: 2, add: "Mumb", phone: 1213231313, hobbies: ['dancing', 'swimming', 'cricket'], percentages: {ssc: 92, hsc: 82, graduation: 9.2} } , 
+    { name: "rinku", age: 23, id: 3, add: "bang", phone: 4432434214, hobbies: ['dancing', 'swimming', 'cricket'], percentages: {ssc: 93, hsc: 83, graduation: 9.3} } , 
+    { name: "kinku", age: 24, id: 4, add: "hapd", phone: 4342323323, hobbies: ['dancing', 'swimming', 'cricket'], percentages: {ssc: 94, hsc: 84, graduation: 9.4} } , 
+    { name: "rinku", age: 25, id: 5, add: "pakd", phone: 53242423421,hobbies: ['dancing', 'swimming', 'cricket'], percentages: {ssc: 95, hsc: 85, graduation: 9.5} } 
 ]
 
 let updatedArr = users.filter((val) => {
@@ -106,3 +91,26 @@ let a2 = arr3.reduce((sum, val) => {
 });
 console.log("-----------------")
 console.log(a2);
+
+//The map() method of Array instances creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+users.map((val,ind)=>{
+    val.hobbies.map((h)=>(console.log(h)))
+})
+
+let updatedusers = users.filter((val)=>{
+    return val.name != "rinku";
+})
+
+console.log(updatedusers)
+
+console.log("****************")
+
+let obj = {
+    name:"tinku"
+}
+
+console.log(obj.__proto__);
+let number = 10; 
+console.log(number.__proto__)
+
