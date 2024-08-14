@@ -13,7 +13,6 @@ Use any locators.
  */
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FacebookRegistration {
@@ -38,20 +37,15 @@ public class FacebookRegistration {
             // Fill registration details
             fillFacebookRegistration(driver);
 
-            // Wait 5 seconds and close the broweser .
-            Thread.sleep(5000);
+            // Wait 7 seconds and close the broweser .
+            Thread.sleep(7000);
             driver.close();
-
-
         }
         else {
             System.out.println("Change your URL");
-
         }
         Thread.sleep(5000);
         driver.close();
-
-
     }
 
     private static void fillFacebookRegistration(ChromeDriver driver) throws InterruptedException {
@@ -64,10 +58,12 @@ public class FacebookRegistration {
         driver.findElement(By.cssSelector("input[name='reg_passwd__']")).sendKeys("fakePass");
 
         // find gender button by xpath and click on it.
+        String buttonPath = "/html/body/div[3]/div[2]/div/div/div[2]/div/div/div[1]/form/div[1]/div[7]/span/span[2]/input";
+        driver.findElement(By.xpath(buttonPath)).click();
 
-
+        // Wait 2 seconds and click on register butotn .
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("button[name='websubmit']")).click();
     }
-
-
 }
 
