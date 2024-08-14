@@ -43,7 +43,7 @@ public class DemoWebshopLogin {
 		Thread.sleep(3000);
 		
 		// Fill login details. 
-		driver.findElement(By.id("Email")).sendKeys("FakeLogin");
+		driver.findElement(By.id("Email")).sendKeys("FakeLogin@gmail.com");
 		driver.findElement(By.id("Password")).sendKeys("FakePass");
 		driver.findElement(By.id("RememberMe")).click();
 		
