@@ -53,5 +53,21 @@ public class FacebookRegistration {
 
 
     }
+
+    private static void fillFacebookRegistration(ChromeDriver driver) throws InterruptedException {
+        driver.findElement(By.cssSelector("input[name='firstname']")).sendKeys("FakeFirstName");
+        driver.findElement(By.cssSelector("input[name='lastname']")).sendKeys("FakeLastName");
+        driver.findElement(By.cssSelector("input[name='reg_email__']")).sendKeys("abc@xyz.com");
+        //wait 2 secs for re-enter prompt to appar
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("input[name='reg_email_confirmation__']")).sendKeys("abc@xyz.com");
+        driver.findElement(By.cssSelector("input[name='reg_passwd__']")).sendKeys("fakePass");
+
+        // find gender button by xpath and click on it.
+
+
+    }
+
+
 }
 
