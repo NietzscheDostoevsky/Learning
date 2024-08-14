@@ -27,17 +27,20 @@ public class FacebookRegistration {
 
         // verification and continue
         if(driver.getCurrentUrl().equals(fbURL)) {
-            System.out.println("Fabook Opened");
-            Thread.sleep(5000);
-            driver.findElement(By.id("email")).sendKeys("Saurabh");
-            Thread.sleep(5000);
-            WebElement password = driver.findElement(By.id("pass"));
-            Thread.sleep(5000);
-            password.sendKeys("fakePassword");
-            Thread.sleep(5000);
+            System.out.println("Facebook Opened");
 
-            driver.findElement(By.name("login")).click();
+            // Click on Create new account
+            driver.findElement(By.linkText("Create new account")).click();
 
+            // Wait 3 seconds
+            Thread.sleep(3000);
+
+            // Fill registration details
+            fillFacebookRegistration(driver);
+
+            // Wait 5 seconds and close the broweser .
+            Thread.sleep(5000);
+            driver.close();
 
 
         }
