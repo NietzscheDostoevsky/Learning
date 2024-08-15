@@ -61,9 +61,21 @@ public class FacebookRegistration {
         String buttonPath = "/html/body/div[3]/div[2]/div/div/div[2]/div/div/div[1]/form/div[1]/div[7]/span/span[2]/input";
         driver.findElement(By.xpath(buttonPath)).click();
 
+        // Adding DOB using clicking
+
+        driver.findElement(By.cssSelector(("select[name='birthday_day']"))).click();
+        driver.findElement(By.cssSelector("option[value='1999']")).click();
+        driver.findElement(By.cssSelector("option[value='27']")).click();
+        driver.findElement(By
+                .xpath("/html/body/div[3]/div[2]/div/div/div[2]/div/div/div[1]/form/div[1]/div[5]/div[2]/span/span/select[2]/option[7]"))
+                .click();
+
+
         // Wait 2 seconds and click on register butotn .
         Thread.sleep(2000);
-        driver.findElement(By.cssSelector("button[name='websubmit']")).click();
+
+        //dON'T CLIKC, form is not completely filled. 
+        //driver.findElement(By.cssSelector("button[name='websubmit']")).click();
     }
 }
 
