@@ -43,7 +43,7 @@ public class DemoWebShopRegistrationXPath {
 
     public static void fillRegistration(ChromeDriver driver) throws InterruptedException {
         // Filling registration details.
-        driver.findElement(By.cssSelector("input[value='M']")).click();
+        driver.findElement(By.cssSelector("")).click();
         driver.findElement(By.cssSelector("input[id='FirstName']")).sendKeys("RandomFirstName");
         driver.findElement(By.cssSelector("input[id='LastName']")).sendKeys("RandomLastName");
         driver.findElement(By.cssSelector("input[id='Email']")).sendKeys("abc@xyz.com");
