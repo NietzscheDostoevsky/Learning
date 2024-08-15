@@ -1,7 +1,6 @@
 package locators;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -19,11 +18,9 @@ public class DWSSearchBarXPath {
 		String actual_result = driver.getCurrentUrl(); 
 		if(expected_result.equals(actual_result)) {
 			System.out.println("I'm in dws page");
-			WebElement search_field = driver.findElement(By.xpath("//input[@value='Search store']"));
+			WebElement search_field = driver.findElement(By.xpath("/html/body/div[4]/div/div/div[3]/form/input"));
 			search_field.sendKeys("iphone");
-			Thread.sleep(3000);
-			search_field.sendKeys(Keys.RETURN);
-			
+			driver.findElement(By.className("button-1 search-box-button")).click();
 			Thread.sleep(5000);	
 			System.out.println("successfully sent iphone into searchfiled");
 			
