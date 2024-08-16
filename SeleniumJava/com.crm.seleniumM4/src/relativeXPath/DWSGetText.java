@@ -19,8 +19,15 @@ public class DWSGetText {
 		String actual_result = driver.getCurrentUrl(); 
 		if(expected_result.equals(actual_result)) {
 			System.out.println("I'm in dws page");
+			
 			//WebElement commPoll = driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[4]/div[2]/div[2]/div[1]/strong"));
-			WebElement commPoll = driver.findElement(By.linkText("Community poll"));
+			
+			// Will NOT work, since text must be present inside an anchor tag. 
+			// WebElement commPoll = driver.findElement(By.linkText("Community poll"));
+			
+			// Use xPath by text function .
+			//TagName[text()='Value']
+			WebElement commPoll = driver.findElement(By.xpath("//strong[text()='Community poll']"));			
 			System.out.println(commPoll.getText());
 			
 		}
