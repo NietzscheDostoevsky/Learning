@@ -23,6 +23,8 @@ public class DWSFindElements {
 				Thread.sleep(1000);
 			}
 			
+			commPoll.get(0).click();
+			
 		} else {
 			System.out.println("I am not on dws page");
 		}
