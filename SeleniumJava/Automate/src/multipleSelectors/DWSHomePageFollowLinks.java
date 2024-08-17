@@ -30,11 +30,17 @@ public class DWSHomePageFollowLinks {
 
             List<WebElement> links = followLinks.findElements(By.tagName("a"));
 
+            // Escaping the rss page
+            String rss = "https://demowebshop.tricentis.com/news/rss/1";
+
             for (WebElement ele : links) {
                 ele.click();
                 Thread.sleep(2000);
-                //driver.navigate().back();
-                //Thread.sleep(2000);
+
+                // Escape the rss page.
+                if(driver.getCurrentUrl().equals(rss))
+                    driver.navigate().back();
+
             }
             Thread.sleep(5000);
             driver.close();
