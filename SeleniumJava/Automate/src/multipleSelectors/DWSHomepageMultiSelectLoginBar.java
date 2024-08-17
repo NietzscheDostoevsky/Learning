@@ -15,7 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.util.List;
 
-public class DWSHomepageMultiSelect {
+public class DWSHomepageMultiSelectLoginBar {
     public static void main(String[] args) throws InterruptedException {
         ChromeDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
