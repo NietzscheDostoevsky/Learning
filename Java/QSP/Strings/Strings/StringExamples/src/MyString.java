@@ -1,4 +1,4 @@
-public final class MyString {
+final class MyString {
     String str = null;
     MyString(String str) {
         this.str = str;
