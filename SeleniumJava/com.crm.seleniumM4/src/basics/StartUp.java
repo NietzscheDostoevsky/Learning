@@ -20,9 +20,6 @@ public class StartUp {
 		Thread.sleep(5000);
 	    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.close(); 
-		
-		
-		
 
 	}
 
