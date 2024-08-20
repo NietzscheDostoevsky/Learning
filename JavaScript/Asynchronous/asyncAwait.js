@@ -5,4 +5,4 @@ let fetchAPI = async() => {
     let api = await resp.json();
     console.log(api)
 }
-fetchAPI();
+fetchAPI(); 
