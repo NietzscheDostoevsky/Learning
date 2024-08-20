@@ -26,7 +26,10 @@ public class IndependentAndDependent {
 	    		WebElement album3d = driver.findElement(By.xpath("//a[text()='3rd Album']/../following-sibling::div[3]/div/span"));
 	    		String price = album3d.getText();
 	    		System.out.println("Price of album is : " + price);
-	    		driver.close();
+	    		
+	    		System.out.println(driver.findElement(By.xpath("(//a[text()='Music 2'])[1]/../following-sibling::div[3]/div/span")).getText());
+	    		System.out.println(driver.findElement(By.xpath("(//a[text()='Music 2'])[2]/../following-sibling::div[3]/div/span")).getText());
+	    		
 	    	}
 	    	
 	    }
