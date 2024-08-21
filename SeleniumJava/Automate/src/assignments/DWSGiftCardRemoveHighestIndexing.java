@@ -58,23 +58,18 @@ public class DWSGiftCardRemoveHighestIndexing {
             WebElement shoppingCart = driver.findElement(By.tagName("tbody"));
             List<WebElement> cartItems = driver.findElements(By.className("cart-item-row"));
             ArrayList<Double> priceList = new ArrayList<Double>();
+            int indx = 0;
+            double maxPrice = 0.0;
             for (WebElement item: cartItems) {
-                Double price = Double.parseDouble(item.findElement(By.className("product-unit-price")).getText());
-                priceList.add(price);
-            }
-            priceList.sort((o1, o2) -> o2.compareTo(o1));
-            Double maxPrice = priceList.getFirst();
-            System.out.println("Maximum price : " + maxPrice);
-
-            // finding the item associated with maximum price and marking it for removal
-            for (WebElement item: cartItems) {
-                Double price = Double.parseDouble(item.findElement(By.className("product-unit-price")).getText());
-                if (price.equals(maxPrice)){
-                    // click on checkbox
-                    item.findElement(By.tagName("input")).click();
-                    Thread.sleep(3000);
+                double price = Double.parseDouble(item.findElement(By.className("product-unit-price")).getText());
+                if (price > maxPrice) {
+                    maxPrice = price;
+                    indx++;
                 }
             }
+
+
+            driver.findElement(By.xpath("(//input[@type='checkbox'])["+indx+"]")).click();
 
             System.out.println("Clicked on maximum price remove checkbox ✅");
 
