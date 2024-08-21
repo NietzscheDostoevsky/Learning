@@ -1,4 +1,4 @@
-package multipleSelectors;
+package assignments;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
