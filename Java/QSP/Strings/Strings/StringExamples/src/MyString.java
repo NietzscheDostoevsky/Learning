@@ -58,6 +58,35 @@ public final class MyString {
         return op;
     }
 
+    public boolean startsWith(String check) {
+        boolean starts = true;
+        if (check.length() > str.length())
+            return false;
+
+        for (int i = 0; i < check.length(); i++)
+            if (check.charAt(i) != str.charAt(i))
+                return false;
+        return starts;
+    }
+
+    public char charAt(int index) {
+        if (index < 0 || index >= str.length())
+            throw new IndexOutOfBoundsException("Wrong index entered");
+
+        char[] arr = str.toCharArray();
+        return arr[index];
+
+    }
+
+    public int codePointAt(int index) {
+        if (index < 0 || index >= str.length())
+            throw new IndexOutOfBoundsException("Wrong index entered");
+
+        char[] arr = str.toCharArray();
+        return arr[index];
+
+    }
+
 
 
     public static void main(String[] args) {
@@ -66,10 +95,21 @@ public final class MyString {
         System.out.println(mystr.isEmpty());
 
         MyString str2 = new MyString();
+
         System.out.println(str2.isEmpty());
         System.out.println(mystr.toUpperCase());
+
         System.out.println(new MyString("HahaHehe").toUpperCase());
         System.out.println(new MyString("HahaHehe").toLowerCase());
+
+        System.out.println(mystr.startsWith("Saur"));
+        System.out.println(mystr.startsWith("saur"));
+
+        System.out.println(mystr.charAt(0));
+        System.out.println(mystr.charAt(2));
+
+        System.out.println(mystr.codePointAt(0));
+        System.out.println(mystr.codePointAt(2));
 
     }
 }
