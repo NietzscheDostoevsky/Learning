@@ -90,6 +90,29 @@ public final class MyString {
     }
 
 
+    public boolean equals(String input) {
+        boolean flag = true;
+        if (str.length() != input.length())
+            return false;
+
+        char[] temp = str.toCharArray();
+        for (int i = 0; i < temp.length; i++ )
+            if (temp[i] != input.charAt(i))
+                return false;
+        return true;
+    }
+
+    public boolean equalsIgnoreCase( String input) {
+        String temp = input.toLowerCase();
+        return str.toLowerCase().equals(temp);
+    }
+
+    public int codePointCount(String input, int start, int end) {
+        if (end >= start)
+            throw new IndexOutOfBoundsException("End can't be greater than begin");
+        return end - start;
+    }
+
 
     public static void main(String[] args) {
         MyString mystr = new MyString("Saurabh");
@@ -112,6 +135,11 @@ public final class MyString {
 
         System.out.println(mystr.codePointAt(0));
         System.out.println(mystr.codePointAt(2));
+
+        System.out.println(mystr.equals("Saurabh"));
+        System.out.println(mystr.equals("saurabh"));
+
+        System.out.println(mystr.equalsIgnoreCase("saUrabh"));
 
     }
 }
