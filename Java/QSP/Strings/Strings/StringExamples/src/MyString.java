@@ -1,3 +1,6 @@
+import java.sql.SQLOutput;
+import java.util.Arrays;
+
 public final class MyString {
     String str = null;
     MyString(String str) {
@@ -89,7 +92,7 @@ public final class MyString {
 
     }
 
-
+    //@Override
     public boolean equals(String input) {
         boolean flag = true;
         if (str.length() != input.length())
@@ -113,9 +116,34 @@ public final class MyString {
         return end - start;
     }
 
+    public char[] toCharArray() {
+        int n = str.length();
+        char[] ret = new char[n];
+        for (int i = 0; i < n; i++)
+            ret[i] = str.charAt(i);
+        return ret;
+    }
+
+    public int indexOf(char ch) {
+        for (int i = 0; i < str.length(); i++)
+            if (str.charAt(i) == ch)
+                return i;
+        return -1;
+    }
+
+    public MyString concat(MyString obj) {
+        String str1 = this.str;
+        String newStr = str1 + obj;
+        return new MyString(newStr);
+
+    }
+
+
 
     public static void main(String[] args) {
         MyString mystr = new MyString("Saurabh");
+        MyString mystr2 = new MyString("Singh");
+
         System.out.println(mystr.length());
         System.out.println(mystr.isEmpty());
 
@@ -141,6 +169,9 @@ public final class MyString {
 
         System.out.println(mystr.equalsIgnoreCase("saUrabh"));
 
+        System.out.println(mystr.concat(mystr2));
+
+        System.out.println(Arrays.toString(mystr.toCharArray()));
     }
 }
 
