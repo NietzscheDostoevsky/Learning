@@ -21,6 +21,8 @@ public final class MyString {
         return count;
     }
 
+
+
     public boolean isEmpty() {
         if(str==null)
             throw new NullPointerException("String object not created.");
