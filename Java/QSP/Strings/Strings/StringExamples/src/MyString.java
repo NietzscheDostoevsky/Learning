@@ -253,6 +253,29 @@ public final class MyString {
         return 0;
     }
 
+//    public boolean contentEquals(MyString obj) {
+//        if (this.str < obj.str)
+//            return false;
+//
+//    }
+
+    /**
+     * Original MyString is NOT modified in place.
+     * @param oldChar old char to be replaced
+     * @param newChar new replacement character
+     * @return MyString object with replaced characters
+     */
+    public MyString replace(char oldChar, char newChar) {
+        if (oldChar == newChar)
+            return new MyString(this.str);
+        char[] temp = this.str.toCharArray();
+        int N = this.str.length();
+        for (int i = 0; i < N; i++)
+            if (this.str.charAt(i) == oldChar)
+                temp[i] = newChar;
+        return new MyString(new String(temp));
+    }
+
 
 
     public static void main(String[] args) {
@@ -301,7 +324,12 @@ public final class MyString {
 
         System.out.println(mystr.compareTo(mystr2));
         System.out.println(mystr.compareTo(new MyString("Saurabh"))); //0
+
+        System.out.println(mystr.replace('a', '@'));
+
     }
+
+
 }
 
 
