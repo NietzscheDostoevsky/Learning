@@ -131,12 +131,38 @@ public final class MyString {
         return -1;
     }
 
+    public int lastIndexOf(char ch) {
+        for (int i = str.length()-1;i >=0; i--)
+            if (str.charAt(i) == ch)
+                return i;
+        return -1;
+    }
+
     public MyString concat(MyString obj) {
         String str1 = this.str;
         String newStr = str1 + obj;
         return new MyString(newStr);
 
     }
+
+//    public MyString trim() {
+//        int count = 0;
+//        int N = str.length();
+//        for ( int i = 0; i < N; i++)
+//            if(isWhitespace(str.charAt(i)))
+//                count++;
+//        int retLen = N - count;
+//        char[] arr = new char[retLen];
+//        for ( int i = 0; i < N; i++)
+//            if(!(isWhitespace(str.charAt(i))))
+//                arr[i] = str.charAt(i);
+//        String retStr = new String(arr);
+//        return new MyString(retStr);
+//
+//    }
+//    private boolean isWhitespace(char c) {
+//        return c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f';
+//    }
 
 
 
@@ -172,6 +198,9 @@ public final class MyString {
         System.out.println(mystr.concat(mystr2));
 
         System.out.println(Arrays.toString(mystr.toCharArray()));
+//        System.out.println("-----------");
+//        MyString trimCheck = new MyString("  ABCDEFGH   ");
+//        System.out.println(trimCheck.trim());
     }
 }
 
