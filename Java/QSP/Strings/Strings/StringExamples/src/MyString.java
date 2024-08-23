@@ -1,7 +1,5 @@
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public final class MyString {
     String str = null;
@@ -219,48 +217,41 @@ public final class MyString {
         return true;
     }
 
-//    public MyString[] split(String regex) {
-//        char ch = regex.charAt(0);
-//        char[] arr = str.toCharArray();
-//        ArrayList<String> ret = new ArrayList<>() ;
-//        for (int i = 0; i < str.length(); i++) {
-//            String temp = "";
-//            if (arr[i] != ch)
-//                temp += arr[i];
-//            else
-//                ret.add(temp);
-//
-//        }
-//
-//        String h = ret.toString();
-//        return new MyString[]{new MyString(h)};
-//    }
 
-//    public MyString[] split(String regex) {
-//        char ch = regex.charAt(0);
-//        ArrayList<String> list = new ArrayList<>();
-//        String a = "";
-//        for (int i = 0; i < str.length(); i++) {
-//            char ch1 = str.charAt(i);
-//            if (ch1 != ' ') {
-//                a += ch1;
-//            } else {
-//                list.add(a);
-//
-//            }
-//        }
-//
-//        if(a!="") {
-//            list.add(a);
-//        }
-//
-//        MyString[] arr = new MyString[list.size()];
-//        int indx = 0;
-//        for (String ele : list) {
-//            arr[indx++] = new MyString(ele);
-//        }
-//    }
+    public MyString[] split(String regex) {
+        char ch = regex.charAt(0);
+        ArrayList<String> list = new ArrayList<>();
+        String a = "";
+        for (int i = 0; i < str.length(); i++) {
+            char ch1 = str.charAt(i);
+            if (ch1 != ch)
+                a += ch1;
+            else {
+                list.add(a);
+                a = "";
+            }
+        }
 
+        if(!a.equals("")) {
+            list.add(a);
+        }
+
+        MyString[] arr = new MyString[list.size()];
+        int indx = 0;
+        for (String ele : list)
+            arr[indx++] = new MyString(ele);
+        return arr;
+    }
+
+    public int compareTo(MyString obj) {
+        int N = Math.min(obj.str.length(), this.str.length());
+        for (int i = 0; i < N; i++) {
+            if (this.str.charAt(i) == obj.str.charAt(i))
+                continue;
+            return this.str.charAt(i) - obj.str.charAt(i);
+        }
+        return 0;
+    }
 
 
 
@@ -304,9 +295,12 @@ public final class MyString {
         System.out.println("-----------");
         MyString trimCheck = new MyString("  ABCDEFGH   ");
         System.out.println(trimCheck.trim());
-        MyString splicCheck = new MyString("HI HI HI");
-        MyString [] arr = splicCheck.split(" ");
+        MyString splitCheck = new MyString("HI HI HI");
+        MyString [] arr = splitCheck.split(" ");
         System.out.println(Arrays.toString(arr));
+
+        System.out.println(mystr.compareTo(mystr2));
+        System.out.println(mystr.compareTo(new MyString("Saurabh"))); //0
     }
 }
 
