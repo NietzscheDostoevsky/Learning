@@ -225,6 +225,7 @@ public final class MyString {
         System.out.println(Arrays.toString(mystr.toCharArray()));
 
         System.out.println(mystr.substring(3));
+        System.out.println(mystr.substring(3, 6));
 
 
 //        System.out.println("-----------");
