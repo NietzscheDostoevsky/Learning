@@ -1,5 +1,7 @@
 import java.sql.SQLOutput;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public final class MyString {
     String str = null;
@@ -147,7 +149,6 @@ public final class MyString {
 
     public MyString substring(int beginIndex) {
         int N = str.length();
-
         if (beginIndex < 0 || beginIndex > N)
             throw new IndexOutOfBoundsException("beginIndex wrong");
         int len = N - beginIndex;
@@ -170,24 +171,96 @@ public final class MyString {
     }
 
 
-//    public MyString trim() {
-//        int count = 0;
-//        int N = str.length();
-//        for ( int i = 0; i < N; i++)
-//            if(isWhitespace(str.charAt(i)))
-//                count++;
-//        int retLen = N - count;
-//        char[] arr = new char[retLen];
-//        for ( int i = 0; i < N; i++)
-//            if(!(isWhitespace(str.charAt(i))))
-//                arr[i] = str.charAt(i);
-//        String retStr = new String(arr);
-//        return new MyString(retStr);
+
+
+    public MyString trim() {
+        String newStr = "";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if(isWhitespace(ch)){
+                newStr = str.substring(i+1);
+                continue;
+            } else
+                break;
+        }
+        for (int i = newStr.length()-1; i>=0; i--) {
+            char ch = str.charAt(i);
+            if(isWhitespace(ch)) {
+                newStr = newStr.substring(0, i-1);
+                continue;
+            } else
+                break;
+        }
+
+        return new MyString(newStr);
+    }
+
+    private boolean isWhitespace(char c) {
+        return c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f';
+    }
+
+    public boolean contentEquals(StringBuffer sb) {
+        if(str.length()!=sb.length())
+            return false;
+
+        for (int i = 0; i < str.length(); i++)
+            if (str.charAt(i) != sb.charAt(i))
+                return false;
+        return true;
+    }
+
+    public boolean contentEquals(StringBuilder sb) {
+        if(str.length()!=sb.length())
+            return false;
+
+        for (int i = 0; i < str.length(); i++)
+            if (str.charAt(i) != sb.charAt(i))
+                return false;
+        return true;
+    }
+
+//    public MyString[] split(String regex) {
+//        char ch = regex.charAt(0);
+//        char[] arr = str.toCharArray();
+//        ArrayList<String> ret = new ArrayList<>() ;
+//        for (int i = 0; i < str.length(); i++) {
+//            String temp = "";
+//            if (arr[i] != ch)
+//                temp += arr[i];
+//            else
+//                ret.add(temp);
 //
+//        }
+//
+//        String h = ret.toString();
+//        return new MyString[]{new MyString(h)};
 //    }
-//    private boolean isWhitespace(char c) {
-//        return c == ' ' || c == '\t' || c == '\n' || c == '\r' || c == '\f';
+
+//    public MyString[] split(String regex) {
+//        char ch = regex.charAt(0);
+//        ArrayList<String> list = new ArrayList<>();
+//        String a = "";
+//        for (int i = 0; i < str.length(); i++) {
+//            char ch1 = str.charAt(i);
+//            if (ch1 != ' ') {
+//                a += ch1;
+//            } else {
+//                list.add(a);
+//
+//            }
+//        }
+//
+//        if(a!="") {
+//            list.add(a);
+//        }
+//
+//        MyString[] arr = new MyString[list.size()];
+//        int indx = 0;
+//        for (String ele : list) {
+//            arr[indx++] = new MyString(ele);
+//        }
 //    }
+
 
 
 
@@ -228,9 +301,12 @@ public final class MyString {
         System.out.println(mystr.substring(3, 6));
 
 
-//        System.out.println("-----------");
-//        MyString trimCheck = new MyString("  ABCDEFGH   ");
-//        System.out.println(trimCheck.trim());
+        System.out.println("-----------");
+        MyString trimCheck = new MyString("  ABCDEFGH   ");
+        System.out.println(trimCheck.trim());
+        MyString splicCheck = new MyString("HI HI HI");
+        MyString [] arr = splicCheck.split(" ");
+        System.out.println(Arrays.toString(arr));
     }
 }
 
