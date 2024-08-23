@@ -145,6 +145,31 @@ public final class MyString {
 
     }
 
+    public MyString substring(int beginIndex) {
+        int N = str.length();
+
+        if (beginIndex < 0 || beginIndex > N)
+            throw new IndexOutOfBoundsException("beginIndex wrong");
+        int len = N - beginIndex;
+        char[] arr = new char[len];
+        for (int i = 0; i < len; i++)
+            arr[i] = str.charAt(beginIndex + i);
+        return new MyString(new String(arr));
+    }
+
+
+    public MyString substring(int beginIndex, int endIndex) {
+        int N = str.length();
+        if (beginIndex < 0 || endIndex > N || beginIndex > endIndex)
+            throw new IndexOutOfBoundsException("Index wrong");
+        int len = endIndex - beginIndex;
+        char[] arr = new char[len];
+        for (int i = 0; i < len; i++)
+            arr[i] = str.charAt(beginIndex + i);
+        return new MyString(new String(arr));
+    }
+
+
 //    public MyString trim() {
 //        int count = 0;
 //        int N = str.length();
@@ -198,6 +223,10 @@ public final class MyString {
         System.out.println(mystr.concat(mystr2));
 
         System.out.println(Arrays.toString(mystr.toCharArray()));
+
+        System.out.println(mystr.substring(3));
+
+
 //        System.out.println("-----------");
 //        MyString trimCheck = new MyString("  ABCDEFGH   ");
 //        System.out.println(trimCheck.trim());
