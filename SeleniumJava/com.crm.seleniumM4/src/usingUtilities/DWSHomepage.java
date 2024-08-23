@@ -6,7 +6,7 @@ public class DWSHomepage extends BaseClassDWS {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		preCondition();
+		useFirefox();
 		
 		String expectedURL = "https://demowebshop.tricentis.com/";
 		if (expectedURL.equals(driver.getCurrentUrl())){
