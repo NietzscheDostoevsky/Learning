@@ -6,7 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/GitHub/Learning/SeleniumJava/selenium-server-4.12.0.jar"/>
-	<classpathentry kind="lib" path="/home/saurabh-singh/Documents/GitHub/Learning/SeleniumJava/selenium-server-4.12.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-server-4.12.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
