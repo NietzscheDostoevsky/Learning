@@ -1,7 +1,6 @@
 package boundedWildcards;
 
 //Two Dimensional coordinates 
-
 public class TwoD {
 	int x, y; 
 	
@@ -9,13 +8,12 @@ public class TwoD {
 	TwoD(int x, int y) {
 		this.x = x; 
 		this.y = y; 
-	}
-	
+	}	
 }
+
 // Three dimensional coordinates
 class ThreeD extends TwoD {
 	int z;
-	
 	// constructor
 	public ThreeD(int x, int y, int z) {
 		super(x, y);
@@ -24,7 +22,6 @@ class ThreeD extends TwoD {
 }
 
 //four dimensional coordinates 
-
 class FourD extends ThreeD {
 	//constructor
 	int t; 

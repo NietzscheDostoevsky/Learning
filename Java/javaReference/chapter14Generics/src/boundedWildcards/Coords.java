@@ -1,11 +1,11 @@
 package boundedWildcards;
 
 // generic class "Coords" which stores an 
-// 		array of coordinates 
-public class Coords<T extends TwoD> {
-	T[] coords;
+// array of coordinates 
+public class Coords<Type extends TwoD> {
+	Type[] coords;
 
-	public Coords(T[] o) {
+	public Coords(Type[] o) {
 		this.coords = o;
 	}
 
@@ -14,7 +14,7 @@ public class Coords<T extends TwoD> {
 		for (int i = 0; i < c.coords.length; i++) {
 			System.out.println(c.coords[i].x +" " 
 							 + c.coords[i].y);
-			//System.out.println();
+			System.out.println();
 		}
 	}
 
@@ -35,5 +35,5 @@ public class Coords<T extends TwoD> {
 		c.coords[i].z + " " +
 		c.coords[i].t);
 		System.out.println();
-		}
+	}
 }
