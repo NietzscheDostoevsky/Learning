@@ -22,7 +22,7 @@ public class GenericMethodDriver {
 		if (!isIn("seven", strs))
 			System.out.println("seven is not in strs");
 		
-		//System.out.println(GenMathDemo.<String,String>isIn("one", strs));
+		System.out.println(GenMathDemo.<String,String>isIn("one", strs));
 		
 		// Oops! Won't compile! Types must be compatible.
 //		if (isIn("two", nums))

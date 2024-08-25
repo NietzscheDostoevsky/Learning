@@ -14,7 +14,7 @@ public class BoundsDriver {
 		System.out.println(dob.average());
 		
 		
-		String[] strs = { "1", "2", "3", "4", "5" };
+		//String[] strs = { "1", "2", "3", "4", "5" };
 		
 		// These lines would throw an CTE
 		// There is a bound on Type parameter. 

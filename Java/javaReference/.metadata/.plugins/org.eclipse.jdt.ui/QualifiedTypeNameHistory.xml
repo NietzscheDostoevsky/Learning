@@ -6,4 +6,10 @@
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="lambdaExpressionsAndExceptions.DescSort"/>
     <fullyQualifiedTypeName name="javax.swing.text.PlainDocument"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction"/>
+    <fullyQualifiedTypeName name="java.awt.RenderingHints.Key"/>
+    <fullyQualifiedTypeName name="genericMethod.GenMathDemo"/>
+    <fullyQualifiedTypeName name="java.lang.Number"/>
+    <fullyQualifiedTypeName name="genericConstructor.GenCons"/>
 </qualifiedTypeNameHistroy>
