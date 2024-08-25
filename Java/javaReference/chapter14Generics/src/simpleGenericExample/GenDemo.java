@@ -4,7 +4,7 @@ public class GenDemo {
 	
 	public static void main(String[] args) {
 		
-		// Create a gen reference for Integers. 
+		// Create a generic reference for Integers. 
 		
 		Gen<Integer> iOb; 
 		
@@ -16,7 +16,7 @@ public class GenDemo {
 		
 		System.out.println();
 		
-		// greateing a gen reference for sTrings ;
+		// creating a generic reference for strings ;
 		
 		Gen<String> strOb = new Gen<String>("Generic Test");
 		strOb.showType();

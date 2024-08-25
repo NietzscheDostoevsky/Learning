@@ -13,7 +13,7 @@ public class JavaRustTest {
 		int y = 32; 
 		
 		{
-			int y = y * 2; 
+			// int y = y * 2; CTE in java, but a valid code in Rust	
 			System.out.println("Y in inner scope is : " + y);
 		}
 		
