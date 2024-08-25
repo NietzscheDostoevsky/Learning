@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <dirs>
+    <entry loc="/home/saurabh-singh/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551/jre" stamp="1724480494547"/>
+    <entry loc="/home/saurabh-singh/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.linux.x86_64_21.0.4.v20240802-1551" stamp="1724480494547"/>
+    <entry loc="/home/saurabh-singh/.sdkman/candidates/java/21.0.3-graal" stamp="1713462491000"/>
     <entry loc="C:\Program Files\RedHat\java-21-openjdk-21.0.2.0.13-2" stamp="1712817040713"/>
 </dirs>
