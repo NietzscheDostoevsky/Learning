@@ -20,7 +20,7 @@ public class NonGenDemo {
 		String str = (String) strOb.getObject();
 		System.out.println("Value : " + str);
 		
-		iOb = strOb; 
+		iOb = strOb; // this would compile, but is conceptually WRONG!
 		v = (Integer) iOb.getObject(); // runtime error
 									   // class cast exception .
 		

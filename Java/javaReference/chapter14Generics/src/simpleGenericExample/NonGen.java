@@ -4,10 +4,10 @@ package simpleGenericExample;
 // 		but doesn't uses generics 
 
 public class NonGen {
-	Object obj; // ob is now of type object, the superclass of all the classes. 
+	Object obj; // obj is now of type object, the superclass of all the classes. 
 	
-	public NonGen(Object o) {
-		this.obj = o ; 
+	public NonGen(Object obj) {
+		this.obj = obj ; 
 	}
 	
 	Object getObject() {

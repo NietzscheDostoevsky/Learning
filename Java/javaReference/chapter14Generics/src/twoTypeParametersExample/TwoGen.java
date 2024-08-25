@@ -1,25 +1,25 @@
 package twoTypeParametersExample;
 
-public class TwoGen<T, V> {
-	T ob1; 
-	V ob2; 
+public class TwoGen<Type, Value> {
+	Type ob1; 
+	Value ob2; 
 	
-	public TwoGen(T o1, V o2) {
+	public TwoGen(Type o1, Value o2) {
 		this.ob1 = o1;
 		this.ob2 = o2; 
 	}
 	
-	T getOb1() {
+	Type getOb1() {
 		return ob1; 
 	}
 	
-	V getOb2() {
+	Value getOb2() {
 		return ob2; 
 	}
 	
 	void showTypes() {
 		System.out.println("Type of T is :" +
-							ob1.getClass().getName());
+				ob1.getClass().getName());
 		System.out.println("Type of V is :" +
 				ob2.getClass().getName());
 

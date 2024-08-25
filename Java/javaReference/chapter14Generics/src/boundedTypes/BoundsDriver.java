@@ -3,7 +3,6 @@ package boundedTypes;
 public class BoundsDriver {
 	public static void main(String[] args) {
 		
-		
 		Stats<Integer> iob ; 
 		Integer[] inums = {1,2,3,4,5};
 		iob = new Stats<Integer>(inums);
@@ -14,7 +13,11 @@ public class BoundsDriver {
 		Stats<Double> dob = new Stats<Double>(dnums);
 		System.out.println(dob.average());
 		
-		//String[] strs = { "1", "2", "3", "4", "5" };
+		
+		String[] strs = { "1", "2", "3", "4", "5" };
+		
+		// These lines would throw an CTE
+		// There is a bound on Type parameter. 
 		//Stats<String> strob = new Stats<String>(strs);
 		
 		Float[] fnums = { 1.0F, 2.0F, 3.0F, 4.0F, 5.0F };
@@ -32,9 +35,7 @@ public class BoundsDriver {
 		} else {
 			System.out.println("Differetn average");
 		}
-		
-		
-		
+
 	}
 }
 

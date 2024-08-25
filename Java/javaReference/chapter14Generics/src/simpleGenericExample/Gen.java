@@ -4,19 +4,19 @@ package simpleGenericExample;
 // T is a type parameter that will be replaced by 
 // 	 a real type when an object of type Gen is creaetd. 
 
-class Gen<T> {
-	T objT ; // declare an object of type T 
+class Gen<Type> {
+	Type objT ; // declare an object of type T 
 	
 	// passing the constructor a reference to an object of 
 	// 		type T 
 	
-	public Gen(T objT) {
+	public Gen(Type objT) {
 		this.objT = objT; 
 	}
 	
-	// returning an obect of type T. 
+	// returning an object of type T. 
 	
-	T getObj() {
+	Type getObj() {
 		return objT; 
 	}
 	
