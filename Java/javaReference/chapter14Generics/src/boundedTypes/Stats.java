@@ -20,9 +20,8 @@ public class Stats<Type extends Number & Comparable<Type>> {
 	// Determine if the averages are the same. 
 	
 	boolean isSameAvg(Stats<?> ob) {
-		if(this.average() == ob.average()) {
+		if(this.average() == ob.average()) 
 			return true; 
-		}
 		return false;
 	}	
 }
