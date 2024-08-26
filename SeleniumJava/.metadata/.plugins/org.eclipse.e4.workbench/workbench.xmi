@@ -437,7 +437,7 @@
             <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           </children>
           <children xsi:type="basic:Part" xmi:id="_GCR1oGNUEe-wkoeOZeCe6w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="CrossBrowserTesting.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;CrossBrowserTesting.java&quot; partName=&quot;CrossBrowserTesting.java&quot; title=&quot;CrossBrowserTesting.java&quot; tooltip=&quot;com.crm.seleniumM4/src/utilityClasses/CrossBrowserTesting.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/com.crm.seleniumM4/src/utilityClasses/CrossBrowserTesting.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;548&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;CrossBrowserTesting.java&quot; partName=&quot;CrossBrowserTesting.java&quot; title=&quot;CrossBrowserTesting.java&quot; tooltip=&quot;com.crm.seleniumM4/src/utilityClasses/CrossBrowserTesting.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/com.crm.seleniumM4/src/utilityClasses/CrossBrowserTesting.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;588&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
             <tags>Editor</tags>
             <tags>removeOnHide</tags>
             <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -445,16 +445,10 @@
             <tags>activeOnClose</tags>
           </children>
         </children>
-        <children xsi:type="basic:PartStack" xmi:id="_erZV4WNTEe-wkoeOZeCe6w" elementId="PartStack@11091385" containerData="4609" selectedElement="_5HK30GNYEe-wkoeOZeCe6w">
+        <children xsi:type="basic:PartStack" xmi:id="_erZV4WNTEe-wkoeOZeCe6w" elementId="PartStack@11091385" containerData="4609" selectedElement="_dP62YGNTEe-wkoeOZeCe6w">
           <tags>EditorStack</tags>
           <children xsi:type="basic:Part" xmi:id="_dP62YGNTEe-wkoeOZeCe6w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="BaseClassDWS.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BaseClassDWS.java&quot; partName=&quot;BaseClassDWS.java&quot; title=&quot;BaseClassDWS.java&quot; tooltip=&quot;com.crm.seleniumM4/src/utilityClasses/BaseClassDWS.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/com.crm.seleniumM4/src/utilityClasses/BaseClassDWS.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;64&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-            <tags>Editor</tags>
-            <tags>removeOnHide</tags>
-            <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          </children>
-          <children xsi:type="basic:Part" xmi:id="_5HK30GNYEe-wkoeOZeCe6w" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="usingCrossBrowserTesting.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;usingCrossBrowserTesting.java&quot; partName=&quot;usingCrossBrowserTesting.java&quot; title=&quot;usingCrossBrowserTesting.java&quot; tooltip=&quot;com.crm.seleniumM4/src/usingUtilities/usingCrossBrowserTesting.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/com.crm.seleniumM4/src/usingUtilities/usingCrossBrowserTesting.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;247&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+            <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;BaseClassDWS.java&quot; partName=&quot;BaseClassDWS.java&quot; title=&quot;BaseClassDWS.java&quot; tooltip=&quot;com.crm.seleniumM4/src/utilityClasses/BaseClassDWS.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/com.crm.seleniumM4/src/utilityClasses/BaseClassDWS.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;473&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
             <tags>Editor</tags>
             <tags>removeOnHide</tags>
             <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
@@ -721,7 +715,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KPRM9FSAEe-w1eBWnaWx-Q" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_tvKshmNSEe-wkoeOZeCe6w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_KPSaN1SAEe-w1eBWnaWx-Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_8yxNx2OCEe--EK2p6hVT6A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_KPSaN1SAEe-w1eBWnaWx-Q"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KPRNAVSAEe-w1eBWnaWx-Q" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -729,8 +723,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KPRNA1SAEe-w1eBWnaWx-Q" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_tvSBQmNSEe-wkoeOZeCe6w" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" command="_KPSYl1SAEe-w1eBWnaWx-Q"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_tvSBQ2NSEe-wkoeOZeCe6w" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_KPSZEVSAEe-w1eBWnaWx-Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_8y6-wGOCEe--EK2p6hVT6A" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.png" tooltip="Undo" enabled="false" command="_KPSYl1SAEe-w1eBWnaWx-Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_8y6-wWOCEe--EK2p6hVT6A" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.png" tooltip="Redo" enabled="false" command="_KPSZEVSAEe-w1eBWnaWx-Q"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KPRNB1SAEe-w1eBWnaWx-Q" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -763,7 +757,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KPRNN1SAEe-w1eBWnaWx-Q" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_tvSBSWNSEe-wkoeOZeCe6w" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_KPSZ8lSAEe-w1eBWnaWx-Q"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_8y6-x2OCEe--EK2p6hVT6A" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_KPSZ8lSAEe-w1eBWnaWx-Q"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_KPRNRFSAEe-w1eBWnaWx-Q" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
