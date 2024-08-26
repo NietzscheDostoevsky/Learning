@@ -21,10 +21,9 @@ public class DWSFollowLinks extends BaseClassDWS {
 			System.out.println("clicked");
 			if(rssLink.equals(driver.getCurrentUrl()))
 				driver.navigate().back();		
-			sleep();
+			sleep(2000);
 		}
 		
 		postCondition2();
 	}
-
 }

@@ -12,7 +12,7 @@ public class BaseClassDWS {
 	public static void useChrome() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		sleep();
+		sleep(3000);
 		String homeUrl = "https://demowebshop.tricentis.com/";
 		driver.get(homeUrl);		
 	}
@@ -20,7 +20,7 @@ public class BaseClassDWS {
 	public static void useFirefox()  {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		sleep();
+		sleep(3000);
 		String homeUrl = "https://demowebshop.tricentis.com/";
 		driver.get(homeUrl);		
 	}
@@ -28,14 +28,14 @@ public class BaseClassDWS {
 	public static void useEdge()  {
 		driver = new EdgeDriver();
 		driver.manage().window().maximize();
-		sleep();
+		sleep(3000);
 		String homeUrl = "https://demowebshop.tricentis.com/";
 		driver.get(homeUrl);		
 	}
 	
-	public static void sleep() {
+	public static void sleep(int ms) {
 		try {
-			Thread.sleep(3000);
+			Thread.sleep(ms);
 		} catch (InterruptedException e) {
 			System.out.println("thread pause");
 		}
@@ -50,7 +50,6 @@ public class BaseClassDWS {
 		System.out.println("Quitting session");
 		driver.quit();
 	}
-
 }
 
 
