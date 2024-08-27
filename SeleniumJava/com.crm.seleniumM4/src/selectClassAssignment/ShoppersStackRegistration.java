@@ -1,6 +1,4 @@
 package selectClassAssignment;
-import java.time.Duration;
-
 /**
  * Task ?  
  * 	Write a script for shopperStack application.  
@@ -17,19 +15,29 @@ import java.time.Duration;
  * 	✅	Verify the password and confirm password.  
  */
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 
 public class ShoppersStackRegistration {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		ChromeDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
+		WebDriver driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		String shopperURL = "https://shoppersstack.com/";
 		driver.get(shopperURL);
-		Thread.sleep(30000);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
+		
+		while(true) {
+			try {
+				driver.findElement(By.id("loginBtn"));
+				break;
+			} catch (Exception e) {
+				System.out.println("Can't find login button yet, sleeping for 5 seconds");
+				Thread.sleep(5000);
+			}
+		}
 		
 		// Verify homepage by title : 
 		if(driver.getTitle().equals("ShoppersStack")) {
@@ -40,6 +48,7 @@ public class ShoppersStackRegistration {
 			WebElement uniqueLogin = driver.findElement(By.xpath("//strong"));
 			if (uniqueLogin.isDisplayed()) {
 				driver.findElement(By.xpath("(//span[@class='MuiButton-label'])[2]")).click();
+				Thread.sleep(3000);
 				fillRegistrationForm(driver);			
 			} else {
 				System.out.println("Login page not gotten");
@@ -49,11 +58,15 @@ public class ShoppersStackRegistration {
 			verifyPassConfirmPass(driver);
 	
 		} else System.out.println("Wrong page");
+		
+		Thread.sleep(5000);
+		System.out.println("Closing the browser.");
+		driver.quit();
 	}
 
 	
 
-	private static void fillRegistrationForm(ChromeDriver driver) {
+	private static void fillRegistrationForm(WebDriver driver) {
 		
 		driver.findElement(By.id("First Name")).sendKeys("FakeFirstName");
 		driver.findElement(By.id("Last Name")).sendKeys("FakeLastName");
@@ -67,7 +80,7 @@ public class ShoppersStackRegistration {
 	}
 	
 	
-	private static void verifyRadioButton(ChromeDriver driver) {
+	private static void verifyRadioButton(WebDriver driver) {
 		System.out.println("Verifying radio button");
 		boolean button = driver.findElement(By.id("Terms and Conditions")).isSelected(); 
 		if(button)
@@ -77,8 +90,8 @@ public class ShoppersStackRegistration {
 		
 	}
 	
-	private static void verifyPassConfirmPass(ChromeDriver driver) {
-		System.out.println("getting the filled text: ");
+	private static void verifyPassConfirmPass(WebDriver driver) {
+		System.out.println("Verifying Password");
 		String pass = driver.findElement(By.id("Password")).getAttribute("value");
 		String confirmPass = driver.findElement(By.id("Confirm Password")).getAttribute("value");
 		
