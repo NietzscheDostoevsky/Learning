@@ -28,7 +28,7 @@ public class QSPDropdownSelect {
 		
 		while(true) {
 			try {
-				driver.findElement(By.xpath("//*[@id=\"optionsBody\"]/a[1]/div/main/div[2]/div[2]"));
+				driver.findElement(By.xpath("(//div[@title='Learn More'])[1]"));
 				break;
 			} catch (Exception e) {
 				System.out.println("Can't find login button yet, sleeping for 5 seconds");
@@ -38,7 +38,7 @@ public class QSPDropdownSelect {
 		
 		if(driver.getCurrentUrl().equals(qspURL)) {
 			System.out.println("URL Verified ✔️");
-			driver.findElement(By.xpath("//*[@id=\"optionsBody\"]/a[1]/div/main/div[2]/div[2]")).click();
+			driver.findElement(By.xpath("(//div[@title='Learn More'])[1]")).click();
 			Thread.sleep(10000);
 			driver.findElement(By.xpath("//section[text()='Dropdown']")).click();
 			Thread.sleep(5000);
