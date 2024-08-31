@@ -30,7 +30,7 @@ public class Coords<Type extends TwoD> {
 	static void showAll(Coords<? extends FourD> c) {
 		System.out.println("X Y Z T Coordinates:");
 		for(int i=0; i < c.coords.length; i++)
-		System.out.println(c.coords[i].x + " " +
+			System.out.println(c.coords[i].x + " " +
 		c.coords[i].y + " " +
 		c.coords[i].z + " " +
 		c.coords[i].t);
