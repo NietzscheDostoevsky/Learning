@@ -1,11 +1,11 @@
 package records;
 
-record Employee(String name, int id) {};
+
 
 public class RecordDemo {
 
 	public static void main(String[] args) {
-		
+		record Employee(String name, int id) {};
 		Employee[] empList = new Employee[4];
 		
 		empList[0] = new Employee("Doe", 1057);
