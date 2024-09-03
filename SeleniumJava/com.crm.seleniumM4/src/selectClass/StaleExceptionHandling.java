@@ -27,6 +27,32 @@ public class StaleExceptionHandling extends CrossBrowserTesting {
 			sort = new Select(driver.findElement(By.id("products-orderby")));
 			Thread.sleep(2000);
 		}
+		
+		// display menu 
+		sort = new Select(driver.findElement(By.id("products-pagesize")));
+		sortOptions = sort.getOptions();
+		indx = 0;
+		for (WebElement ele : sortOptions) {
+			sort.selectByIndex(indx++);
+			
+			//reinitialize to handle stale element exception.
+			sort = new Select(driver.findElement(By.id("products-pagesize")));
+			Thread.sleep(2000);
+		}
+		
+		// view as 
+		
+		sort = new Select(driver.findElement(By.id("products-viewmode")));
+		sortOptions = sort.getOptions();
+		indx = 0;
+		for (WebElement ele : sortOptions) {
+			sort.selectByIndex(indx++);
+			
+			//reinitialize to handle stale element exception.
+			sort = new Select(driver.findElement(By.id("products-viewmode")));
+			Thread.sleep(2000);
+		}
+		
 		Thread.sleep(5000);
 		driver.quit();
 	}
