@@ -33,12 +33,12 @@ public class DWSDigitalDownloadsSelect {
 		Thread.sleep(3000);
 		Select sort = new Select(driver.findElement(By.id("products-orderby")));
 		List<WebElement> sortOptions = sort.getOptions();
-		
+		int indx = 0;
 		for (WebElement ele : sortOptions) {
-			ele.click();
+			sort.selectByIndex(indx++);
 			Thread.sleep(2000);
-			driver.navigate().back();
-			Thread.sleep(1000);
+			sort = new Select(driver.findElement(By.id("products-orderby")));
+			
 		}
 		Thread.sleep(5000);
 		driver.quit();
