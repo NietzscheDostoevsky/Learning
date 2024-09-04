@@ -15,6 +15,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\GitHub\Learning\Java\javaReference\Chapter15"/>
 			<item value="C:\GitHub\Learning\Java\javaReference\chapter20CollectionsFramework"/>
 			<item value="C:\GitHub\Learning\Java\QSP\Collections"/>
 			<item value="/home/saurabh-singh/Documents/GitHub/Learning/Java/javaReference/chapter14Generics"/>

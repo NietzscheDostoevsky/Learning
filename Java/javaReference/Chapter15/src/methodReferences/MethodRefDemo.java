@@ -1,6 +1,6 @@
 package methodReferences;
 
-// Demostrate a method reference for a static method. 
+// Demonstrate a method reference for a static method. 
 
 // A functional interface for string operations. 
 interface StringFunc {
@@ -20,9 +20,9 @@ class MyStringOps {
 
 
 public class MethodRefDemo {
-	// This method has a functinoal interface as the type of 
+	// This method has a functional interface as the type of 
 	// its first parameter. Thus, it can be passed any instance
-	// of that interface, inclusing a method reference. 
+	// of that interface, including a method reference. 
 	static String stringOp(StringFunc sf, String s) {
 		return sf.func(s); 
 	}
@@ -31,7 +31,7 @@ public class MethodRefDemo {
 		String inStr = "Lambdas add power to Java"; 
 		String outStr; 
 		
-		// Here a method refernce to strReverse is passed to stringOp(). 
+		// Here a method reference to strReverse is passed to stringOp(). 
 		
 		outStr = stringOp(MyStringOps::strReverse, inStr); 
 		
@@ -39,5 +39,4 @@ public class MethodRefDemo {
 		System.out.println("String reversed: " + outStr);		
 		
 	}
-
 }
