@@ -28,17 +28,24 @@ public class MyArrayList<E>  {
 		if (arr.length == indx) {
 			int newSize = (((arr.length) * 3 ) / 2 ) +1; 
 			E[] narr = Arrays.copyOf(arr, newSize);
-			arr = narr;
-			
+			arr = narr;			
 		}
+		
 		arr[indx++] = (E) e; 
 	}
 	
 	public int indexOf(E e) {
-		for (int i = 0; i < indx; i++) {
+		for (int i = 0; i < size(); i++) 
 			if (arr[i].equals(e))
 				return i;
-		}
+		return -1;
+	}
+	
+	public int lastIndexOf(E e) {
+		for (int i = size() -1; i >=1; i--) 
+			if (arr[i].equals(e))
+				return i;
+		
 		return -1;
 	}
 	
@@ -46,11 +53,35 @@ public class MyArrayList<E>  {
 		return indx;
 	}
 	
-	public Integer get(int index) {
+	public E get(int index) {
 		if (index<0 || index>= size()) 
 			throw new IndexOutOfBoundsException("Wrong Index Entered");
-		return (Integer) arr[index];
+		return arr[index];
 	}
+	
+	public void trimToSize() {
+		E[] narr = Arrays.copyOf(arr, size());
+		arr = narr; 
+	}
+	
+	public E set(int index, E ele) {
+		if (index<0 || index>= size()) 
+			throw new IndexOutOfBoundsException("Wrong Index Entered");
+		
+		E previousElement = arr[index];
+		arr[index] = ele;
+		return previousElement;
+	}
+	
+	public void remove(int index) {
+		@SuppressWarnings("unchecked")
+		E[] narr = (E[]) new  Object[size()-1];
+		System.arraycopy(arr, 0, narr, 0, index);
+		System.arraycopy(arr, index + 1, narr, index, size() - index -1);
+		indx--;./
+		arr = narr;
+	}
+	
 	
 	
 }

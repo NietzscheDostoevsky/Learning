@@ -6,7 +6,6 @@ public class ArrayListDriver {
 		
 		MyArrayList<Integer> mal = new MyArrayList<>(); 
 		System.out.println(mal);
-		
 		mal.add(10);
 		mal.add(20);
 		mal.add(30);
@@ -22,11 +21,20 @@ public class ArrayListDriver {
 		mal.add(1100);
 		mal.add(1200);
 		
-		System.out.println(mal);
 		
+		System.out.println(mal);		
 		System.out.println(mal.indexOf(70));
 		System.out.println(mal.indexOf(0));
+		System.out.println(mal.get(3));
+		System.out.println(mal.indexOf(70));
+		System.out.println(mal.set(2,0));
+		System.out.println(mal);	
 		
+		mal.remove(2);
+		System.out.println(mal);	
+
+		
+
 	}
 
 }
