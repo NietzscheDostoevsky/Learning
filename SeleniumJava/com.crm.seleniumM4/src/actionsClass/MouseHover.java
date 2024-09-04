@@ -24,6 +24,11 @@ public class MouseHover {
 			Thread.sleep(3000);
 			WebElement men = driver.findElement(By.xpath("//a[@data-reactid='21']"));
 			act.moveToElement(men).build().perform();
+			Thread.sleep(3000);
+			WebElement jackets = driver.findElement(By.xpath("//a[@data-reactid='41']"));
+			act.moveToElement(jackets).build().perform();
+			Thread.sleep(1000);
+			jackets.click();
 			
 			
 		} else {
