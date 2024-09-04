@@ -1,6 +1,7 @@
 package arrayListImplementation;
 
 import java.util.Arrays;
+import java.util.Collection;
 
 public class MyArrayList<E>  {
 	
@@ -10,6 +11,12 @@ public class MyArrayList<E>  {
 	public MyArrayList() {
 		arr = (E[]) new Object[10]; 
 	}
+	
+	@SuppressWarnings("unchecked")
+	public MyArrayList(int size) {
+		arr = (E[]) new Object[size]; 
+	}
+	
 	
 	@Override
 	public String toString() {
