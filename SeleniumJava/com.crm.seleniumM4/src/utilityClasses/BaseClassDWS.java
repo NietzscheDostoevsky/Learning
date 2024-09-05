@@ -14,7 +14,25 @@ public class BaseClassDWS {
 		driver.manage().window().maximize();
 		sleep(3000);
 		String homeUrl = "https://demowebshop.tricentis.com/";
-		driver.get(homeUrl);		
+		driver.get(homeUrl);	
+		
+		if(driver.getCurrentUrl().equals(homeUrl))
+			System.out.println("DWS page fetched");
+		else
+			System.out.println("check home URL again");
+	}
+	
+	public static void useChrome(String url) {
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		sleep(3000);
+		String homeUrl = url;
+		driver.get(homeUrl);	
+		
+		if(driver.getCurrentUrl().equals(homeUrl))
+			System.out.println("Home page fetched");
+		else
+			System.out.println("check home URL again");
 	}
 	
 	public static void useFirefox()  {
