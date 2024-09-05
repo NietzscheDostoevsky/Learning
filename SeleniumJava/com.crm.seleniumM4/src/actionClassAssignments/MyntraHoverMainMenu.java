@@ -16,13 +16,13 @@ public class MyntraHoverMainMenu extends MyntraHomePage {
 		List<WebElement> menu = navLinks.findElements(By.className("desktop-navContent"));
 		
 		Actions act = new Actions(driver);
+		
 		for (WebElement link : menu) {
 			act.moveToElement(link).build().perform();
 			sleep(1500);
 		}
 		
 		sleep(3000);
-		driver.quit();
-		
+		driver.quit();		
 	}
 }
