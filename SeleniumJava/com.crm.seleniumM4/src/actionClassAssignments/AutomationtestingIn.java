@@ -38,10 +38,12 @@ public class AutomationtestingIn extends BaseClassDWS {
 		
 		//Languages 
 		
-//		WebElement languages = driver.findElement(By.xpath("//multi-select/div/ul"));
-//		
+		WebElement languages = driver.findElement(By.xpath("//multi-select/div/ul"));
+		
 //		languages.findElement(By.linkText("English")).click();
 //		languages.findElement(By.linkText("Hindi")).click();
+		
+		driver.findElement(By.linkText("Arabic")).click(); sleep(3000);
 		
 		
 		//Skills 
