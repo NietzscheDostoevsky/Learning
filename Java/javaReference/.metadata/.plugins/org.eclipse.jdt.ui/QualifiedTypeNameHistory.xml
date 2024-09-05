@@ -24,7 +24,6 @@
     <fullyQualifiedTypeName name="genericClassHierarchies.GenB"/>
     <fullyQualifiedTypeName name="genericClassHierarchies.GenA"/>
     <fullyQualifiedTypeName name="java.lang.EnumConstantNotPresentException"/>
-    <fullyQualifiedTypeName name="T"/>
     <fullyQualifiedTypeName name="javax.swing.table.TableColumn"/>
     <fullyQualifiedTypeName name="genericArray.Gen"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
@@ -34,8 +33,11 @@
     <fullyQualifiedTypeName name="records.Employee2"/>
     <fullyQualifiedTypeName name="java.awt.geom.IllegalPathStateException"/>
     <fullyQualifiedTypeName name="java.lang.IllegalArgumentException"/>
-    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
     <fullyQualifiedTypeName name="selftest.StringFunc"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="selftest.MyStringOps"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="methodReferences.StringFunc1"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="methodReferences.MyStringOps1"/>
+    <fullyQualifiedTypeName name="T"/>
 </qualifiedTypeNameHistroy>
