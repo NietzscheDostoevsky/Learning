@@ -1,7 +1,7 @@
 package arrayListImplementation;
 
 import java.util.Arrays;
-import java.util.Collection;
+
 
 public class MyArrayList<E>  {
 	
@@ -85,7 +85,7 @@ public class MyArrayList<E>  {
 		E[] narr = (E[]) new  Object[size()-1];
 		System.arraycopy(arr, 0, narr, 0, index);
 		System.arraycopy(arr, index + 1, narr, index, size() - index -1);
-		indx--;./
+		indx--;
 		arr = narr;
 	}
 	
