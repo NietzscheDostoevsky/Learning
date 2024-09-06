@@ -20,15 +20,12 @@ public class DragAndDrop extends BaseClassDWS{
 		for (int i = 1; i <= totalBoxes/2; i++) {
 			WebElement sourcElement = driver.findElement(By.id("box" + i));
 			WebElement targetElement = driver.findElement(By.id("box10" + i));
-			dragAndDropBoxes(action, sourcElement, targetElement);
+			action.dragAndDrop(sourcElement, targetElement).build().perform(); sleep(1500);
 		}
-		sleep(5000);
+		sleep(3000);
 		postCondition2();
 	}
 	
-	public static void dragAndDropBoxes(Actions action, WebElement source, WebElement target) {
-		action.dragAndDrop(source, target).build().perform();
-		sleep(1500);
-	}
+	
 
 }
