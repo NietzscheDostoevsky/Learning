@@ -38,11 +38,12 @@
     <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
     <fullyQualifiedTypeName name="methodReferences.StringFunc1"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="methodReferences.MyStringOps1"/>
-    <fullyQualifiedTypeName name="T"/>
     <fullyQualifiedTypeName name="org.w3c.dom.css.Counter"/>
-    <fullyQualifiedTypeName name="methodReferences.MyFunc"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
     <fullyQualifiedTypeName name="methodReferences.HighTemp"/>
+    <fullyQualifiedTypeName name="java.lang.TypeNotPresentException"/>
+    <fullyQualifiedTypeName name="T"/>
+    <fullyQualifiedTypeName name="methodReferences.MyStringOps1"/>
+    <fullyQualifiedTypeName name="methodReferences.MyFunc"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
 </qualifiedTypeNameHistroy>

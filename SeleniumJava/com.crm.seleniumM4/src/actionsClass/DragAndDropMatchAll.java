@@ -24,13 +24,13 @@ public class DragAndDropMatchAll extends BaseClassDWS {
 		for (WebElement capital : capitals) {
 			if (capital.getAttribute("id").contains("box"))
 				for (WebElement country: countries) {
-					action.dragAndDrop(capital, country).build().perform(); sleep(500);
+					action.dragAndDrop(capital, country).build().perform(); sleep(1000);
 					String capitalId = capital.getAttribute("id");
 					String color =  driver.findElement(By.id(capitalId)).getAttribute("style");
 					if(color.contains("rgb(0, 255, 0)")) break;					
 				}
 		}
-		
+		sleep(5000);
 		postCondition2();
 	}
 

@@ -16,10 +16,17 @@ public class LinkedListDriver {
 		list.addLast(60);
 		list.addFirst(90000);
 		System.out.println(list);
-		
-		System.out.println(list.getFirst());	
+		System.out.println(list.removeFirst());
+		System.out.println(list);
+		System.out.println(list.size());
+		System.out.println(list.getFirst());
+		System.out.println(list.removeLast());
 		System.out.println(list.getLast());	
-
+		System.out.println(list.size());
+		System.out.println(list);
+		list.remove(2);
+		System.out.println(list);
+		
 	}
 
 }
