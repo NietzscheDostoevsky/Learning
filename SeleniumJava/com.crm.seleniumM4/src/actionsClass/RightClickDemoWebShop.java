@@ -21,5 +21,4 @@ public class RightClickDemoWebShop extends BaseClassDWS {
 		sleep(10000);
 		postCondition2();
 	}
-
 }

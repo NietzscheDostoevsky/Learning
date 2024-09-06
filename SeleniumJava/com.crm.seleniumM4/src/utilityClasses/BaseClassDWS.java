@@ -12,7 +12,7 @@ public class BaseClassDWS {
 	public static void useChrome() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		sleep(3000);
+		sleep(1500);
 		String homeUrl = "https://demowebshop.tricentis.com/";
 		driver.get(homeUrl);	
 		
@@ -25,10 +25,10 @@ public class BaseClassDWS {
 	public static void useChrome(String url) {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		sleep(3000);
+		sleep(1500);
 		String homeUrl = url;
 		driver.get(homeUrl);	
-		
+		sleep(3000);
 		if(driver.getCurrentUrl().equals(homeUrl))
 			System.out.println("Home page fetched");
 		else
