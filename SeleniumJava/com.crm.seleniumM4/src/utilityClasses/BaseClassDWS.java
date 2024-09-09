@@ -60,6 +60,7 @@ public class BaseClassDWS {
 	}
 	
 	public static void postCondition1() {
+		sleep(5000);
 		System.out.println("Closing browser");
 		driver.close();
 	}
