@@ -65,6 +65,7 @@ public class BaseClassDWS {
 	}
 	
 	public static void postCondition2() {
+		sleep(5000);
 		System.out.println("Quitting session");
 		driver.quit();
 	}
