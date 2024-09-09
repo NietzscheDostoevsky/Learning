@@ -12,7 +12,7 @@ public class VectorDemo {
 		// 		can be multithreaded. 
 		Vector<Integer> vector = new Vector<>();
 		vector.add(10); 
-		vector.
+		
 
 	}
 
