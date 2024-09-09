@@ -2,6 +2,7 @@ package methodReferences;
 
 // Demonstrate a method reference to an instance method. 
 
+
 //A functional interface for String operations.
 
 @FunctionalInterface
