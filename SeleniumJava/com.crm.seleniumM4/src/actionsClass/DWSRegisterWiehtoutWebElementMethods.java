@@ -25,7 +25,8 @@ public class DWSRegisterWiehtoutWebElementMethods extends BaseClassDWS {
 		actions.sendKeys(Keys.TAB).perform(); sleep(500);
 		actions.sendKeys("fakePass").perform();
 		actions.sendKeys(Keys.TAB).perform(); sleep(500);
-		actions.sendKeys(Keys.ENTER);
+		actions.sendKeys(Keys.ENTER); sleep(2000);
+		
 		
 		postCondition2();
 	}
