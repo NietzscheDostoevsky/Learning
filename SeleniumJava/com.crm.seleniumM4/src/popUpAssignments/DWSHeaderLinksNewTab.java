@@ -17,7 +17,7 @@ public class DWSHeaderLinksNewTab extends BaseClassDWS{
 			System.out.println("Page verified by element. ");
 	
 		Actions actions = new Actions(driver);
-		List<WebElement> headerLinks = driver.findElements(By.xpath("//div[@class='header-links-wrapper']/div/ul/li"));
+		List<WebElement> headerLinks = driver.findElements(By.xpath("//div[@class='header-links-wrapper']/div/ul/li"));	
 		System.out.println("Total elements: " + headerLinks.size());
 		for (WebElement link: headerLinks) {
 			actions.keyDown(Keys.CONTROL).click(link).perform(); sleep(1000);
