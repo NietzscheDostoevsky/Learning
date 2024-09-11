@@ -1,7 +1,9 @@
 package arrayList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
+import java.util.List;
 
 public class InterableDemo {
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -24,14 +26,27 @@ public class InterableDemo {
 		list.add(true);
 		list.add(1.2);
 		list.add("Thirty");
-		ArrayList<String> stringList2 = list;
-		Iterator iterator = list.iterator();
-		while(iterator.hasNext()) {
-			Object obj = iterator.next();
-			if(!(obj instanceof String))
-				iterator.remove();
+		
+		ArrayList<String> list2 = new ArrayList<String>(list); 
+		System.out.println(list2);
+		try {
+			for (String s : list2) {
+				System.out.println(s.getClass());
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		System.out.println(list);
-		ArrayList<String> stringList = list;
+				
+		
+//		ArrayList<String> stringList2 = list;
+//		Iterator iterator = list.iterator();
+//		while(iterator.hasNext()) {
+//			Object obj = iterator.next();
+//			if(!(obj instanceof String))
+//				iterator.remove();
+//		}
+//		System.out.println(list);
+//		ArrayList<String> stringList = list;
 	}
 }
