@@ -10,7 +10,7 @@ interface MyFunc1<T> {
 	int func(T[]vals, T v);
 }
 
-// This class defines a method called countMatchin() that returns 
+// This class defines a method called countMatching() that returns 
 // the number of items in an array that are equal to a specified value. 
 // 		countMatching() is generic, but MyArrayOps is not. 
 
@@ -27,6 +27,18 @@ public class MethodReferenceWithGenerics {
 	
 	static <T> int myOp(MyFunc1<T> f, T[] vals,  T v) {
 		return f.func(vals, v);
+	}
+	
+	public static void main(String[] args) {
+		Integer[] integers = {  1, 2, 3, 4, 2, 3, 4, 4, 5 };
+		String[] strings =  { "One", "Two", "Three", "Two" };
+		int count; 
+		
+		count = myOp(MyArrayOps::<Integer>countMatching, integers, 4);
+		System.out.println("count of 4: " + count);
+		
+		count = myOp(MyArrayOps::<String>countMatching, strings, "Two");
+		System.out.println("count of 'two' : " + count);
 	}
 
 }
