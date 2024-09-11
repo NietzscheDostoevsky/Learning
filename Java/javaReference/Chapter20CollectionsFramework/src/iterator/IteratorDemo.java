@@ -3,6 +3,7 @@ package iterator;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.ListIterator;
+import java.util.function.*;
 
 public class IteratorDemo {
 
@@ -50,6 +51,8 @@ public class IteratorDemo {
 			System.out.print(elemtnString + " ");
 		}
 		System.out.println();
+		
+		litr.forEachRemaining((e) -> (System.out.println()));
 	}
 
 }
