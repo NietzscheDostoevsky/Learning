@@ -1,6 +1,5 @@
 package popUpAssignments;
 
-import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -26,6 +25,7 @@ public class DWSFollowLinksAndRegister extends BaseClassDWS {
 		Set<String> windowSet = driver.getWindowHandles();
 		for (String window : windowSet) {
 			driver.switchTo().window(window); sleep(1000);
+			
 			if (driver.getCurrentUrl().contains("facebook")) { 
 				driver.findElement(By.xpath("//span[text()='Create new account']")).click(); sleep(5000);
 				driver.close();
@@ -33,8 +33,7 @@ public class DWSFollowLinksAndRegister extends BaseClassDWS {
 			else if (driver.getCurrentUrl().contains("twitter") || 
 					 driver.getCurrentUrl().contains("x.com")) {
 				driver.findElement(By.xpath("//span[text()='Create account']")).click(); sleep(5000);
-				driver.close();
-				
+				driver.close();				
 			} else driver.close();
 			
 			System.out.println("Link closed: " + ++count);
