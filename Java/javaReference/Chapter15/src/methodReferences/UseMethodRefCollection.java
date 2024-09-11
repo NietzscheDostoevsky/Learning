@@ -37,3 +37,8 @@ public class UseMethodRefCollection {
 	}
 
 }
+
+// MyClass neither defines any comparison method, nor does it implements Comparator. 
+// But, the max val of the list of MyClass items can still be obtained by calling max()
+// because UseMethodRefCollection defines the static method compareMC() 
+// which is compatible with the compare() method defined by the Comparator. 
