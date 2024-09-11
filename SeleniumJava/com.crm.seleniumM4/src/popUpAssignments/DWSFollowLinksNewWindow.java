@@ -21,12 +21,13 @@ public class DWSFollowLinksNewWindow extends BaseClassDWS{
 		String rss = "https://demowebshop.tricentis.com/news/rss/1";
 		
 		List<WebElement> linksElements = driver.findElements(By.xpath("//div[@class='column follow-us']/ul/li/a"));
-		System.out.println("Total Links: " + linksElements.size());
+		System.out.println(linksElements);
 		
 		int count = 0;
 		for (WebElement link : linksElements) {
 			//link.click(); 
-			actions.keyDown(Keys.CONTROL).click(link); 
+			sleep(1000);
+			actions.keyDown(Keys.SHIFT).click(link).perform(); 
 			System.out.println("Clicked link: " + ++count);
 			sleep(1000);
 		}

@@ -1,9 +1,6 @@
 package popUp;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
-import java.util.concurrent.CountDownLatch;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
