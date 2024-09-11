@@ -18,7 +18,6 @@ public class DWSFollowLinksNewWindow extends BaseClassDWS{
 
 		Actions actions = new Actions(driver);
 		actions.keyDown(Keys.PAGE_DOWN).perform();sleep(500);
-		String rss = "https://demowebshop.tricentis.com/news/rss/1";
 		
 		List<WebElement> linksElements = driver.findElements(By.xpath("//div[@class='column follow-us']/ul/li/a"));
 		System.out.println(linksElements);
