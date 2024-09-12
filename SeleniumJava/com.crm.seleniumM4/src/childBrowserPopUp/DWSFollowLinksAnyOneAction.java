@@ -24,6 +24,7 @@ public class DWSFollowLinksAnyOneAction extends BaseClassDWS {
 	public static void main(String[] args) {
 				
 		useChrome();
+		//useChromeHeadless();
 		String parentHandle = driver.getWindowHandle();
 		List<WebElement> linksElements = driver.findElements(By.xpath("//div[@class='column follow-us']/ul/li/a"));
 		Actions actions = new Actions(driver);	
@@ -57,7 +58,6 @@ public class DWSFollowLinksAnyOneAction extends BaseClassDWS {
 					driver.close();				
 				}
 			} catch (Exception e) {
-				
 				e.printStackTrace();
 			}
 			
