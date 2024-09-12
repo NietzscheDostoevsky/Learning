@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Multiple popups</title>
+  </head>
+
+  <body>
+    <form>
+      <input type="button" value="Open Food Sites" onclick="open_win()" />
+    </form>
+  </body>
+  <script type="text/javascript">
+    function open_win() {
+      var frsWin = window.open("https://www.barbequenation.com/", "FIRST", "windowFeatures");
+      frsWin.resizeBy(350 ,400);
+      frsWin.moveTo(100,400);
+      setTimeout(function () {
+        secWin = window.open("https://www.olivegarden.com/", "SECOND", "windowFeatures");
+        secWin.resizeBy(350 ,400);
+        secWin.moveTo(450,400);
+      }, 500);
+      setTimeout(function () {
+        thirWin = window.open("https://www.giallozafferano.com/", "THIRD", "windowFeatures");
+        thirWin.resizeBy(350 ,400);
+        thirWin.moveTo(800,400);
+      }, 500);
+    }
+  </script>
+</html>
