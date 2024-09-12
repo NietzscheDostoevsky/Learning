@@ -44,7 +44,7 @@ public class DWSFollowLinksAnyOneAction extends BaseClassDWS {
 					driver.findElement(By.xpath("//span[text()='Create account']")).click(); sleep(5000);
 					driver.close();				
 				} else if (currentURL.contains("rss")) {
-					String webtextString = driver.findElement(By.xpath("/html/body/pre")).getText(); sleep(2000);
+					String webtextString = driver.findElement(By.xpath("/html/body/pre")).getText(); sleep(1000);
 					System.out.println(webtextString.substring(0, 100));
 					driver.close();
 					
@@ -68,7 +68,7 @@ public class DWSFollowLinksAnyOneAction extends BaseClassDWS {
 			
 			driver.switchTo().window(parentHandle);
 			System.out.println("Switched to : " + driver.getCurrentUrl());
-			System.out.println(); sleep(3000);
+			System.out.println(); sleep(1000);
 		}			
 		postCondition2();	
 	}
