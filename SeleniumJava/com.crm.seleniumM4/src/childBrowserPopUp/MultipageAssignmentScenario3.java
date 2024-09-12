@@ -19,7 +19,12 @@ import utilityClasses.BaseClassDWS;
 
 public class MultipageAssignmentScenario3 extends BaseClassDWS {
 	public static void main(String[] args) {
-		String urlString = "C:\\GitHub\\Learning\\SeleniumJava\\MultipleWindow-1.html";
+		String urlString;
+		if (System.getProperty("os.name").equals("Linux"))
+			urlString = "file:///home/saurabh-singh/Documents/GitHub/Learning/SeleniumJava/MultipleWindow-1.html";
+		else 
+			urlString = "C:\\GitHub\\Learning\\SeleniumJava\\MultipleWindow-1.html";
+		System.out.println(urlString);
 		useChrome(urlString);
 		
 		WebElement foodSiteButton = driver.findElement(By.cssSelector("[type='button']"));
