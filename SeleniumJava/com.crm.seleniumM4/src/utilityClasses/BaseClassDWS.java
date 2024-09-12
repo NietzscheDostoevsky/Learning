@@ -2,12 +2,17 @@ package utilityClasses;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class BaseClassDWS {
-	protected static WebDriver driver; 
+	protected static WebDriver driver;
+	protected static ChromeOptions options = new ChromeOptions();
+	static {
+		 options.addArguments("--headless=new");
+	}
 	
 	public static void useChrome() {
 		driver = new ChromeDriver();
@@ -25,6 +30,30 @@ public class BaseClassDWS {
 	public static void useChrome(String url) {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+		sleep(1500);
+		String homeUrl = url;
+		driver.get(homeUrl);	
+		sleep(3000);
+		if(driver.getCurrentUrl().equals(homeUrl))
+			System.out.println("Home page fetched");
+		else
+			System.out.println("check home URL again");
+	}
+	
+	public static void useChromeHeadless() {
+		driver = new ChromeDriver(options);
+		sleep(1500);
+		String homeUrl = "https://demowebshop.tricentis.com/";
+		driver.get(homeUrl);	
+		
+		if(driver.getCurrentUrl().equals(homeUrl))
+			System.out.println("DWS page fetched");
+		else
+			System.out.println("check home URL again");
+	}
+	
+	public static void useChromeHeadless(String url) {
+		driver = new ChromeDriver(options);
 		sleep(1500);
 		String homeUrl = url;
 		driver.get(homeUrl);	
