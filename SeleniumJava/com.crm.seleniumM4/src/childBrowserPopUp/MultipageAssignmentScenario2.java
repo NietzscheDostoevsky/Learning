@@ -7,7 +7,7 @@ package childBrowserPopUp;
 		d. Verify the page by using WebElement 
 		e. Click the open food sites. 
 		f. Maximize only Olive Garden Italian restaurant page. 
-Close this page. 
+		  Close this page. 
  */
 
 import java.util.Set;
@@ -34,8 +34,7 @@ public class MultipageAssignmentScenario2 extends BaseClassDWS {
 		
 		Set<String> foodSites = driver.getWindowHandles();
 		for (var site : foodSites) { 
-			driver.switchTo().window(site);
-			//driver.manage().window().maximize(); sleep(2000);			
+			driver.switchTo().window(site);			
 			if (driver.getCurrentUrl().contains("olivegarden")) {
 				driver.manage().window().maximize(); sleep(3000);
 				driver.close();

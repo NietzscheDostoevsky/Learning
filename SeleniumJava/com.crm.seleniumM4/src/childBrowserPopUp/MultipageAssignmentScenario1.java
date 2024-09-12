@@ -43,7 +43,6 @@ public class MultipageAssignmentScenario1 extends BaseClassDWS {
 				driver.close();
 			}			
 		}
-		
 		postCondition2();
 	}
 }

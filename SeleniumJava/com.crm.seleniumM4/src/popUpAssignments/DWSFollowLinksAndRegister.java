@@ -44,6 +44,4 @@ public class DWSFollowLinksAndRegister extends BaseClassDWS {
 		}
 		postCondition2();	
 	}
-	
-
 }
