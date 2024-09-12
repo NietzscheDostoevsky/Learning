@@ -84,7 +84,7 @@ public class BaseClassDWS {
 		try {
 			int count = ms/1000;
 			System.out.print("Sleeping: " );
-			for (int i = 1; i <= count; i++) {
+			for (int i = count; i >= 0; i--) {
 				Thread.sleep(1000);
 				System.out.print(i + " ");	
 			}
