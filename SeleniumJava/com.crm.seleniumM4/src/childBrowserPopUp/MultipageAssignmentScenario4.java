@@ -25,8 +25,8 @@ public class MultipageAssignmentScenario4 extends BaseClassDWS {
 		else 
 			urlString = "C:\\GitHub\\Learning\\SeleniumJava\\MultipleWindow-1.html";
 		System.out.println(urlString);
-		useChrome(urlString);
-		
+		//useChrome(urlString);
+		useChromeHeadless(urlString);
 		WebElement foodSiteButton = driver.findElement(By.cssSelector("[type='button']"));
 		
 		if(foodSiteButton.isEnabled())
@@ -37,7 +37,7 @@ public class MultipageAssignmentScenario4 extends BaseClassDWS {
 		
 		String baseWindowHandle = driver.getWindowHandle();
 		
-		foodSiteButton.click(); sleep(2000);
+		foodSiteButton.click(); sleep(4000);
 		
 		Set<String> foodSites = driver.getWindowHandles();
 		foodSites.remove(baseWindowHandle);
@@ -45,7 +45,7 @@ public class MultipageAssignmentScenario4 extends BaseClassDWS {
 		
 		for (var site : foodSites) { 
 			driver.switchTo().window(site);
-			System.out.println(driver.getCurrentUrl());sleep(1000);
+			System.out.println(driver.getCurrentUrl());
 			driver.close();
 			sleep(2000);
 		}

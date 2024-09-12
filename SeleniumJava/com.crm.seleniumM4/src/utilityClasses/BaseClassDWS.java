@@ -82,7 +82,13 @@ public class BaseClassDWS {
 	
 	public static void sleep(int ms) {
 		try {
-			Thread.sleep(ms);
+			int count = ms/1000;
+			System.out.print("Sleeping: " );
+			for (int i = 1; i <= count; i++) {
+				Thread.sleep(1000);
+				System.out.print(i + " ");	
+			}
+			System.out.println();
 		} catch (InterruptedException e) {
 			System.out.println("thread pause");
 		}
