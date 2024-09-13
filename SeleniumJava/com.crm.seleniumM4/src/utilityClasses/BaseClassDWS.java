@@ -1,5 +1,7 @@
 package utilityClasses;
 
+import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -54,6 +56,21 @@ public class BaseClassDWS {
 	
 	public static void useChromeHeadless(String url) {
 		driver = new ChromeDriver(options);
+		sleep(1500);
+		String homeUrl = url;
+		driver.get(homeUrl);	
+		sleep(3000);
+		if(driver.getCurrentUrl().equals(homeUrl))
+			System.out.println("Home page fetched");
+		else
+			System.out.println("check home URL again");
+	}
+	
+	public static void useChromeHeadUblock(String url) {
+		ChromeOptions options = new ChromeOptions();
+		options.addExtensions(new File("ublockOrigin.crx"));
+		driver = new ChromeDriver(options);
+		driver.manage().window().maximize();
 		sleep(1500);
 		String homeUrl = url;
 		driver.get(homeUrl);	
