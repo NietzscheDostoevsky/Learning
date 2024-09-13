@@ -1,18 +1,8 @@
 package childBrowserPopUp;
 
-/*
- * 	1. Write a script for DWS webpage. 
-		a. Open the browser. 
-		b. Maximize the browser. 
-		c. Enter into DWS website. 
-		d. Verify the page by using URL. 
-		e. After verification, click all 5 links. 
-			Ø FB, twitter, … google. 
-				Perform an action, any single action, read all text of RSS. 
- */
-
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -30,8 +20,8 @@ public class DWSFollowLinksAnyOneAction extends BaseClassDWS {
 		Actions actions = new Actions(driver);	
 		for (WebElement link : linksElements) {
 			actions.keyDown(Keys.SHIFT).click(link).perform(); sleep(5000);
-			List<String> windows = new ArrayList<String>(driver.getWindowHandles()); 
-			driver.switchTo().window(windows.get(1));
+			LinkedList<String> windows = new LinkedList<>(driver.getWindowHandles()); 
+			driver.switchTo().window(windows.getLast());
 			String currentURL = driver.getCurrentUrl();
 			System.out.println("Link Opened : " +  currentURL );
 			
