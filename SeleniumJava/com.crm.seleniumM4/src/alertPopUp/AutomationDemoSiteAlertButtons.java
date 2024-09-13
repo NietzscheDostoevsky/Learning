@@ -16,13 +16,13 @@ public class AutomationDemoSiteAlertButtons extends BaseClassDWS {
 		
 		List<WebElement> AlertButtons = driver.findElements(By.xpath("//div[@class='tabpane pullleft']/ul/li"));
 		for (WebElement button : AlertButtons) {
-			button.findElement(By.xpath("(//../../following-sibling::div/div)[" + count++ + "]")).click();
+			button.click();
+			button.findElement(By.xpath("(//../../following-sibling::div/div/button)[" + count++ + "]")).click();
 			System.out.println("Button clicked");
 			sleep(2000);
 			driver.switchTo().alert().dismiss();
 			System.out.println("Alert handled.");
-			sleep(2000);
-			
+			sleep(2000);			
 		}
 	}
 }	
