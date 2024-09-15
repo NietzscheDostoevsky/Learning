@@ -50,9 +50,9 @@ public class IteratorDemo {
 			String elemtnString = litr.previous();
 			System.out.print(elemtnString + " ");
 		}
-		System.out.println();
+		System.out.println("\n__________________");
 		
-		litr.forEachRemaining((e) -> (System.out.println()));
+		litr.forEachRemaining(System.out::println);
 	}
 
 }
