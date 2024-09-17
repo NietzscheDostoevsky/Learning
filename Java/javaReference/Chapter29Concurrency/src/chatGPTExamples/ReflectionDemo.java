@@ -47,6 +47,6 @@ public class ReflectionDemo {
         // Call a method dynamically. 
         Method method = cls.getMethod("printMessage");
         method.invoke(obj);
-        
+        Arrays.parallelSort(null);
     }
 }
