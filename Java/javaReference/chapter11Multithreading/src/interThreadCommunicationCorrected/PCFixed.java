@@ -15,31 +15,42 @@ class Q {
 	boolean valueSet = false;
 
 	synchronized int get() {
-		while (!valueSet)
-			try {
-				wait();
-			} catch (InterruptedException e) {
-				System.out.println("Interrupted caught");
-			}
+//		while (!valueSet) {
+//			try {
+//				wait();
+//			} catch (InterruptedException e) {
+//				System.out.println("Interrupted caught");
+//			}
+//		}
 		System.out.println("Got: " + n);
 		valueSet = false;
 		notify();
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			System.out.println("exeption 1");
+		}
 		return n;
 	}
 
 	synchronized void put(int n) {
-		while (valueSet) {
-			try {
-				wait();
-			} catch (InterruptedException e) {
-				System.out.println("Interrupted exceptino");
-			}
-		}
+//		while (valueSet) {
+//			try {
+//				wait();
+//			} catch (InterruptedException e) {
+//				System.out.println("Interrupted exceptino");
+//			}
+//		}
 
 		this.n = n;
 		valueSet = true;
 		System.out.println("Put: " + n);
 		notify();
+		try {
+			wait();
+		} catch (InterruptedException e) {
+			System.out.println("Exe[tion 2");
+		}
 	}
 }
 
