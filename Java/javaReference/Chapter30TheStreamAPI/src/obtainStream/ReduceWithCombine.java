@@ -11,5 +11,6 @@ public class ReduceWithCombine {
 		double prodOfSquareRoots = myList.parallelStream().reduce(1.0, (a,b) -> a*Math.sqrt(b), (a,b)->a*b);
 		System.out.println("Product of square roots: " + prodOfSquareRoots);
 		System.out.println(myList.stream().reduce(1.0, (a,b) -> a * Math.sqrt(b)));
+
 	}
 }
