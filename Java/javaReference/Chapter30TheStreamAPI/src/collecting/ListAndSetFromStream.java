@@ -1,6 +1,8 @@
 package collecting;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -60,5 +62,70 @@ public class ListAndSetFromStream {
 		Set<NamePhone> set = myList.stream().map(a -> new NamePhone(a.name, a.phonenum)).collect(Collectors.toSet());
 		System.out.println("\nNames and phone numbers in a Set:");
 		set.forEach(System.out::println);
+		
+		myList.forEach(a->System.out.println(a.name + " " + a.phonenum));
+		
+		
+		// Specifically using LinkedList as the container to collect the stream. 
+		
+		LinkedList<NamePhone> ll = myList.stream()
+										 .map(a -> new NamePhone(a.name, a.phonenum))
+										 .collect(LinkedList::new, 
+												 LinkedList::add, 
+												 LinkedList::addAll);
+		
+		System.out.println(ll.size());
+		System.out.println(ll.getClass().getName());
+		
+		// equivalent code using lambdas. 
+		
+		HashSet<NamePhone> hs = myList.stream()
+									  .map(a -> new NamePhone(a.name, a.phonenum))
+									  .collect( () -> new HashSet<NamePhone>(), 
+											    (setA, element) -> setA.add(element), 
+											    (setA, setB) -> setA.addAll(setB));
+		
+		System.out.println(hs.getClass());
+		System.out.println(hs.getClass().getName());
+		System.out.println(hs.size());
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
