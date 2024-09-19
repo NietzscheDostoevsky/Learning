@@ -18,7 +18,6 @@ public class DWSFollowLinksFillFacebook extends BaseClassDWS{
 		String parentHandle = driver.getWindowHandle();
 		List<WebElement> linksElements = driver.findElements(By.xpath("//div[@class='column follow-us']/ul/li/a"));
 		Actions actions = new Actions(driver);	
-		actions.sendKeys(Keys.PAGE_DOWN).perform(); sleep(1000);
 		for (WebElement link : linksElements) {
 			actions.keyDown(Keys.SHIFT).click(link).perform(); sleep(5000);
 			LinkedList<String> windows = new LinkedList<>(driver.getWindowHandles()); 
@@ -32,10 +31,8 @@ public class DWSFollowLinksFillFacebook extends BaseClassDWS{
 					
 					// Switch to the registration page and fill it. 
 					driver.getWindowHandles().forEach((win) -> {
-						if (driver.switchTo().window(win).getTitle().contains("Sign up for Facebook")) {
+						if (driver.switchTo().window(win).getTitle().contains("Sign up for Facebook"))
 							fillFacebookRegistration(driver);
-							sleep(5000);
-						}
 					});
 				
 				} else if (currentURL.contains("twitter") || 
@@ -75,12 +72,8 @@ public class DWSFollowLinksFillFacebook extends BaseClassDWS{
 	private static void fillFacebookRegistration(WebDriver driver) {
 		System.out.println("***Welcome to facebook registration***");
 		System.out.println(driver.getCurrentUrl());
-		var firstName = driver.findElement(By.cssSelector("input[name='firstname']")); sleep(1000);
-		Actions act =  new Actions(driver);
-		act.sendKeys("haha").perform();
-        //firstName.sendKeys("thisisalllower");
-        sleep(2000);
-        driver.findElement(By.cssSelector("input[name='lastname']")).sendKeys("FakeLastName".toLowerCase());
+        driver.findElement(By.cssSelector("input[name='firstname']")).sendKeys("FakeFirstName");
+        driver.findElement(By.cssSelector("input[name='lastname']")).sendKeys("FakeLastName");
         driver.findElement(By.cssSelector("input[name='reg_email__']")).sendKeys("abc@xyz.com");
         //driver.findElement(By.cssSelector("input[name='reg_email_confirmation__']")).sendKeys("abc@xyz.com");
         driver.findElement(By.cssSelector("input[name='reg_passwd__']")).sendKeys("fakePass");
