@@ -14,10 +14,11 @@ import utilityClasses.BaseClassDWS;
 
 public class DWSFollowLinksFillFacebook extends BaseClassDWS{
 	public static void main(String[] args) {
-		useChrome();
+		useFirefox();
 		String parentHandle = driver.getWindowHandle();
 		List<WebElement> linksElements = driver.findElements(By.xpath("//div[@class='column follow-us']/ul/li/a"));
 		Actions actions = new Actions(driver);	
+		actions.sendKeys(Keys.PAGE_DOWN).perform(); sleep(1000);
 		for (WebElement link : linksElements) {
 			actions.keyDown(Keys.SHIFT).click(link).perform(); sleep(5000);
 			LinkedList<String> windows = new LinkedList<>(driver.getWindowHandles()); 
@@ -31,8 +32,10 @@ public class DWSFollowLinksFillFacebook extends BaseClassDWS{
 					
 					// Switch to the registration page and fill it. 
 					driver.getWindowHandles().forEach((win) -> {
-						if (driver.switchTo().window(win).getTitle().contains("Sign up for Facebook"))
+						if (driver.switchTo().window(win).getTitle().contains("Sign up for Facebook")) {
 							fillFacebookRegistration(driver);
+							sleep(5000);
+						}
 					});
 				
 				} else if (currentURL.contains("twitter") || 

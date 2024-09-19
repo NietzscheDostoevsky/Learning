@@ -84,9 +84,14 @@ public class BaseClassDWS {
 	public static void useFirefox()  {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		sleep(3000);
+		sleep(1500);
 		String homeUrl = "https://demowebshop.tricentis.com/";
-		driver.get(homeUrl);		
+		driver.get(homeUrl);	
+		
+		if(driver.getCurrentUrl().equals(homeUrl))
+			System.out.println("DWS page fetched");
+		else
+			System.out.println("check home URL again");	
 	}
 	
 	public static void useEdge()  {
