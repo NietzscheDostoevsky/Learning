@@ -14,7 +14,7 @@ import utilityClasses.BaseClassDWS;
 
 public class DWSFollowLinksFillFacebook extends BaseClassDWS{
 	public static void main(String[] args) {
-		useFirefox();
+		useChrome();
 		String parentHandle = driver.getWindowHandle();
 		List<WebElement> linksElements = driver.findElements(By.xpath("//div[@class='column follow-us']/ul/li/a"));
 		Actions actions = new Actions(driver);	
@@ -75,8 +75,12 @@ public class DWSFollowLinksFillFacebook extends BaseClassDWS{
 	private static void fillFacebookRegistration(WebDriver driver) {
 		System.out.println("***Welcome to facebook registration***");
 		System.out.println(driver.getCurrentUrl());
-        driver.findElement(By.cssSelector("input[name='firstname']")).sendKeys("FakeFirstName");
-        driver.findElement(By.cssSelector("input[name='lastname']")).sendKeys("FakeLastName");
+		var firstName = driver.findElement(By.cssSelector("input[name='firstname']")); sleep(1000);
+		Actions act =  new Actions(driver);
+		act.sendKeys("haha").perform();
+        //firstName.sendKeys("thisisalllower");
+        sleep(2000);
+        driver.findElement(By.cssSelector("input[name='lastname']")).sendKeys("FakeLastName".toLowerCase());
         driver.findElement(By.cssSelector("input[name='reg_email__']")).sendKeys("abc@xyz.com");
         //driver.findElement(By.cssSelector("input[name='reg_email_confirmation__']")).sendKeys("abc@xyz.com");
         driver.findElement(By.cssSelector("input[name='reg_passwd__']")).sendKeys("fakePass");
