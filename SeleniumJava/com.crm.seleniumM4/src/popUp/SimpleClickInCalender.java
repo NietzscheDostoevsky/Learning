@@ -30,13 +30,13 @@ public class SimpleClickInCalender extends BaseClassDWS {
 		
 		driver.findElement(By.id("rdatelbl")).click(); sleep(2000);
 		System.out.println("opened return date");
-		driver.findElement(By.xpath("//img[@id='img2Nex']")).click(); sleep(2000);
-		driver.findElement(By.xpath("//img[@id='img2Nex']")).click(); sleep(2000);
-		driver.findElement(By.xpath("//img[@id='img2Nex']")).click(); sleep(2000);
+		driver.findElement(By.xpath("//img[@id='img2Nex']")).click(); sleep(500);
+		driver.findElement(By.xpath("//img[@id='img2Nex']")).click(); sleep(500);
+		driver.findElement(By.xpath("//img[@id='img2Nex']")).click(); sleep(500);
 		
 		driver.findElement(By.xpath("//li[@id='frth_6_25/01/2025']")).click(); 
-		sleep(20000);
+		sleep(5000);
 		driver.quit();
-		sleep(2000);
+		
 	}
 }
