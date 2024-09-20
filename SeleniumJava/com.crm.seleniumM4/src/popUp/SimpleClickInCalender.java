@@ -37,5 +37,6 @@ public class SimpleClickInCalender extends BaseClassDWS {
 		driver.findElement(By.xpath("//li[@id='frth_6_25/01/2025']")).click(); 
 		sleep(20000);
 		driver.quit();
+		sleep(2000);
 	}
 }
