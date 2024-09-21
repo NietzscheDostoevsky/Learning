@@ -30,10 +30,12 @@ public class RedBusCalender extends BaseClassDWS{
 		driver.findElement(By.id("dest")).sendKeys(Keys.ENTER);
 		
 		driver.findElement(By.id("onwardCal")).click(); sleep(2000);  
-		
+		driver.findElement(By.xpath("//span[text()=27]")).click();
 		
 		// Close the browser. 
 		postCondition2();
 	}
 
 }
+
+//span[contains(text(),'26')]
