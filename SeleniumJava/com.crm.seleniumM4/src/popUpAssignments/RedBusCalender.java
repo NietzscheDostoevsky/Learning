@@ -2,6 +2,7 @@ package popUpAssignments;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
 /*
  * Write a script for RedBus website.  
@@ -30,10 +31,14 @@ public class RedBusCalender extends BaseClassDWS{
 		driver.findElement(By.id("dest")).sendKeys(Keys.ENTER);
 		
 		driver.findElement(By.id("onwardCal")).click(); sleep(2000);  
+		driver.findElement(By.xpath("//span[text()=27]")).click(); sleep(2000);
 		
+		driver.findElement(By.id("search_button")).click(); sleep(50000);
+		
+		driver.findElement(By.xpath("(//ul[@class='bus-items']/div)[1]/li/div/div[2]/div")).click();
 		
 		// Close the browser. 
-		postCondition2();
+		//postCondition2();
 	}
 
 }
