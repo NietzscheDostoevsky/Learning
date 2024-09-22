@@ -30,7 +30,9 @@ public class OmayoAssignment {
 	public static void main(String[] args) {
 		String baseURL = "https://omayo.blogspot.com/";
 		WebDriver driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30)); //implicit wait
 		driver.manage().window().maximize();
 		driver.get(baseURL);
 		
@@ -51,7 +53,8 @@ public class OmayoAssignment {
 		else 
 			System.out.println("button not enalbed yet");
 		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10)); //explicit wait
 		wait.withMessage("waiting");
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("timerButton")));
 		driver.findElement(By.id("timerButton")).click();
