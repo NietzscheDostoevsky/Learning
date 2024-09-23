@@ -32,6 +32,7 @@ public class enumDemo {
                 System.out.println("I Love Deshari");
 
         }
+        System.out.println(Mango.Deshari.getClass().getName());
 
     }
 }
