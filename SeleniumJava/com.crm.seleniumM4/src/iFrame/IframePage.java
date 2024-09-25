@@ -30,7 +30,7 @@ public class IframePage {
 		if (System.getProperty("os.name").equals("Linux"))
 			url =  "file:///home/saurabh-singh/Documents/GitHub/Learning/SeleniumJava/com.crm.seleniumM4/testdata/iframe.html";
 		else 
-			url = "C:\\GitHub\\Learning\\SeleniumJava\\MultipleWindow-1.html";
+			url = "file:///C:/GitHub/Learning/SeleniumJava/com.crm.seleniumM4/testdata/iframe.html";
 		driver.get(url);
 		String parentWindow = driver.getWindowHandle();
 		driver.switchTo().frame("frame1");
