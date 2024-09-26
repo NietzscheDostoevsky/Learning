@@ -39,13 +39,11 @@ public class IframePage {
 		else 
 			System.out.println("Not inside dws");
 		
-		// Click on facebook
 		driver.findElement(By.linkText("Facebook")).click();
 		System.out.println("clicked fb");
 		LinkedList<String> handle = new LinkedList<String>(driver.getWindowHandles());
-		System.out.println(handle.size());
+		
 		driver.switchTo().window(handle.getLast());
-		System.out.println(driver.getCurrentUrl());
 		driver.findElement(By.xpath("//span[text()='Create new account']")).click();
 		System.out.println("clicked registration");
 		handle = new LinkedList<String>(driver.getWindowHandles());
@@ -55,7 +53,6 @@ public class IframePage {
 			  .forEach(window->driver.switchTo().window(window).close());
 		
 		driver.switchTo().window(parentWindow);
-		System.out.println(driver.getCurrentUrl());
 		driver.switchTo().frame("frame1");
 		driver.findElement(By.id("small-searchterms")).sendKeys("iPhone");
 		driver.findElement(By.linkText("Google+")).click();
