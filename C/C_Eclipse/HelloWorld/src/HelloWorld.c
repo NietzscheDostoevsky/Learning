@@ -13,11 +13,13 @@
 
 int main(void)
 {
-	puts("!!!Hello World!!!\nHahaHEHE"); /* prints !!!Hello World!!! */
+	puts("!!!Hello World!!!\n\nHaha HEHE"); /* prints !!!Hello World!!! */
 	int numbers[5] = {1, 2, 3, 4, 5};
 	int a[4];
-	for (int i = 0; i < 5; i++)
-		printf(numbers[i] + "\n");
 
+//	for (int i = 0; i < 5; i++)
+//		printf(numbers[i] + "\n");
+
+	printf("\nhaha");
 	return EXIT_SUCCESS;
 }
