@@ -12,7 +12,8 @@ public class ScrollBasedOnWebElement extends BaseClassDWS {
 	public static void main(String[] args) {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("https://www.redbus.in");
+//		driver.get("https://www.redbus.in");
+		driver.get("https://www.reddit.com");
 		sleep(3000);
 		JavascriptExecutor  js = (JavascriptExecutor) driver;
 //		WebElement bookTrain =  driver.findElement(By.linkText("Book Train Tickets"));
