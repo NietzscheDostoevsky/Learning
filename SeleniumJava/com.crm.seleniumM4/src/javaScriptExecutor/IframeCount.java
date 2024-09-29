@@ -18,8 +18,8 @@ public class IframeCount {
 			url = "file:///C:/GitHub/Learning/SeleniumJava/com.crm.seleniumM4/testdata/iframe.html";
 		driver.get(url);
 		JavascriptExecutor  js = (JavascriptExecutor) driver;
-		var iframeLen =  js.executeScript("window.length");
-	
+		//var iframeLen =  js.executeScript("window.length");
+		Long iframeLen = (Long) js.executeScript("return document.getElementsByTagName('iframe').length;");
 		System.out.println(iframeLen.getClass().getName());
 		System.out.println(iframeLen);
 		
