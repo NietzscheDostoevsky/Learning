@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ReadMultipleData {
 	
 	public static void main(String[] args) throws EncryptedDocumentException, IOException {
-		//FileInputStream fis = new FileInputStream("C:\\GitHub\\Learning\\SeleniumJava\\login.xlsx");
+	
 		FileInputStream fis2 = new FileInputStream("../com.crm.AdvanceSelenium/src/test/resources/login2.xlsx");
 		Workbook wb = WorkbookFactory.create(fis2);
 		Sheet sheet = wb.getSheet("Sheet1");
