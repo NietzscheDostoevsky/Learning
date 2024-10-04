@@ -33,10 +33,8 @@ public class ReadDataFromExcel {
 		FileInputStream fis = new FileInputStream("C:\\GitHub\\Learning\\SeleniumJava\\login.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		var sheet = wb.getSheet("Sheet1");
-		
 		String email = sheet.getRow(0).getCell(0).toString();
 		String password = sheet.getRow(0).getCell(1).toString();
-		
 		
 		// Fill login details.
 		driver.findElement(By.id("Email")).sendKeys(email);
