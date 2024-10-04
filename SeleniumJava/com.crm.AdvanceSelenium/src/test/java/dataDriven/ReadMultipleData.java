@@ -28,6 +28,5 @@ public class ReadMultipleData {
 				System.out.println(data);
 			}
 		}
-		
 	}
 }
