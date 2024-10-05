@@ -11,7 +11,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class BaseClassDWS {
+public class BaseClass {
 	protected static WebDriver driver;
 	protected static ChromeOptions options = new ChromeOptions();
 	static {

@@ -11,10 +11,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 
-import utilityClasses.BaseClassDWS;
+import utilityClasses.BaseClass;
 
 @Test
-public class DWSLoginAndSearch extends BaseClassDWS {
+public class DWSLoginAndSearch extends BaseClass {
 	
 	@Test
 	public void login() throws IOException {
