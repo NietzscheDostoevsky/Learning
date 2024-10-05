@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-03T22:36:56 IST" name="Default suite" finished-at="2024-10-03T22:37:19 IST" duration-ms="22754">
+  <suite started-at="2024-10-05T08:45:59 IST" name="Default suite" finished-at="2024-10-05T08:45:59 IST" duration-ms="53">
     <groups>
     </groups>
-    <test started-at="2024-10-03T22:36:56 IST" name="Default test" finished-at="2024-10-03T22:37:19 IST" duration-ms="22754">
-      <class name="testing.MultipleTestScript">
-        <test-method signature="csk()[pri:0, instance:testing.MultipleTestScript@3c407114]" started-at="2024-10-03T22:36:56 IST" name="csk" finished-at="2024-10-03T22:37:07 IST" duration-ms="10660" status="PASS">
+    <test started-at="2024-10-05T08:45:59 IST" name="Default test" finished-at="2024-10-05T08:45:59 IST" duration-ms="53">
+      <class name="dataDriven.ReadFromProperties">
+        <test-method signature="login()[pri:0, instance:dataDriven.ReadFromProperties@55183b20]" started-at="2024-10-05T08:45:59 IST" name="login" finished-at="2024-10-05T08:45:59 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- csk -->
-        <test-method signature="dws()[pri:0, instance:testing.MultipleTestScript@3c407114]" started-at="2024-10-03T22:37:07 IST" name="dws" finished-at="2024-10-03T22:37:12 IST" duration-ms="5139" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dws -->
-        <test-method signature="rcb()[pri:0, instance:testing.MultipleTestScript@3c407114]" started-at="2024-10-03T22:37:12 IST" name="rcb" finished-at="2024-10-03T22:37:19 IST" duration-ms="6931" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- rcb -->
-      </class> <!-- testing.MultipleTestScript -->
+        </test-method> <!-- login -->
+      </class> <!-- dataDriven.ReadFromProperties -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
