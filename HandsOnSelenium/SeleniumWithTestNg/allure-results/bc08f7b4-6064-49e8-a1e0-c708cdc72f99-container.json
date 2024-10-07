@@ -1,0 +1,1 @@
+{"uuid":"bc08f7b4-6064-49e8-a1e0-c708cdc72f99","name":"chapter02.HelloWorldChromeTestNgTest","children":["afaacb5e-9e6c-45f7-ac7a-cae64c5695c0"],"befores":[{"name":"setupClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1728325615450,"stop":1728325615673}],"afters":[],"start":1728325615436,"stop":1728325618089}
