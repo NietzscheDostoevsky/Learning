@@ -17,7 +17,7 @@ public class HelperMethods {
 		driver.quit();
 	}
 	
-	@Test(priority = 1)
+	@Test(priority = -1)
 	public void rcb() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -27,7 +27,7 @@ public class HelperMethods {
 		driver.quit();
 	}
 	
-	@Test(priority = 2)
+	@Test(priority = 'c', invocationCount = 4)
 	public void csk() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
