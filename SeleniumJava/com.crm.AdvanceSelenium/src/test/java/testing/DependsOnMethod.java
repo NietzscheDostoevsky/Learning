@@ -6,8 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class HelperMethods {
-	@Test(priority = 0)
+public class DependsOnMethod {
+	
+	@Test(priority = -1, enabled = false)
 	public void dws() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -16,7 +17,7 @@ public class HelperMethods {
 		Thread.sleep(2000);
 		driver.quit();
 	}
-	
+
 	@Test(priority = -1, enabled = false)
 	public void rcb() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
@@ -26,8 +27,8 @@ public class HelperMethods {
 		Thread.sleep(2000);
 		driver.quit();
 	}
-	
-	@Test(priority = 'c', invocationCount = 4, threadPoolSize = 2)
+
+	@Test(priority = 'c', invocationCount = 4, threadPoolSize = 2, dependsOnMethods = "rcb")
 	public void csk() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
