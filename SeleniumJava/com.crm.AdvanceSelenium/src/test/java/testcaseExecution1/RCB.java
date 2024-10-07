@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class RCB {
-	@Test(priority = -1, enabled = false)
+	@Test(priority = -1, enabled = true)
 	public void rcb() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
