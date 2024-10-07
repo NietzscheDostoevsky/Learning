@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+repositories/svn%%%svn.appwork.org%utils/location=svn\://svn.appwork.org/utils
+repositories/svn%%%svn.jdownloader.org%jdownloader%MyJDownloaderClient/location=svn\://svn.jdownloader.org/jdownloader/MyJDownloaderClient
+repositories/svn%%%svn.jdownloader.org%jdownloader%browser/location=svn\://svn.jdownloader.org/jdownloader/browser
+repositories/svn%%%svn.jdownloader.org%jdownloader%trunk/location=svn\://svn.jdownloader.org/jdownloader/trunk
