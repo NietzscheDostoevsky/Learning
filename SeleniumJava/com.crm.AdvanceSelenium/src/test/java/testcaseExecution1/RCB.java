@@ -4,15 +4,18 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class RCB {
+	
+	@Parameters("url")
 	@Test(priority = -1, enabled = true, groups = "regression")
-	public void rcb() throws InterruptedException {
+	public void rcb(String url) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-		driver.get("https://www.royalchallengers.com/");
+		driver.get(url);
 		Thread.sleep(2000);
 		driver.quit();
 	}
