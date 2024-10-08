@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="dataDriven.ReadFromProperties">
+      <class name="testing.ReadMultipleDataFromXML">
         <methods>
           <include name="login"/>
         </methods>
-      </class> <!-- dataDriven.ReadFromProperties -->
+      </class> <!-- testing.ReadMultipleDataFromXML -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
