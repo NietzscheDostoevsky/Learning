@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class RoyalEnfild {
-	@Test(priority = 'c')
+	@Test(priority = 'c', groups = "smoke")
 	public void royalEnfield() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();

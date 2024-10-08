@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class DWS {
-	@Test(priority = -1, enabled = true)
+	@Test(groups = "integration", enabled = true)
 	public void dws() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();

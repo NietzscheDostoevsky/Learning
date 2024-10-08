@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 public class KTM {
-	@Test(priority = 'c')
+	@Test(priority = 'c', groups = "smoke")
 	public void ktm() throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
