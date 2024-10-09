@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.Iterator"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.Select"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By.ByLinkText"/>
     <fullyQualifiedTypeName name="java.awt.Desktop.Action"/>
     <fullyQualifiedTypeName name="io.netty.handler.codec.AsciiHeadersEncoder.NewlineType"/>
@@ -58,6 +56,8 @@
     <fullyQualifiedTypeName name="org.apache.poi.ss.usermodel.Sheet"/>
     <fullyQualifiedTypeName name="org.apache.commons.compress.archivers.tar.TarArchiveEntry"/>
     <fullyQualifiedTypeName name="utilityClasses.GetDataFromProperties"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="utilityClasses.BaseClass"/>
+    <fullyQualifiedTypeName name="org.testng.annotations.Parameters"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
