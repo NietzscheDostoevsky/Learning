@@ -37,7 +37,7 @@ public class HelloWorldChromeTestNgTest {
 	
 	@Test
 	public void test() {
-		String url = "https://www.google.com";
+		String url = "https://www.bing.com";
 		driver.get(url);
 		String title = driver.getTitle();
 		log.debug("The title of {} is {}", url, title);
@@ -46,38 +46,3 @@ public class HelloWorldChromeTestNgTest {
 		assertThat(title).isEqualTo("Google");
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
