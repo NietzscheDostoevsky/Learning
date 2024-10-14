@@ -22,7 +22,9 @@ public class ChronologicalOrder {
 	@BeforeMethod
 	
 	@Test
-	
+	public void test() {
+		System.out.println("this is a test");
+	}
 	
 	@AfterMethod
 	
