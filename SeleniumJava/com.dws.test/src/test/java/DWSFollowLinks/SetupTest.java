@@ -12,3 +12,4 @@ public class SetupTest extends BaseClass {
 	}
 	
 }
+

@@ -17,7 +17,7 @@ import com.dws.fileutility.PropertiesFile;
 
 public class BaseClass {
 
-	WebDriver driver;
+	protected WebDriver driver;
 
 	@BeforeClass
 	public void preCondition() {
