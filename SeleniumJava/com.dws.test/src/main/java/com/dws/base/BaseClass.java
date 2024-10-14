@@ -15,7 +15,7 @@ import org.testng.annotations.BeforeMethod;
 
 import com.dws.fileutility.PropertiesFile;
 
-public class DWSBaseClass {
+public class BaseClass {
 
 	WebDriver driver;
 
