@@ -5,6 +5,11 @@
 	<groupId>SiliconBrain</groupId>
 	<artifactId>com.crm.AdvanceSelenium</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<properties>
+		<javaVersion>21</javaVersion>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+	</properties>
 	<dependencies>
 		<!--
 		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
