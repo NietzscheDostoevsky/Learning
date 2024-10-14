@@ -1,4 +1,4 @@
-package com.crm.fileUtility;
+package com.dws.fileutility;
 
 import java.io.FileInputStream;
 import java.util.Properties;
