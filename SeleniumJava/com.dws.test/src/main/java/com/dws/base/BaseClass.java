@@ -31,7 +31,7 @@ public class BaseClass {
 	} 
 	
 	driver.manage().window().maximize();
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	driver.get("https://demowebshop.tricentis.com/");
 	
 	}
@@ -45,8 +45,9 @@ public class BaseClass {
 	}
 
 	@AfterMethod
-	public void logout() {
-		driver.findElement(By.className("ico-logout")).click();
+	public void logout() throws InterruptedException{
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//a[@class='ico-logout']")).click();
 	}
 
 	@AfterClass

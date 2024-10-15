@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-14T15:16:27 IST" name="Default suite" finished-at="2024-10-14T15:17:12 IST" duration-ms="44848">
+  <suite started-at="2024-10-15T09:58:05 IST" name="Default suite" finished-at="2024-10-15T09:58:22 IST" duration-ms="16791">
     <groups>
     </groups>
-    <test started-at="2024-10-14T15:16:27 IST" name="Default test" finished-at="2024-10-14T15:17:12 IST" duration-ms="44848">
-      <class name="DWSFollowLinks.ECommerceLinks">
-        <test-method is-config="true" signature="preCondition()[pri:0, instance:DWSFollowLinks.ECommerceLinks@2e005c4b]" started-at="2024-10-14T15:16:27 IST" name="preCondition" finished-at="2024-10-14T15:16:30 IST" duration-ms="3334" status="PASS">
+    <test started-at="2024-10-15T09:58:05 IST" name="Default test" finished-at="2024-10-15T09:58:22 IST" duration-ms="16791">
+      <class name="DWSFollowLinks.SetupTest">
+        <test-method is-config="true" signature="preCondition()[pri:0, instance:DWSFollowLinks.SetupTest@6c6cb480]" started-at="2024-10-15T09:58:05 IST" name="preCondition" finished-at="2024-10-15T09:58:15 IST" duration-ms="9534" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method is-config="true" signature="login()[pri:0, instance:DWSFollowLinks.ECommerceLinks@2e005c4b]" started-at="2024-10-14T15:16:30 IST" name="login" finished-at="2024-10-14T15:16:31 IST" duration-ms="1254" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:DWSFollowLinks.SetupTest@6c6cb480]" started-at="2024-10-15T09:58:15 IST" name="login" finished-at="2024-10-15T09:58:16 IST" duration-ms="1053" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="linksTest()[pri:0, instance:DWSFollowLinks.ECommerceLinks@2e005c4b]" started-at="2024-10-14T15:16:31 IST" name="linksTest" finished-at="2024-10-14T15:17:11 IST" duration-ms="40099" status="PASS">
+        <test-method signature="setupTest()[pri:0, instance:DWSFollowLinks.SetupTest@6c6cb480]" started-at="2024-10-15T09:58:16 IST" name="setupTest" finished-at="2024-10-15T09:58:16 IST" duration-ms="46" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- linksTest -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:DWSFollowLinks.ECommerceLinks@2e005c4b]" started-at="2024-10-14T15:17:11 IST" name="logout" finished-at="2024-10-14T15:17:11 IST" duration-ms="44" status="PASS">
+        </test-method> <!-- setupTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:DWSFollowLinks.SetupTest@6c6cb480]" started-at="2024-10-15T09:58:16 IST" name="logout" finished-at="2024-10-15T09:58:20 IST" duration-ms="4169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="postCondition()[pri:0, instance:DWSFollowLinks.ECommerceLinks@2e005c4b]" started-at="2024-10-14T15:17:11 IST" name="postCondition" finished-at="2024-10-14T15:17:12 IST" duration-ms="98" status="PASS">
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:DWSFollowLinks.SetupTest@6c6cb480]" started-at="2024-10-15T09:58:20 IST" name="postCondition" finished-at="2024-10-15T09:58:22 IST" duration-ms="1859" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
-      </class> <!-- DWSFollowLinks.ECommerceLinks -->
+      </class> <!-- DWSFollowLinks.SetupTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
