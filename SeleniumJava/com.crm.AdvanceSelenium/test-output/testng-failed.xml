@@ -5,7 +5,8 @@
     <classes>
       <class name="testNg.LaunchListerners">
         <methods>
-          <include name="dws"/>
+          <include name="duckduckgo"/>
+          <include name="bing"/>
         </methods>
       </class> <!-- testNg.LaunchListerners -->
     </classes>

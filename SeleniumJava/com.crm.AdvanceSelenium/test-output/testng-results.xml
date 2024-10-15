@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
   <reporter-output>
     <line>
       <![CDATA[OnStart]]>
@@ -10,26 +10,41 @@
     <line>
       <![CDATA[OntestFailure]]>
     </line>
+    <line>
+      <![CDATA[OntestStart]]>
+    </line>
+    <line>
+      <![CDATA[OntestSuceess]]>
+    </line>
+    <line>
+      <![CDATA[OntestStart]]>
+    </line>
+    <line>
+      <![CDATA[OntestSkipped]]>
+    </line>
+    <line>
+      <![CDATA[OntestFinish]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-10-15T08:52:23 IST" name="Default suite" finished-at="2024-10-15T08:52:29 IST" duration-ms="6392">
+  <suite started-at="2024-10-15T09:28:24 IST" name="Default suite" finished-at="2024-10-15T09:28:30 IST" duration-ms="5551">
     <groups>
     </groups>
-    <test started-at="2024-10-15T08:52:23 IST" name="Default test" finished-at="2024-10-15T08:52:29 IST" duration-ms="6392">
+    <test started-at="2024-10-15T09:28:24 IST" name="Default test" finished-at="2024-10-15T09:28:30 IST" duration-ms="5551">
       <class name="testNg.LaunchListerners">
-        <test-method signature="dws()[pri:0, instance:testNg.LaunchListerners@38d8f54a]" started-at="2024-10-15T08:52:23 IST" name="dws" finished-at="2024-10-15T08:52:29 IST" duration-ms="6347" status="FAIL">
+        <test-method signature="bing()[pri:0, instance:testNg.LaunchListerners@38d8f54a]" started-at="2024-10-15T09:28:24 IST" name="bing" finished-at="2024-10-15T09:28:27 IST" duration-ms="2506" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [hehe] but found [haha]]]>
+              <![CDATA[expected [hahe] but found [haha]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [hehe] but found [haha]
+              <![CDATA[java.lang.AssertionError: expected [hahe] but found [haha]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1578)
 at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 at org.testng.Assert.assertEquals(Assert.java:132)
 at org.testng.Assert.assertEquals(Assert.java:656)
 at org.testng.Assert.assertEquals(Assert.java:666)
-at testNg.LaunchListerners.dws(LaunchListerners.java:27)
+at testNg.LaunchListerners.bing(LaunchListerners.java:40)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -67,7 +82,57 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
               <![CDATA[OntestFailure]]>
             </line>
           </reporter-output>
-        </test-method> <!-- dws -->
+        </test-method> <!-- bing -->
+        <test-method signature="google()[pri:0, instance:testNg.LaunchListerners@38d8f54a]" started-at="2024-10-15T09:28:27 IST" name="google" finished-at="2024-10-15T09:28:30 IST" duration-ms="3002" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[OntestStart]]>
+            </line>
+            <line>
+              <![CDATA[OntestSuceess]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- google -->
+        <test-method signature="duckduckgo()[pri:0, instance:testNg.LaunchListerners@38d8f54a]" started-at="2024-10-15T09:28:30 IST" name="duckduckgo" finished-at="2024-10-15T09:28:30 IST" depends-on-methods="testNg.LaunchListerners.bing" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method testNg.LaunchListerners.duckduckgo() on instance testNg.LaunchListerners@38d8f54a depends on not successfully finished methods 
+[testNg.LaunchListerners.bing() on instance testNg.LaunchListerners@38d8f54a]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method testNg.LaunchListerners.duckduckgo() on instance testNg.LaunchListerners@38d8f54a depends on not successfully finished methods 
+[testNg.LaunchListerners.bing() on instance testNg.LaunchListerners@38d8f54a]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+            <line>
+              <![CDATA[OntestSkipped]]>
+            </line>
+            <line>
+              <![CDATA[OntestFinish]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- duckduckgo -->
       </class> <!-- testNg.LaunchListerners -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
