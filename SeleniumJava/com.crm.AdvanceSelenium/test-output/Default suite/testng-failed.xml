@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testing.ReadMultipleDataFromXML">
+      <class name="testNg.LaunchListerners">
         <methods>
-          <include name="login"/>
+          <include name="dws"/>
         </methods>
-      </class> <!-- testing.ReadMultipleDataFromXML -->
+      </class> <!-- testNg.LaunchListerners -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

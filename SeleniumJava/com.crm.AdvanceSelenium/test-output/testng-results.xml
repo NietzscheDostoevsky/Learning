@@ -1,83 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[OnStart]]>
+    </line>
+    <line>
+      <![CDATA[OntestStart]]>
+    </line>
+    <line>
+      <![CDATA[OntestFailure]]>
+    </line>
   </reporter-output>
-  <suite started-at="2024-10-14T14:11:02 IST" name="Default suite" finished-at="2024-10-14T14:11:17 IST" duration-ms="15034">
+  <suite started-at="2024-10-15T08:52:23 IST" name="Default suite" finished-at="2024-10-15T08:52:29 IST" duration-ms="6392">
     <groups>
     </groups>
-    <test started-at="2024-10-14T14:11:02 IST" name="Default test" finished-at="2024-10-14T14:11:17 IST" duration-ms="15034">
-      <class name="testScriptsDWS.ClickAllTheLinks">
-        <test-method is-config="true" signature="preCondition()[pri:0, instance:testScriptsDWS.ClickAllTheLinks@44ebcd03]" started-at="2024-10-14T14:11:02 IST" name="preCondition" finished-at="2024-10-14T14:11:07 IST" duration-ms="5809" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- preCondition -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testScriptsDWS.ClickAllTheLinks@44ebcd03]" started-at="2024-10-14T14:11:07 IST" name="login" finished-at="2024-10-14T14:11:09 IST" duration-ms="1304" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="testScript()[pri:0, instance:testScriptsDWS.ClickAllTheLinks@44ebcd03]" started-at="2024-10-14T14:11:09 IST" name="testScript" finished-at="2024-10-14T14:11:12 IST" duration-ms="3004" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testScript -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:testScriptsDWS.ClickAllTheLinks@44ebcd03]" started-at="2024-10-14T14:11:12 IST" name="logout" finished-at="2024-10-14T14:11:13 IST" duration-ms="818" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="login()[pri:0, instance:testScriptsDWS.ClickAllTheLinks@44ebcd03]" started-at="2024-10-14T14:11:13 IST" name="login" finished-at="2024-10-14T14:11:14 IST" duration-ms="1068" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="testScript2()[pri:0, instance:testScriptsDWS.ClickAllTheLinks@44ebcd03]" started-at="2024-10-14T14:11:14 IST" name="testScript2" finished-at="2024-10-14T14:11:17 IST" duration-ms="3001" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testScript2 -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:testScriptsDWS.ClickAllTheLinks@44ebcd03]" started-at="2024-10-14T14:11:17 IST" name="logout" finished-at="2024-10-14T14:11:17 IST" duration-ms="5" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
+    <test started-at="2024-10-15T08:52:23 IST" name="Default test" finished-at="2024-10-15T08:52:29 IST" duration-ms="6392">
+      <class name="testNg.LaunchListerners">
+        <test-method signature="dws()[pri:0, instance:testNg.LaunchListerners@38d8f54a]" started-at="2024-10-15T08:52:23 IST" name="dws" finished-at="2024-10-15T08:52:29 IST" duration-ms="6347" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=129.0.6668.100)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-45-generic', java.version: '21.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ba263cd9a55a965df6eabd85b61b40d6, findElement {value=ico-logout, using=class name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42553}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:42553/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba263cd9a55a965df6eabd85b61b40d6]]>
+              <![CDATA[expected [hehe] but found [haha]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=129.0.6668.100)
-Build info: version: '4.18.1', revision: 'b1d3319b48'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.8.0-45-generic', java.version: '21.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ba263cd9a55a965df6eabd85b61b40d6, findElement {value=ico-logout, using=class name}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.100, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42553}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:42553/devtoo..., se:cdpVersion: 129.0.6668.100, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba263cd9a55a965df6eabd85b61b40d6
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at com.crm.baseClass.DWSBaseClass.logout(DWSBaseClass.java:36)
+              <![CDATA[java.lang.AssertionError: expected [hehe] but found [haha]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at testNg.LaunchListerners.dws(LaunchListerners.java:27)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
-at org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:833)
-at org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:802)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:778)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
 at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
@@ -102,15 +58,17 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
+            <line>
+              <![CDATA[OntestStart]]>
+            </line>
+            <line>
+              <![CDATA[OntestFailure]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="postCondition()[pri:0, instance:testScriptsDWS.ClickAllTheLinks@44ebcd03]" started-at="2024-10-14T14:11:17 IST" name="postCondition" finished-at="2024-10-14T14:11:17 IST" duration-ms="0" status="SKIP">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- postCondition -->
-      </class> <!-- testScriptsDWS.ClickAllTheLinks -->
+        </test-method> <!-- dws -->
+      </class> <!-- testNg.LaunchListerners -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
