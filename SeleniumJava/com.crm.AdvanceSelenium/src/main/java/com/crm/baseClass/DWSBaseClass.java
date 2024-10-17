@@ -1,7 +1,6 @@
 package com.crm.baseClass;
 
 import java.time.Duration;
-import static com.crm.utility.PropertiesFile ;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
