@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="setup.Setup">
+      <class name="contacts.CreateNewContact">
         <methods>
-          <include name="openBrowser"/>
+          <include name="createContact"/>
+          <include name="postCondition"/>
+          <include name="preCondition"/>
+          <include name="logout"/>
           <include name="login"/>
-          <include name="setup"/>
         </methods>
-      </class> <!-- setup.Setup -->
+      </class> <!-- contacts.CreateNewContact -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
