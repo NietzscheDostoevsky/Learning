@@ -9,7 +9,7 @@ import com.crm.baseclass.VtigerBaseClass;
 
 public class CreateNewContact extends VtigerBaseClass   {
 	
-	@Test
+	@Test(invocationCount = 5)
 	public void createContact() throws InterruptedException {
 		driver.findElement(By.linkText("Contacts")).click();
 		driver.findElement(By.xpath("//img[@title='Create Contact...']")).click();
