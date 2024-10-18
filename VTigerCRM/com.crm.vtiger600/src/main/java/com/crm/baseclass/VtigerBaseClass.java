@@ -12,31 +12,34 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import com.crm.POM.Login;
+
 public class VtigerBaseClass {
-	
-	protected WebDriver driver ; 
-	
+
+	protected WebDriver driver;
+
 	@BeforeClass
 	public void preCondition() {
-		driver = new ChromeDriver(); 
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(property("url"));
 	}
-	
+
 	@BeforeMethod
 	public void login() {
-		driver.findElement(By.name("user_name")).sendKeys(property("username"));
-		driver.findElement(By.name("user_password")).sendKeys(property("password"));
-		driver.findElement(By.id("submitButton")).click();
+		Login ref = new Login(driver);
+		ref.loginTextfield.sendKeys(property("username"));
+		ref.passwordTextfield.sendKeys(property("password"));
+		ref.loginButton.click();
 	}
-	
+
 	@AfterMethod
-	public void logout()  {
+	public void logout() {
 		driver.findElement(By.xpath("(//td[@class='small'])[2]")).click();
 		driver.findElement(By.xpath("(//a[@class='drop_down_usersettings'])[2]")).click();
 	}
-	
+
 	@AfterClass
 	public void postCondition() {
 		driver.quit();
