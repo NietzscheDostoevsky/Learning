@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="com.crm.listeners.DWSListener"></listener>
+	</listeners>
+	<test thread-count="5" name="ExtentReportPractice">
+		<classes>
+			<class name="practicingDWSListenerExtentReport.Main3" />
+			<class name="practicingDWSListenerExtentReport.Main4" />
+			<class name="practicingDWSListenerExtentReport.Main5" />
+			<class name="practicingDWSListenerExtentReport.Main1" />
+			<class name="practicingDWSListenerExtentReport.Main2" />
+		</classes>
+	</test> <!-- ExtentReportPractice -->
+</suite> <!-- Suite -->
