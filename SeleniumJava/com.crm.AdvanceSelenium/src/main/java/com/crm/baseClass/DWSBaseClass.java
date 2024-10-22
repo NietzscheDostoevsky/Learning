@@ -11,9 +11,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-public class DWSBaseClass {
+public class DWSBaseClass  {
 	
-	WebDriver driver;
+	public static WebDriver driver;
+	public static WebDriver driver2; 
+	
 	
 	@BeforeClass
 	public void preCondition() {
@@ -21,6 +23,7 @@ public class DWSBaseClass {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://demowebshop.tricentis.com/");
+		driver2 = driver; 
 	}
 	
 	@BeforeMethod
