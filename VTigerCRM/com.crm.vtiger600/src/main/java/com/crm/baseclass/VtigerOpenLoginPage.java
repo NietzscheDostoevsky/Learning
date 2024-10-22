@@ -11,8 +11,11 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
+import com.crm.POM.LoginPage;
+
 public class VtigerOpenLoginPage {
 	protected WebDriver driver;
+	public LoginPage ref ; 
 
 	@BeforeClass
 	public void preCondition() {
@@ -20,6 +23,7 @@ public class VtigerOpenLoginPage {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(property("url"));
+		ref = new LoginPage(driver); 
 	}
 
 	@BeforeMethod
