@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login {
+public class LoginPage {
+	
+	// Login functionality
 	@FindBy(name = "user_name")
 	public WebElement loginTextfield;
 	
@@ -16,7 +18,6 @@ public class Login {
 	public WebElement loginButton;
 	
 	// Plugins
-	
 	@FindBy(id = "submitButton")
 	public WebElement outlookPlugin;
 		
@@ -25,7 +26,7 @@ public class Login {
 	
 	
 	
-	public Login(WebDriver driver) {
+	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 	

@@ -12,7 +12,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
-import com.crm.POM.Login;
+import com.crm.POM.LoginPage;
 
 public class VtigerLogin {
 
@@ -28,7 +28,7 @@ public class VtigerLogin {
 
 	@BeforeMethod
 	public void login() {
-		Login ref = new Login(driver);
+		LoginPage ref = new LoginPage(driver);
 		ref.loginTextfield.sendKeys(property("username"));
 		ref.passwordTextfield.sendKeys(property("password"));
 		ref.loginButton.click();
