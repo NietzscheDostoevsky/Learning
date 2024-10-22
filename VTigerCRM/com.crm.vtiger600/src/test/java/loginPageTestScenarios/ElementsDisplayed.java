@@ -52,10 +52,10 @@ public class ElementsDisplayed extends VtigerOpenLoginPage {
 	}
 	@Test
 	public void  verifyVtigerForumLink(){
-		assertEquals(ref.VtigerForumPage, true);
+		assertEquals(ref.VtigerForumPage.isDisplayed(), true);
 	}
 	@Test
 	public void verifyVtigerBlogLink(){
-		assertEquals(ref.VtigerBlogPage, true);
+		assertEquals(ref.VtigerBlogPage.isDisplayed(), true);
 	}
 }
