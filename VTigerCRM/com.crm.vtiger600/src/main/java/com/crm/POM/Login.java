@@ -15,7 +15,19 @@ public class Login {
 	@FindBy(id = "submitButton")
 	public WebElement loginButton;
 	
+	// Plugins
+	
+	@FindBy(id = "submitButton")
+	public WebElement outlookPlugin;
+		
+	
+	
+	
+	
+	
 	public Login(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+	
+	
 }
