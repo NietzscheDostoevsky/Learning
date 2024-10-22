@@ -17,15 +17,23 @@ public class LoginPage {
 	@FindBy(id = "submitButton")
 	public WebElement loginButton;
 	
-	// Plugins
-	@FindBy(id = "submitButton")
+	// Get more out of links
+	@FindBy(xpath = "//img[@alt='Outlook Plugin']/..")
 	public WebElement outlookPlugin;
 		
+	@FindBy(xpath = "//img[@alt='Exchange Connector']/..")
+	public WebElement exchangeConnector;
+	
+	@FindBy(xpath = "//img[@alt='vtiger iPhone Application']/..")
+	public WebElement iPhoneAppLink;
+	
+	@FindBy(xpath = "//img[@alt='vtiger Android Application']/..")
+	public WebElement androidAppLink;
+	
+	//Connect with us buttons
 	
 	
-	
-	
-	
+	//Constructor
 	public LoginPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
