@@ -1,5 +1,6 @@
 package com.crm.listeners;
 
+package com.crm.listeners;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -15,18 +16,19 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.crm.baseClass.DWSBaseClass;
 
-public class DWSListerner implements ITestListener {
+public class ListenerReference implements ITestListener {
 	public static ExtentSparkReporter spark;
 	public static ExtentReports report;
 	public static ExtentTest test;
 
-	
+	@Override
 	public void onTestStart(ITestResult result) {
 		String name = result.getMethod().getMethodName();
 		test = report.createTest(name);
 
 	}
 
+	@Override
 	public void onTestSuccess(ITestResult result) {
 		String name = result.getMethod().getMethodName();
 
@@ -34,7 +36,7 @@ public class DWSListerner implements ITestListener {
 		test.log(Status.INFO, name + " is passed");
 	}
 
-	
+	@Override
 	public void onTestFailure(ITestResult result) {
 		String name = result.getMethod().getMethodName();
 		WebDriver d = DWSBaseClass.driver2;
@@ -47,22 +49,22 @@ public class DWSListerner implements ITestListener {
 
 	}
 
-	
+	@Override
 	public void onTestSkipped(ITestResult result) {
 		String name = result.getMethod().getMethodName();
 		test.log(Status.SKIP, "assertion is skipped");
 		test.log(Status.INFO, name + " is skipped");
 	}
 
-	
+	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
 	}
 
-	
+	@Override
 	public void onTestFailedWithTimeout(ITestResult result) {
 	}
 
-	
+	@Override
 	public void onStart(ITestContext context) {
 		spark = new ExtentSparkReporter("./ExtentReport/DWSExtentReport.html");
 		spark.config().setDocumentTitle("Functinoal Testing");
@@ -74,7 +76,7 @@ public class DWSListerner implements ITestListener {
 		report.attachReporter(spark);
 	}
 
-	
+	@Override
 	public void onFinish(ITestContext context) {
 		report.flush();
 	}
