@@ -10,52 +10,52 @@ public class ElementsDisplayed extends VtigerOpenLoginPage {
 	
 	
 	@Test
-	public void verifyOutlook() {
+	public void verifyOutlookElement() {
 		assertEquals(ref.outlookPlugin.isDisplayed(), true);
 	}
 	
 	@Test
-	public void verifyExchangeConnector() {
+	public void verifyExchangeConnectorElement() {
 		assertEquals(ref.exchangeConnector.isDisplayed(), true);
 	}
 	
 	@Test
-	public void verifyIPhoneAppLink() {
+	public void verifyIPhoneAppLinkElement() {
 		assertEquals(ref.iPhoneAppLink.isDisplayed(), true);
 	}
 	
 	@Test 
-	public void verifyAndroidAppLink() {
+	public void verifyAndroidAppLinkElement() {
 		assertEquals(ref.androidAppLink.isDisplayed(), true);
 	}
 	
 	@Test
-	public void verifyFacebookPageLink() {
+	public void verifyFacebookPageLinkElement() {
 		assertEquals(ref.facebookPage.isDisplayed(), true); 
 	}
 	
 	@Test
-	public void verifyTwitterLink() {
+	public void verifyTwitterLinkElement() {
 		assertEquals(ref.TwitterPage.isDisplayed(), true);
 	}
 	@Test
-	public void verifyLinkedinLink(){
+	public void verifyLinkedinLinkElement(){
 		assertEquals(ref.LinkedinPage.isDisplayed(), true);
 	}
 	@Test
-	public void verifyYoutubeLink() {
+	public void verifyYoutubeLinkElement() {
 		assertEquals(ref.YoutubePage.isDisplayed(), true);
 	}
 	@Test
-	public void verifyVtigerWikiLink() {
+	public void verifyVtigerWikiLinkElement() {
 		assertEquals(ref.VtigerWikiPage.isDisplayed(), true);
 	}
 	@Test
-	public void  verifyVtigerForumLink(){
+	public void  verifyVtigerForumLinkElement(){
 		assertEquals(ref.VtigerForumPage.isDisplayed(), true);
 	}
 	@Test
-	public void verifyVtigerBlogLink(){
+	public void verifyVtigerBlogLinkElement(){
 		assertEquals(ref.VtigerBlogPage.isDisplayed(), true);
 	}
 }
