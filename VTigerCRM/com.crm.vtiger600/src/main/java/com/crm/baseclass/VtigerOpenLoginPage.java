@@ -41,4 +41,8 @@ public class VtigerOpenLoginPage {
 	public void postCondition() {
 		driver.quit();
 	}
+	
+	public WebDriver getDriver() {
+		return driver2; 
+	}
 }

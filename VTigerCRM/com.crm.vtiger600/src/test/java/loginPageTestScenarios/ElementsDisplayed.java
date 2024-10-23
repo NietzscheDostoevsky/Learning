@@ -2,7 +2,6 @@ package loginPageTestScenarios;
 
 import static org.testng.Assert.assertEquals;
 
-import org.openqa.selenium.OutputType;
 import org.testng.annotations.Test;
 
 import com.crm.baseclass.VtigerOpenLoginPage;

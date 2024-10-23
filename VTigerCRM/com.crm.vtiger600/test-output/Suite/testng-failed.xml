@@ -9,8 +9,8 @@
       <class name="loginPageTestScenarios.ElementsDisplayed">
         <methods>
           <include name="preCondition"/>
-          <include name="verifyLoginPage"/>
           <include name="thisTestShouldFail"/>
+          <include name="verifyLoginPage"/>
           <include name="postCondition"/>
         </methods>
       </class> <!-- loginPageTestScenarios.ElementsDisplayed -->
