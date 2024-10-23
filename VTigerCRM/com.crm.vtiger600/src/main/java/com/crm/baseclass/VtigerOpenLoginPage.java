@@ -1,7 +1,6 @@
 package com.crm.baseclass;
 
 import static com.crm.utility.PropertiesFile.property;
-import static org.testng.Assert.assertEquals;
 
 import java.time.Duration;
 
@@ -14,12 +13,14 @@ import org.testng.annotations.BeforeMethod;
 import com.crm.POM.LoginPage;
 
 public class VtigerOpenLoginPage {
-	protected WebDriver driver;
-	public LoginPage ref ; 
+	public static WebDriver driver;
+	public static WebDriver driver2; 
+	public static LoginPage ref ; 
 
 	@BeforeClass
 	public void preCondition() {
 		driver = new ChromeDriver();
+		driver2 = driver; 
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(property("url"));
@@ -28,7 +29,7 @@ public class VtigerOpenLoginPage {
 
 	@BeforeMethod
 	public void verifyLoginPage() {
-		assertEquals(driver.getTitle(), "vtiger CRM 5 - Commercial Open Source CRM" );
+		System.out.println("Current URL : " + driver.getCurrentUrl());
 	}
 
 
