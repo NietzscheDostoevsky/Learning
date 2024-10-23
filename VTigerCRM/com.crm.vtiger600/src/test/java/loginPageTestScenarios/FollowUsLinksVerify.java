@@ -7,9 +7,9 @@ import java.util.List;
 
 import org.testng.annotations.Test;
 
-import com.crm.baseclass.VtigerOpenLoginPage;
+import com.crm.baseclass.VtigerOpenLoginPageBaseClass;
 
-public class FollowUsLinksVerify extends VtigerOpenLoginPage {
+public class FollowUsLinksVerify extends VtigerOpenLoginPageBaseClass {
 
 	// Verify contact us links in the login page if they are navigating
 	// to the correct url or not.

@@ -12,7 +12,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.crm.baseclass.VtigerOpenLoginPage;
+import com.crm.baseclass.VtigerOpenLoginPageBaseClass;
 
 public class LoginPageListener implements ITestListener {
 	public static ExtentSparkReporter spark;
@@ -36,7 +36,7 @@ public class LoginPageListener implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		String name = result.getMethod().getMethodName();
-		WebDriver driver = ((VtigerOpenLoginPage) result.getInstance()).getDriver();
+		WebDriver driver = ((VtigerOpenLoginPageBaseClass) result.getInstance()).getDriver();
 
 		test.log(Status.FAIL, "assertion is failed");
 		test.log(Status.INFO, name + " is failed");

@@ -4,9 +4,9 @@ import static org.testng.Assert.assertEquals;
 
 import org.testng.annotations.Test;
 
-import com.crm.baseclass.VtigerOpenLoginPage;
+import com.crm.baseclass.VtigerOpenLoginPageBaseClass;
 
-public class ElementsDisplayed extends VtigerOpenLoginPage {
+public class ElementsDisplayed extends VtigerOpenLoginPageBaseClass {
 	
 	@Test
 	public void thisTestShouldFail() {
