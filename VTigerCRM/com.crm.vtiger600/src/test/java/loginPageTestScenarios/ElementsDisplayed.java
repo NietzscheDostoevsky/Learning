@@ -21,6 +21,7 @@ public class ElementsDisplayed extends VtigerOpenLoginPageBaseClass {
 	@Test
 	public void verifyExchangeConnectorElement() {
 		assertEquals(ref.exchangeConnector.isDisplayed(), true);
+		
 	}
 	
 	@Test

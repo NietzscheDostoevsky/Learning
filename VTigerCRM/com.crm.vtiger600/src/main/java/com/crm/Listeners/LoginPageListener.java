@@ -31,6 +31,11 @@ public class LoginPageListener implements ITestListener {
 		System.out.println("Test passed");
 		test.log(Status.PASS, "assertion is passed");
 		test.log(Status.INFO, name + "is passed");
+		
+	    WebDriver driver = ((VtigerOpenLoginPageBaseClass) result.getInstance()).getDriver();
+	    TakesScreenshot tScreenshot = (TakesScreenshot) driver;
+		String from = tScreenshot.getScreenshotAs(OutputType.BASE64);
+		test.addScreenCaptureFromBase64String(from);
 	}
 
 	@Override
