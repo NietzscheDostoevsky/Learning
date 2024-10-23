@@ -2,9 +2,9 @@ package setup;
 
 import org.testng.annotations.Test;
 
-import com.crm.baseclass.VtigerLogin;
+import com.crm.baseclass.VtigerLoginBaseClass;
 
-public class SetupTest extends VtigerLogin {
+public class SetupTest extends VtigerLoginBaseClass {
 	
 	@Test
 	public void loginLogout() {

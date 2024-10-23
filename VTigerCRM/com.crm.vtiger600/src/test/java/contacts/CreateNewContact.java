@@ -5,9 +5,9 @@ import static contacts.FillContactInformation.fillContactInformation;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import com.crm.baseclass.VtigerLogin;
+import com.crm.baseclass.VtigerLoginBaseClass;
 
-public class CreateNewContact extends VtigerLogin   {
+public class CreateNewContact extends VtigerLoginBaseClass   {
 	
 	@Test(invocationCount = 5)
 	public void createContact() throws InterruptedException {

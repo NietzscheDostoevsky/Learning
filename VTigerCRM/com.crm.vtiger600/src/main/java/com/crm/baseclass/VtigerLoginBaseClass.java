@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
 
 import com.crm.POM.LoginPage;
 
-public class VtigerLogin {
+public class VtigerLoginBaseClass {
 
 	protected WebDriver driver;
 
