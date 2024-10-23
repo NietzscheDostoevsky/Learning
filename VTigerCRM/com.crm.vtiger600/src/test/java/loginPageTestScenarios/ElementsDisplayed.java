@@ -2,16 +2,21 @@ package loginPageTestScenarios;
 
 import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.OutputType;
 import org.testng.annotations.Test;
 
 import com.crm.baseclass.VtigerOpenLoginPage;
 
 public class ElementsDisplayed extends VtigerOpenLoginPage {
 	
+	@Test
+	public void thisTestShouldFail() {
+		assertEquals(false, true);
+	}
 	
 	@Test
 	public void verifyOutlookElement() {
-		assertEquals(ref.outlookPlugin.isDisplayed(), true);
+		assertEquals(ref.outlookPlugin.isDisplayed(), true);		
 	}
 	
 	@Test
