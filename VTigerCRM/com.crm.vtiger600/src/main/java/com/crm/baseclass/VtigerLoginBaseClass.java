@@ -14,6 +14,10 @@ import org.testng.annotations.BeforeMethod;
 
 import com.crm.POM.LoginPage;
 
+/*
+ * Logs in and logs out of the vtiger applications based on the 
+ * credentials provided in the configuratino file. 
+ */
 public class VtigerLoginBaseClass {
 
 	protected WebDriver driver;
