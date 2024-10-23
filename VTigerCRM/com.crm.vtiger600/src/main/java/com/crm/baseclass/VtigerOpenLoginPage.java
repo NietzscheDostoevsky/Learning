@@ -12,6 +12,10 @@ import org.testng.annotations.BeforeMethod;
 
 import com.crm.POM.LoginPage;
 
+/*
+ * Opens the Vtiger login page for testing that pages functionality. 
+ * Also creates and instance of login page's POM model. 
+ */
 public class VtigerOpenLoginPage {
 	public static WebDriver driver;
 	public static WebDriver driver2; 
