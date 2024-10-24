@@ -21,6 +21,7 @@ import com.crm.POM.LoginPage;
 public class VtigerLoginBaseClass {
 
 	protected WebDriver driver;
+	public static LoginPage ref ;
 
 	@BeforeClass
 	public void preCondition() {
