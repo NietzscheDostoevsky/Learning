@@ -31,7 +31,7 @@ public class HelloWorldChromeTestNgTest {
 	}
 	
 	@AfterMethod
-	public void teradown() {
+	public void teardown() {
 		driver.quit(); 
 	}
 	
