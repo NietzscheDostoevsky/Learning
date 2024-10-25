@@ -32,6 +32,7 @@ public class SessionID {
 		driver.get("https://www.google.com/");
 		SessionId sessionId = ((RemoteWebDriver) driver ).getSessionId();
 		assertThat(sessionId).isNotNull();
-		System.out.println(sessionId);
+		System.out.println(sessionId.toString());
+		
 	}
 }
