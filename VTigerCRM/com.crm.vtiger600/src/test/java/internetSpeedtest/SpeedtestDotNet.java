@@ -3,15 +3,26 @@ package internetSpeedtest;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SpeedtestDotNet {
 
 	public static void main(String[] args) {
-
-		ChromeDriver driver = new ChromeDriver();
+		
+		WebDriver driver ; 
+		
+//		driver = new ChromeDriver();
+//		driver = new HtmlUnitDriver(); 
+		
+		ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");  // Run Chrome in headless mode
+        options.addArguments("--disable-gpu");  // Disabling GPU for headless mode
+        options.addArguments("--window-size=1920,1080");  // Set window size
+        driver = new ChromeDriver(options);
 		try {
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
