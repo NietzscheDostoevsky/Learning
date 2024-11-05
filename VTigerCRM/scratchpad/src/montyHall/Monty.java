@@ -18,7 +18,7 @@ public class Monty {
         Collections.shuffle(doorStrings); // Randomize the door positions
 
         // Let the player make their first guess and choose their door 
-        int chosenDoor = new Random().nextInt(3); // Randomly choose between doors 0, 1, 2
+        int chosenDoor = new Random().nextInt(doorStrings.size()); // Randomly choose between doors 0, 1, 2
         out("Player chooses door " + (chosenDoor + 1) + "; ");
 
         // The host now opens one of the unchosen doors that contains a goat
@@ -56,7 +56,7 @@ public class Monty {
     }
 
     public static void main(String[] args) {
-        int games = 1000; // Number of times to play the game
+        int games = 100000; // Number of times to play the game
 
         // Simulation 1: Player never switches doors
         System.out.println("Simulation 1: No Switching");
