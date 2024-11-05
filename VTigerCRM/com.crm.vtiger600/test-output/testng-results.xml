@@ -1,33 +1,213 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-17T08:57:46 IST" name="Default suite" finished-at="2024-10-17T08:57:52 IST" duration-ms="5549">
+  <suite started-at="2024-10-25T23:00:45 IST" name="Default suite" finished-at="2024-10-25T23:00:56 IST" duration-ms="10511">
     <groups>
     </groups>
-    <test started-at="2024-10-17T08:57:46 IST" name="Default test" finished-at="2024-10-17T08:57:52 IST" duration-ms="5549">
-      <class name="setup.SetupTest">
-        <test-method is-config="true" signature="preCondition()[pri:0, instance:setup.SetupTest@408d971b]" started-at="2024-10-17T08:57:46 IST" name="preCondition" finished-at="2024-10-17T08:57:48 IST" duration-ms="2101" status="PASS">
+    <test started-at="2024-10-25T23:00:45 IST" name="Default test" finished-at="2024-10-25T23:00:56 IST" duration-ms="10511">
+      <class name="loginPageTestScenarios.LoginFunctionality">
+        <test-method is-config="true" signature="preCondition()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:45 IST" name="preCondition" finished-at="2024-10-25T23:00:47 IST" duration-ms="1665" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preCondition -->
-        <test-method is-config="true" signature="login()[pri:0, instance:setup.SetupTest@408d971b]" started-at="2024-10-17T08:57:48 IST" name="login" finished-at="2024-10-17T08:57:50 IST" duration-ms="1271" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:47 IST" name="login" finished-at="2024-10-25T23:00:47 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="loginLogout()[pri:0, instance:setup.SetupTest@408d971b]" started-at="2024-10-17T08:57:50 IST" name="loginLogout" finished-at="2024-10-17T08:57:50 IST" duration-ms="11" status="PASS">
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String)[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:47 IST" name="testLoginNegative" data-provider="NegativeLogin" finished-at="2024-10-25T23:00:48 IST" duration-ms="602" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongpass]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginLogout -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:setup.SetupTest@408d971b]" started-at="2024-10-17T08:57:50 IST" name="logout" finished-at="2024-10-17T08:57:52 IST" duration-ms="1847" status="PASS">
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:48 IST" name="logout" finished-at="2024-10-25T23:00:48 IST" duration-ms="239" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logout -->
-        <test-method is-config="true" signature="postCondition()[pri:0, instance:setup.SetupTest@408d971b]" started-at="2024-10-17T08:57:52 IST" name="postCondition" finished-at="2024-10-17T08:57:52 IST" duration-ms="259" status="PASS">
+        <test-method is-config="true" signature="login()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:48 IST" name="login" finished-at="2024-10-25T23:00:48 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String)[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:48 IST" name="testLoginNegative" data-provider="NegativeLogin" finished-at="2024-10-25T23:00:49 IST" duration-ms="564" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wrongadmin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[root]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:49 IST" name="logout" finished-at="2024-10-25T23:00:49 IST" duration-ms="233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:49 IST" name="login" finished-at="2024-10-25T23:00:49 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String)[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:49 IST" name="testLoginNegative" data-provider="NegativeLogin" finished-at="2024-10-25T23:00:50 IST" duration-ms="563" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[root2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:50 IST" name="logout" finished-at="2024-10-25T23:00:50 IST" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:50 IST" name="login" finished-at="2024-10-25T23:00:50 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String)[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:50 IST" name="testLoginNegative" data-provider="NegativeLogin" finished-at="2024-10-25T23:00:50 IST" duration-ms="563" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:50 IST" name="logout" finished-at="2024-10-25T23:00:51 IST" duration-ms="233" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:51 IST" name="login" finished-at="2024-10-25T23:00:51 IST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String)[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:51 IST" name="testLoginNegative" data-provider="NegativeLogin" finished-at="2024-10-25T23:00:51 IST" duration-ms="550" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[root]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:51 IST" name="logout" finished-at="2024-10-25T23:00:51 IST" duration-ms="242" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:52 IST" name="login" finished-at="2024-10-25T23:00:52 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String)[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:52 IST" name="testLoginNegative" data-provider="NegativeLogin" finished-at="2024-10-25T23:00:52 IST" duration-ms="568" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:52 IST" name="logout" finished-at="2024-10-25T23:00:52 IST" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:52 IST" name="login" finished-at="2024-10-25T23:00:52 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testLoginNegative(java.lang.String,java.lang.String)[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:52 IST" name="testLoginNegative" data-provider="NegativeLogin" finished-at="2024-10-25T23:00:53 IST" duration-ms="530" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginNegative -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:53 IST" name="logout" finished-at="2024-10-25T23:00:53 IST" duration-ms="234" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="login()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:53 IST" name="login" finished-at="2024-10-25T23:00:53 IST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="testLoginPositive(java.lang.String,java.lang.String)[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:53 IST" name="testLoginPositive" data-provider="PositiveLogin" finished-at="2024-10-25T23:00:54 IST" duration-ms="1002" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[root]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginPositive -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:54 IST" name="logout" finished-at="2024-10-25T23:00:56 IST" duration-ms="1581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="postCondition()[pri:0, instance:loginPageTestScenarios.LoginFunctionality@6200f9cb]" started-at="2024-10-25T23:00:56 IST" name="postCondition" finished-at="2024-10-25T23:00:56 IST" duration-ms="90" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCondition -->
-      </class> <!-- setup.SetupTest -->
+      </class> <!-- loginPageTestScenarios.LoginFunctionality -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
