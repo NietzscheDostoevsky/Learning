@@ -50,7 +50,6 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="com.dws.base.BaseClass"/>
     <fullyQualifiedTypeName name="java.sql.Driver"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
     <fullyQualifiedTypeName name="org.testng.ITestNGListener"/>
     <fullyQualifiedTypeName name="org.testng.ITestListener"/>
     <fullyQualifiedTypeName name="org.testng.Reporter"/>
@@ -58,6 +57,7 @@
     <fullyQualifiedTypeName name="com.crm.listeners.Sample"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.testng.annotations.Test"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
     <fullyQualifiedTypeName name="java.lang.InterruptedException"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 </qualifiedTypeNameHistroy>
